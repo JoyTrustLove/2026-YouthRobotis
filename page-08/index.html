@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 8 – 추진내용 및 전략</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Malgun Gothic',sans-serif; background:#E8EAED; display:flex; justify-content:center; padding:30px 10px; }
+  .page { width:210mm; min-height:297mm; background:#fff; padding:15mm 20mm; box-shadow:0 2px 20px rgba(0,0,0,0.08); position:relative; }
+  .nav { margin-bottom:12px; }
+  .nav a { font-size:11px; color:#1E3A5F; text-decoration:none; border:1px solid #C5D3E3; padding:3px 10px; border-radius:4px; }
+  .nav a:hover { background:#F0F4F8; }
+  .sec-header { display:flex; align-items:center; gap:10px; border-bottom:2px solid #1E3A5F; padding-bottom:6px; }
+  .sec-num { background:#1E3A5F; color:#fff; font-size:16px; font-weight:800; padding:4px 14px; border-radius:3px; }
+  .sec-title { font-size:16px; font-weight:700; color:#1E3A5F; }
+  .info-box { width:100%; border-collapse:collapse; font-size:9.5px; line-height:145%; margin:8px 0 10px 0; }
+  .info-box td { border:1px solid #C5D3E3; padding:4px 8px; vertical-align:top; }
+  .info-box .lb { background:#F0F4F8; font-weight:700; text-align:center; color:#1E3A5F; width:95px; }
+  .info-box .hl { background:#FFFDE7; }
+  .info-box .pt { background:#FFF8E1; border-left:3px solid #F9A825; }
+  h3 { font-size:12px; color:#1E3A5F; border-left:3px solid #1E3A5F; padding-left:8px; margin:12px 0 5px 0; }
+  .body-text { font-size:11px; line-height:170%; text-indent:8px; margin:2px 0; color:#262626; }
+  .body-text b { color:#1E3A5F; }
+  .label-mark { display:inline-block; font-size:10px; font-weight:700; color:#1E3A5F; margin:8px 0 3px 0; }
+
+  /* ── 3대 원칙 ── */
+  .principle-row {
+    display:flex; gap:6px; margin:8px 0;
+  }
+  .principle-card {
+    flex:1; border-radius:6px; padding:8px 10px;
+    font-size:9.5px; line-height:150%;
+  }
+  .principle-card .pc-title {
+    font-size:10.5px; font-weight:700; margin-bottom:3px;
+  }
+  .pc-blue  { background:#E3F2FD; border:1px solid #90CAF9; }
+  .pc-blue .pc-title { color:#1565C0; }
+  .pc-amber { background:#FFF8E1; border:1px solid #FFE082; }
+  .pc-amber .pc-title { color:#F57F17; }
+  .pc-green { background:#E8F5E9; border:1px solid #A5D6A7; }
+  .pc-green .pc-title { color:#2E7D32; }
+
+  /* ── 추진내용 구조 ── */
+  .content-block {
+    border:1px solid #E0E0E0; border-radius:5px;
+    padding:8px 10px; margin:5px 0;
+    font-size:10px; line-height:155%;
+  }
+  .content-block .cb-title {
+    font-weight:700; color:#1E3A5F; font-size:10.5px;
+    margin-bottom:3px;
+  }
+  .content-block .cb-sub {
+    margin-left:12px; font-size:9.5px; color:#444;
+  }
+
+  /* ── 비교표 ── */
+  .compare-tbl {
+    width:100%; border-collapse:collapse;
+    font-size:9px; line-height:140%; margin:8px 0;
+  }
+  .compare-tbl th {
+    padding:4px 6px; text-align:center; font-weight:700;
+  }
+  .compare-tbl th:first-child { background:#F0F4F8; color:#1E3A5F; width:20%; }
+  .compare-tbl th:nth-child(2) { background:#FFEBEE; color:#C62828; width:40%; }
+  .compare-tbl th:nth-child(3) { background:#E8F5E9; color:#2E7D32; width:40%; }
+  .compare-tbl td {
+    border:1px solid #D0D8E0; padding:4px 6px; vertical-align:top;
+  }
+  .compare-tbl tr:nth-child(even) { background:#FAFBFC; }
+
+  .page-num { position:absolute; bottom:10mm; left:0; right:0; text-align:center; font-size:10px; color:#999; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-07/index.html" style="margin-left:8px;">← 면수 7</a>
+    <a href="../page-09/index.html" style="margin-left:8px;">면수 9 →</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">4</span>
+    <span class="sec-title">사업 목표 및 추진전략 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr>
+      <td class="lb">평가항목(배점)</td>
+      <td>대회 운영 적합성(5)</td>
+    </tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"자율주행(Autonomous) 필수. 조이스틱·원격조종은 <b>선정 안 될 가능성 높음</b>"</td>
+    </tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 모든 트랙이 <b>자율주행 방식</b> ⇒ 리모컨·조이스틱 제로. 기존 RC카형 대회와의 본질적 차별점<br>
+        ② "오전 교육 → 오후 대회"의 <b>당일 완결형 모델</b>로, 사전 준비 없이 현장 즉시 참여 가능
+      </td>
+    </tr>
+  </table>
+
+  <h3>4-2. 목표 달성을 위한 사업추진 내용 및 전략</h3>
+
+  <!-- 3대 설계 원칙 -->
+  <span class="label-mark">▸ 추진방향 — 3대 설계 원칙</span>
+
+  <div class="principle-row">
+    <div class="principle-card pc-blue">
+      <div class="pc-title">① 낮은 진입 장벽</div>
+      3중 장벽(고가 장비·사전 준비·전문 동아리) 전면 해소. 로봇·경기장·교육 100% 현장 제공. 장비 구매·참가비 無.
+    </div>
+    <div class="principle-card pc-amber">
+      <div class="pc-title">② 즉각적 정량 평가</div>
+      시간(초) 또는 점수(미션+패널티)로 순위 즉시 결정. 심사위원 정성 평가 배제. 경기 종료 즉시 결과 확인.
+    </div>
+    <div class="principle-card pc-green">
+      <div class="pc-title">③ 자율주행 필수</div>
+      시작 버튼 후 일체의 외부 조작 없이 자율 수행. 컴퓨팅 사고력·공학적 문제해결력에 직결되는 피지컬 AI 핵심 소양.
+    </div>
+  </div>
+
+  <!-- 추진내용 ① -->
+  <span class="label-mark">▸ 추진내용 ① — 로보틱스 기초 대회 기획 및 운영</span>
+
+  <div class="content-block">
+    <div class="cb-title">(가) 로보틱스 기초 트랙 프로그램 기획</div>
+    <div class="cb-sub">
+      초·중·고 3개 트랙별 예선 문제 1종씩 총 3종 개발. 트랙별 2차시+ 당일 완결형 교육 프로그램 개발.<br>
+      초등: 4족 보행 로봇+센서 기초(해양 환경 보호) / 중학: AI 비전 자율주행(자원재활용) / 고교: AI 비전+딥러닝(교통 약자 보호)
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="cb-title">(나) 로보틱스 기초 예선 대회 운영</div>
+    <div class="cb-sub">
+      전국 5개 권역 11회+ 예선 (4~9월). 로봇 300세트+(예비10%) 확보, 순환(Rotation) 물류 운용.<br>
+      과학축제·교육청 AI 페스티벌·과학관 주말 프로그램 등 기존 집객 행사 연동 모집.
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="cb-title">(다) 로보틱스 기초 본선 대회 지원</div>
+    <div class="cb-sub">
+      68팀+ 본선 진출팀에 4차시+ 교육(정밀 실행·디버깅 중심), 로봇 임차, 여비 지원. 본선 운영은 재단 주관.
+    </div>
+  </div>
+
+  <!-- 추진내용 ② -->
+  <span class="label-mark">▸ 추진내용 ② — 로보틱스와 문제해결·작품공모전 분과 지원</span>
+
+  <div class="content-block">
+    <div class="cb-title">(가) 본선 대회 참가팀 멘토링 지원</div>
+    <div class="cb-sub">
+      문제해결(주니어 10팀·시니어 10팀) + 작품공모전(13팀 내외) 대상, 25명+ 멘토단, 팀당 온·오프 2회+.
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="cb-title">(나) 대회 운영 내실화 지원</div>
+    <div class="cb-sub">
+      AI Future Festa 홍보 부스(6m×6m, 3일), 운영 가이드·우수 사례집 제작, 성과지표 관리·고도화.
+    </div>
+  </div>
+
+  <!-- 비교표 -->
+  <span class="label-mark">▸ 기존 참여 방식 vs 본 제안 참여 방식</span>
+
+  <table class="compare-tbl">
+    <thead>
+      <tr>
+        <th>비교 항목</th>
+        <th>기존 참여 방식</th>
+        <th>본 제안 참여 방식</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;">로봇 조종</td>
+        <td>조이스틱·원격 조종 허용</td>
+        <td style="font-weight:700; color:#2E7D32;">자율주행(Autonomous) 필수 — 외부 조작 제로</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">참가 장벽</td>
+        <td>고가 로봇 사전 구매, 수 주 준비, 전문 동아리</td>
+        <td style="font-weight:700; color:#2E7D32;">로봇·경기장·교육 100% 현장 제공, 참가비 無</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">교육-대회 연계</td>
+        <td>분리 운영, 사전 학습 필수</td>
+        <td style="font-weight:700; color:#2E7D32;">"오전 교육 → 오후 대회" 당일 완결형</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">평가 방식</td>
+        <td>심사위원 정성 평가 포함</td>
+        <td style="font-weight:700; color:#2E7D32;">100% 정량 — 시간(초)+패널티, 순위 즉시 산출</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">AI 기술 도입</td>
+        <td>선택적 또는 미적용</td>
+        <td style="font-weight:700; color:#2E7D32;">초등(AI 색상) → 중학(AI 사물) → 고교(딥러닝 모델 생성)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-num">- 8 -</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 7 – 사업 추진목표</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Malgun Gothic',sans-serif; background:#E8EAED; display:flex; justify-content:center; padding:30px 10px; }
+  .page { width:210mm; min-height:297mm; background:#fff; padding:15mm 20mm; box-shadow:0 2px 20px rgba(0,0,0,0.08); position:relative; }
+  .nav { margin-bottom:12px; }
+  .nav a { font-size:11px; color:#1E3A5F; text-decoration:none; border:1px solid #C5D3E3; padding:3px 10px; border-radius:4px; }
+  .nav a:hover { background:#F0F4F8; }
+  .sec-header { display:flex; align-items:center; gap:10px; border-bottom:2px solid #1E3A5F; padding-bottom:6px; }
+  .sec-num { background:#1E3A5F; color:#fff; font-size:16px; font-weight:800; padding:4px 14px; border-radius:3px; }
+  .sec-title { font-size:16px; font-weight:700; color:#1E3A5F; }
+  .info-box { width:100%; border-collapse:collapse; font-size:9.5px; line-height:145%; margin:8px 0 10px 0; }
+  .info-box td { border:1px solid #C5D3E3; padding:4px 8px; vertical-align:top; }
+  .info-box .lb { background:#F0F4F8; font-weight:700; text-align:center; color:#1E3A5F; width:95px; }
+  .info-box .hl { background:#FFFDE7; }
+  .info-box .pt { background:#FFF8E1; border-left:3px solid #F9A825; }
+  h3 { font-size:12px; color:#1E3A5F; border-left:3px solid #1E3A5F; padding-left:8px; margin:12px 0 5px 0; }
+  .body-text { font-size:11px; line-height:170%; text-indent:8px; margin:2px 0; color:#262626; }
+  .body-text b { color:#1E3A5F; }
+
+  /* ── 3단계 플로우 ── */
+  .flow-3 {
+    display:flex; align-items:stretch; gap:0;
+    margin:10px 0; font-size:9.5px;
+  }
+  .flow-step {
+    flex:1; padding:10px 12px;
+    border:1px solid #D0D8E0;
+    position:relative;
+    background:#fff;
+  }
+  .flow-step:first-child { border-radius:6px 0 0 6px; }
+  .flow-step:last-child { border-radius:0 6px 6px 0; }
+  .flow-step .step-num {
+    font-size:20px; font-weight:800; color:#1E3A5F; opacity:0.15;
+    position:absolute; top:4px; right:8px;
+  }
+  .flow-step .step-title {
+    font-size:11px; font-weight:700; color:#1E3A5F; margin-bottom:3px;
+  }
+  .flow-step .step-body { font-size:9px; color:#555; line-height:145%; }
+  .flow-arrow {
+    display:flex; align-items:center;
+    font-size:18px; color:#1E3A5F; font-weight:700;
+    padding:0 2px;
+  }
+  .flow-step.s1 { background:#E3F2FD; border-color:#90CAF9; }
+  .flow-step.s2 { background:#FFF3E0; border-color:#FFCC80; }
+  .flow-step.s3 { background:#E8F5E9; border-color:#A5D6A7; }
+
+  /* ── KPI 테이블 ── */
+  .kpi-tbl {
+    width:100%; border-collapse:collapse;
+    font-size:9.5px; line-height:140%; margin:8px 0;
+  }
+  .kpi-tbl th {
+    background:#1E3A5F; color:#fff; padding:4px 6px;
+    text-align:center; font-weight:700;
+  }
+  .kpi-tbl td {
+    border:1px solid #D0D8E0; padding:4px 6px; vertical-align:top;
+  }
+  .kpi-tbl tr:nth-child(even) { background:#F8FAFC; }
+  .kpi-tbl .must {
+    background:#FFEBEE; color:#C62828; font-weight:700;
+    text-align:center; font-size:8px;
+  }
+
+  /* ── 기대효과 ── */
+  .effect-grid {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:6px; margin:8px 0;
+  }
+  .effect-card {
+    border:1px solid #E0E0E0; border-radius:5px;
+    padding:7px 9px; font-size:9.5px; line-height:150%;
+    background:#FAFBFC;
+    border-top:3px solid #1E3A5F;
+  }
+  .effect-card .ef-title { font-weight:700; color:#1E3A5F; font-size:10px; margin-bottom:2px; }
+
+  .page-num { position:absolute; bottom:10mm; left:0; right:0; text-align:center; font-size:10px; color:#999; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-06/index.html" style="margin-left:8px;">← 면수 6</a>
+    <a href="../page-08/index.html" style="margin-left:8px;">면수 8 →</a>
+  </div>
+
+  <div class="sec-header">
+    <span class="sec-num">4</span>
+    <span class="sec-title">사업 목표 및 추진전략</span>
+  </div>
+
+  <table class="info-box">
+    <tr>
+      <td class="lb">평가항목(배점)</td>
+      <td>사업목표 이해도(5) + 사업 목표 달성 기대효과(5)</td>
+    </tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"2,900명도 적다고 하고 있다. <b>반드시 달성해야 하는 KPI</b>"</td>
+    </tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① "누구나 참여 → 가볍게 즐기고 → 본선으로 성장"의 3단계 설계로, 로봇 경험 제로인 학생부터 심화 학생까지 <b>전 스펙트럼 포괄</b><br>
+        ② 2,900명은 최소 목표이며, 미달 시 추가 회차 운영까지 일정·예산에 반영한 <b>필달 설계</b>
+      </td>
+    </tr>
+  </table>
+
+  <h3>4-1. 사업 추진목표</h3>
+
+  <!-- 3단계 플로우 -->
+  <div class="flow-3">
+    <div class="flow-step s1">
+      <span class="step-num">1</span>
+      <div class="step-title">누구나 쉽게 참여</div>
+      <div class="step-body">
+        예선 <b>2,900명+</b>, 5개 권역<br>
+        로봇·경기장·교육 <b>100% 현장 제공</b><br>
+        장비 구매·참가비 無<br>
+        빈손으로 와서 참여
+      </div>
+    </div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step s2">
+      <span class="step-num">2</span>
+      <div class="step-title">가볍게 즐기고</div>
+      <div class="step-body">
+        "오전 교육 → 오후 대회"<br>
+        <b>당일 완결형</b> 2시간 교육<br>
+        정량 평가로 <b>즉시 결과 확인</b><br>
+        흥미·성취감 체험
+      </div>
+    </div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step s3">
+      <span class="step-num">3</span>
+      <div class="step-title">본선으로 성장</div>
+      <div class="step-body">
+        <b>68팀+</b> 본선 진출<br>
+        4차시+ 심화 교육<br>
+        25명+ 전문가 멘토링<br>
+        정밀 실행·디버깅·전략 수립
+      </div>
+    </div>
+  </div>
+
+  <!-- 정량 목표 KPI -->
+  <span style="font-size:10px; font-weight:700; color:#1E3A5F; margin:6px 0 2px 0; display:block;">▸ 정량 목표 (핵심 KPI)</span>
+
+  <table class="kpi-tbl">
+    <thead>
+      <tr>
+        <th style="width:25%;">지표명</th>
+        <th style="width:15%;">목표치</th>
+        <th style="width:30%;">측정방법</th>
+        <th style="width:8%;">필달</th>
+        <th style="width:22%;">비고</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>예선 참여자 수</td>
+        <td style="font-weight:700; color:#C62828;">2,900명 이상</td>
+        <td>현장 등록 데이터 집계</td>
+        <td class="must">필달</td>
+        <td>미달 시 추가 회차 운영</td>
+      </tr>
+      <tr>
+        <td>권역별 참여 균형도</td>
+        <td>모든 권역 10%+ / 특정 50% 이하</td>
+        <td>권역별 등록 인원 비율</td>
+        <td class="must">필달</td>
+        <td>체크리스트 3항목 충족</td>
+      </tr>
+      <tr>
+        <td>예선 운영 횟수</td>
+        <td style="font-weight:700;">11회 이상</td>
+        <td>실 운영 횟수 집계</td>
+        <td class="must">필달</td>
+        <td>5개 권역 배분</td>
+      </tr>
+      <tr>
+        <td>본선 진출팀</td>
+        <td>68팀+ (초38/중15/고15)</td>
+        <td>예선 결과 기반 선정</td>
+        <td></td>
+        <td>예선 종료 2주 내 보고</td>
+      </tr>
+      <tr>
+        <td>교육 프로그램 만족도</td>
+        <td>4.5점+ (5점 만점)</td>
+        <td>참가자 사후 설문 (리커트 5점)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>멘토링 만족도</td>
+        <td>4.5점+</td>
+        <td>멘티 팀 사후 설문</td>
+        <td></td>
+        <td>팀당 온·오프 2회+</td>
+      </tr>
+      <tr>
+        <td>AI·로보틱스 인식 변화율</td>
+        <td>사전→사후 긍정 20%p+↑</td>
+        <td>사전·사후 설문 비교</td>
+        <td></td>
+        <td>자체 성과지표</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 정성 목표 & 기대효과 -->
+  <span style="font-size:10px; font-weight:700; color:#1E3A5F; margin:8px 0 2px 0; display:block;">▸ 정성 목표 및 기대효과</span>
+
+  <div class="effect-grid">
+    <div class="effect-card">
+      <div class="ef-title">대국민 AI·로보틱스 인식 확산</div>
+      로봇 경험 제로인 학생도 2시간 만에 자율주행 로봇을 코딩하고 대회에 참여. 기술이 일상과 연결되는 가치를 체감.
+    </div>
+    <div class="effect-card">
+      <div class="ef-title">자기주도적 문제해결 역량 함양</div>
+      자율주행(Autonomous) 방식 필수로 컴퓨팅 사고력·공학적 문제해결력 강화. 디버깅 중심 실습으로 논리적 사고력 함양.
+    </div>
+    <div class="effect-card">
+      <div class="ef-title">디지털 교육 격차 완화</div>
+      전국 5개 권역 균형 운영으로 수도권-비수도권 로보틱스 교육 기회 격차 완화. 과학관·교육청 센터 등 지역 거점 활용.
+    </div>
+    <div class="effect-card">
+      <div class="ef-title">로봇 인재 발굴 선순환</div>
+      예선(확산) → 본선(심화) → 멘토링(성장)의 단계별 설계로 관심 있는 학생의 지속 탐구 진로 경로 제시.
+    </div>
+  </div>
+
+  <div class="page-num">- 7 -</div>
+</div>
+</body>
+</html>

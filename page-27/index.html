@@ -15,6 +15,7 @@
   .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
   .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
   .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .hl{background:#FFFDE7}
   .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
   h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
   .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
@@ -25,6 +26,11 @@
   .cost-tbl td{border:1px solid #D0D8E0;padding:3px 5px;vertical-align:top}
   .cost-tbl .cat-header td{background:#EEF2F7;font-weight:700;color:#1E3A5F;font-size:10px}
   .cost-tbl .sub-total td{background:#F0F4F8;font-weight:700;color:#1E3A5F}
+  .cost-tbl .mandatory td{background:#FFF3E0;border-left:3px solid #E65100}
+
+  .warn-box{background:#FFEBEE;border:1px solid #EF9A9A;border-radius:5px;padding:8px 12px;font-size:9.5px;line-height:155%;margin:8px 0}
+  .warn-box b{color:#C62828}
+
   .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
   .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
   .highlight-box .h-body{font-size:10px;line-height:165%}
@@ -43,71 +49,195 @@
 
   <div class="sec-header" style="margin-bottom:0;">
     <span class="sec-num">8</span>
-    <span class="sec-title">예산 계획 (계속)</span>
+    <span class="sec-title">예산계획 (계속)</span>
   </div>
 
   <table class="info-box">
-    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적정성(7)</td></tr>
+    <tr><td class="lb">평가항목(배점)</td><td>집행 계획의 타당성(5)</td></tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"강사 교통비는 자문료에 합산. 별도 여비 지급 시 이중집행으로 불인정"<br>"<b>정산위탁수수료 1,500,000원 필수 반영</b>"</td>
+    </tr>
     <tr>
       <td class="lb">제안사<br>핵심포인트</td>
       <td class="pt">
-        ① 일반수용비: 인쇄물·소모품·홍보물 등 <b>품목별 단가 × 수량</b>으로 투명 산출<br>
-        ② 공공요금: 대관 시설 전기·통신비를 <b>실사용 기간 기준</b>으로 계상<br>
-        ③ 특근매식비: 현장 운영 인력의 <b>식비·간식비를 재단 기준 단가</b>로 산출
+        ① 외부 강사 교통비를 전문가 자문료에 일괄 합산하는 구조로, <b>이중집행 리스크를 원천 차단</b>한 정산 친화적 예산 설계<br>
+        ② <b>정산위탁수수료 1,500천원</b> 및 부가가치세를 누락 없이 반영하여, 정산 단계에서 추가 조정이 발생하지 않는 완결형 예산<br>
+        ③ 인쇄물·소모품은 참가자 수 + 여분 5%로 산정하여 과다 발주 방지
       </td>
     </tr>
   </table>
 
   <h3>8-3. 운영비 ① 일반수용비 · 공공요금 · 특근매식비</h3>
 
-  <!-- 일반수용비 -->
-  <span class="label-mark">▸ 일반수용비 (인쇄·소모품·홍보물)</span>
+  <!-- ★ 일반수용비 — 정산위탁수수료 행 추가 -->
+  <span class="label-mark">▸ 일반수용비 (인쇄·소모품·정산위탁수수료)</span>
 
   <table class="cost-tbl">
     <thead>
       <tr>
         <th style="width:4%;">No</th>
         <th style="width:22%;">품목</th>
-        <th style="width:10%;">단가(천원)</th>
+        <th style="width:10%;">단가<br>(천원)</th>
         <th style="width:8%;">수량</th>
         <th style="width:8%;">횟수</th>
-        <th style="width:14%;">소계(천원)</th>
-        <th style="width:12%;">기관</th>
-        <th style="width:22%;">산출 근거</th>
+        <th style="width:12%;">소계<br>(천원)</th>
+        <th style="width:10%;">기관</th>
+        <th style="width:26%;">산출 근거</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td style="text-align:center;">1</td><td>참가자 교육 자료집 인쇄</td><td style="text-align:right;">○</td><td style="text-align:center;">2,900</td><td style="text-align:center;">1</td><td style="text-align:right;">○,○○○</td><td style="text-align:center;">타임</td><td style="font-size:7.5px;">A4 16p 흑백 인쇄, 참가자 전원 배부</td></tr>
-      <tr><td style="text-align:center;">2</td><td>포스터·리플렛 인쇄</td><td style="text-align:right;">○○</td><td style="text-align:center;">500</td><td style="text-align:center;">1</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">A2 포스터 200장 + A5 리플렛 300장</td></tr>
-      <tr><td style="text-align:center;">3</td><td>명찰·스티커·진행 소모품</td><td style="text-align:right;">○</td><td style="text-align:center;">3,000</td><td style="text-align:center;">1</td><td style="text-align:right;">○○○</td><td style="text-align:center;">타임</td><td style="font-size:7.5px;">이름표 3,000매 + 트랙 구분 스티커</td></tr>
-      <tr><td style="text-align:center;">4</td><td>수상 상장·트로피</td><td style="text-align:right;">○○</td><td style="text-align:center;">50</td><td style="text-align:center;">1</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">본선 수상자 50명분 (상장 + 소형 트로피)</td></tr>
-      <tr><td style="text-align:center;">5</td><td>사무용품 (문구·토너 등)</td><td style="text-align:right;">○○</td><td style="text-align:center;">—</td><td style="text-align:center;">6월</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">사업 기간 사무용품 일괄</td></tr>
-      <tr><td style="text-align:center;">6</td><td>현수막·배너</td><td style="text-align:right;">○○</td><td style="text-align:center;">15</td><td style="text-align:center;">1</td><td style="text-align:right;">○○○</td><td style="text-align:center;">타임</td><td style="font-size:7.5px;">예선 11회분 + 본선 + 여분</td></tr>
-      <tr class="sub-total"><td colspan="5" style="text-align:center;">일반수용비 소계</td><td style="text-align:right;">○,○○○</td><td colspan="2"></td></tr>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td>참가자 교육 자료집 인쇄</td>
+        <td style="text-align:right;">○</td>
+        <td style="text-align:center;">3,050</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7.5px;">A4 16p 흑백 인쇄, 참가자 2,900+여분5%</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>포스터·리플렛 인쇄</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">500</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">A2 포스터 200장 + A5 리플렛 300장</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>명찰·스티커·진행 소모품</td>
+        <td style="text-align:right;">○</td>
+        <td style="text-align:center;">3,050</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7.5px;">이름표 3,050매 + 트랙 구분 스티커(여분5% 포함)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td>수상 상장·트로피</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">50</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">본선 수상자 50명분 (상장 + 소형 트로피)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td>사무용품 (문구·토너 등)</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">—</td>
+        <td style="text-align:center;">6개월</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">사업 기간(4~12월) 사무용품 일괄</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">6</td>
+        <td>현수막·배너</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">15</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7.5px;">예선 11회분 + 본선 + Festa + 여분</td>
+      </tr>
+      <!-- ★ 정산위탁수수료 — 필수 항목 강조 -->
+      <tr class="mandatory">
+        <td style="text-align:center;font-weight:700;">7</td>
+        <td style="font-weight:700;">정산위탁수수료</td>
+        <td style="text-align:right;font-weight:700;">1,500</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:right;font-weight:700;">1,500</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;font-weight:700;color:#E65100;">재단 지정 필수 항목. 사업 종료 후 회계법인 정산 위탁 비용</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="5" style="text-align:center;">일반수용비 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td colspan="2"></td>
+      </tr>
     </tbody>
   </table>
 
+  <div class="warn-box">
+    <b>⚠ 정산위탁수수료 필수 반영:</b> ICT 기금 사업 비목별 산정 기준 및 사업설명회 지침에 따라
+    <b>정산위탁수수료 1,500,000원</b>을 일반수용비에 필수 계상함.
+    본 비용은 사업 종료 후 회계법인에 의한 정산 위탁에 사용되며, 미반영 시 정산 단계에서 추가 조정이 발생할 수 있음.
+  </div>
+
   <!-- 공공요금 -->
-  <span class="label-mark">▸ 공공요금 (전기·통신)</span>
+  <span class="label-mark">▸ 공공요금·제세 (전기·통신·부가가치세)</span>
 
   <table class="cost-tbl">
     <thead>
       <tr>
         <th style="width:4%;">No</th>
         <th style="width:24%;">항목</th>
-        <th style="width:12%;">단가(천원)</th>
+        <th style="width:12%;">단가<br>(천원)</th>
         <th style="width:10%;">횟수</th>
-        <th style="width:14%;">소계(천원)</th>
-        <th style="width:12%;">기관</th>
-        <th style="width:24%;">산출 근거</th>
+        <th style="width:14%;">소계<br>(천원)</th>
+        <th style="width:10%;">기관</th>
+        <th style="width:26%;">산출 근거</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td style="text-align:center;">1</td><td>예선 현장 전기 사용료</td><td style="text-align:right;">○○</td><td style="text-align:center;">11</td><td style="text-align:right;">○○○</td><td style="text-align:center;">타임</td><td style="font-size:7.5px;">대관료 별도 전기료 정산 (일부 장소)</td></tr>
-      <tr><td style="text-align:center;">2</td><td>통신비 (Wi-Fi AP 임대 통신)</td><td style="text-align:right;">○○</td><td style="text-align:center;">11</td><td style="text-align:right;">○○○</td><td style="text-align:center;">타임</td><td style="font-size:7.5px;">전용 AP 3대 × 11회 통신비</td></tr>
-      <tr><td style="text-align:center;">3</td><td>LTE 백업 라우터 데이터</td><td style="text-align:right;">○○</td><td style="text-align:center;">11</td><td style="text-align:right;">○○○</td><td style="text-align:center;">핸즈온</td><td style="font-size:7.5px;">비상용 LTE 2대 × 11회 데이터</td></tr>
-      <tr><td style="text-align:center;">4</td><td>사무실 통신비 (사업 기간)</td><td style="text-align:right;">○○</td><td style="text-align:center;">6</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">인터넷·전화 6개월분</td></tr>
-      <tr class="sub-total"><td colspan="4" style="text-align:center;">공공요금 소계</td><td style="text-align:right;">○,○○○</td><td colspan="2"></td></tr>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td>예선 현장 전기 사용료</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7.5px;">대관료 별도 전기료 정산 장소 (일부 장소 해당)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>통신비 (Wi-Fi AP 임대 통신)</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7.5px;">전용 AP 3대 × 11회 통신비</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>LTE 백업 라우터 데이터</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">핸즈온</td>
+        <td style="font-size:7.5px;">비상용 LTE 2대 × 11회 데이터</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td>사무실 통신비 (사업 기간)</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">9</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">인터넷·전화 9개월분 (4~12월)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td>부가가치세 (과세 기관 해당분)</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:center;">—</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:center;">공동</td>
+        <td style="font-size:7.5px;">과세 기관 대상 운영비 총액의 10%. PMS 입력 시 세전 금액으로 입력하여 시스템 자동 가산과 일치시킴</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="4" style="text-align:center;">공공요금·제세 소계</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td colspan="2"></td>
+      </tr>
     </tbody>
   </table>
 
@@ -118,35 +248,100 @@
     <thead>
       <tr>
         <th style="width:4%;">No</th>
-        <th style="width:24%;">항목</th>
-        <th style="width:12%;">단가(천원)</th>
+        <th style="width:22%;">항목</th>
+        <th style="width:10%;">단가<br>(천원)</th>
         <th style="width:8%;">인원</th>
         <th style="width:8%;">횟수</th>
-        <th style="width:14%;">소계(천원)</th>
+        <th style="width:12%;">소계<br>(천원)</th>
         <th style="width:10%;">기관</th>
-        <th style="width:20%;">산출 근거</th>
+        <th style="width:26%;">산출 근거</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td style="text-align:center;">1</td><td>예선 현장 스태프 식비</td><td style="text-align:right;">10</td><td style="text-align:center;">12</td><td style="text-align:center;">11</td><td style="text-align:right;">1,320</td><td style="text-align:center;">타임</td><td style="font-size:7.5px;">1만원/인 × 12명 × 11회</td></tr>
-      <tr><td style="text-align:center;">2</td><td>예선 강사·심판 식비</td><td style="text-align:right;">10</td><td style="text-align:center;">9</td><td style="text-align:center;">11</td><td style="text-align:right;">990</td><td style="text-align:center;">핸즈온</td><td style="font-size:7.5px;">1만원/인 × 9명(강사6+심판3) × 11회</td></tr>
-      <tr><td style="text-align:center;">3</td><td>본선 운영 스태프 식비</td><td style="text-align:right;">10</td><td style="text-align:center;">20</td><td style="text-align:center;">2</td><td style="text-align:right;">400</td><td style="text-align:center;">공동</td><td style="font-size:7.5px;">1만원/인 × 20명 × 2일</td></tr>
-      <tr><td style="text-align:center;">4</td><td>멘토 사전교육 식비</td><td style="text-align:right;">10</td><td style="text-align:center;">28</td><td style="text-align:center;">5</td><td style="text-align:right;">1,400</td><td style="text-align:center;">중앙대</td><td style="font-size:7.5px;">1만원/인 × 28명(멘토24+강사4) × 5일</td></tr>
-      <tr><td style="text-align:center;">5</td><td>기획 회의 간식비</td><td style="text-align:right;">○○</td><td style="text-align:center;">—</td><td style="text-align:center;">12회</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">월 2회 × 6개월 정기회의</td></tr>
-      <tr class="sub-total"><td colspan="5" style="text-align:center;">특근매식비 소계</td><td style="text-align:right;">○,○○○</td><td colspan="2"></td></tr>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td>예선 현장 스태프 식비</td>
+        <td style="text-align:right;">10</td>
+        <td style="text-align:center;">12</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">1,320</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7.5px;">1만원/인 × 12명 × 11회 (재단 지침 단가)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>예선 강사·심판 식비</td>
+        <td style="text-align:right;">10</td>
+        <td style="text-align:center;">9</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">990</td>
+        <td style="text-align:center;">핸즈온</td>
+        <td style="font-size:7.5px;">1만원/인 × 9명(강사6+심판3) × 11회</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>본선 운영 스태프 식비</td>
+        <td style="text-align:right;">10</td>
+        <td style="text-align:center;">20</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:right;">400</td>
+        <td style="text-align:center;">공동</td>
+        <td style="font-size:7.5px;">1만원/인 × 20명 × 2일</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td>멘토 사전교육 식비</td>
+        <td style="text-align:right;">10</td>
+        <td style="text-align:center;">28</td>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:right;">1,400</td>
+        <td style="text-align:center;">중앙대</td>
+        <td style="font-size:7.5px;">1만원/인 × 28명(멘토24+강사4) × 5일</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td>AI Future Festa 부스 운영 식비</td>
+        <td style="text-align:right;">10</td>
+        <td style="text-align:center;">6</td>
+        <td style="text-align:center;">3</td>
+        <td style="text-align:right;">180</td>
+        <td style="text-align:center;">공동</td>
+        <td style="font-size:7.5px;">1만원/인 × 6명(2사 합동) × 3일(DDP)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">6</td>
+        <td>기획 회의 간식비</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">—</td>
+        <td style="text-align:center;">18회</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">월 2회 × 9개월(4~12월) 정기회의</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="5" style="text-align:center;">특근매식비 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td colspan="2"></td>
+      </tr>
     </tbody>
   </table>
 
   <div class="highlight-box">
-    <div class="h-title">운영비 ① 편성 원칙</div>
+    <div class="h-title">운영비 ① 편성 핵심 원칙</div>
     <div class="h-body">
-      <b>① 최소 필요량 원칙:</b> 인쇄물·소모품은 참가자 수 + 여분 5%로 산정하여 과다 발주 방지.<br>
-      <b>② 식비 재단 기준 준수:</b> 1인 1식 10,000원 기준 적용 (한국과학창의재단 사업비 집행 지침).<br>
-      <b>③ 공공요금 실비 정산:</b> 대관 시설별 전기·통신비는 계약서 기반 실비로 정산하며, 사전 견적 확보.
+      <b>① 최소 필요량 원칙:</b> 인쇄물·소모품은 참가자 수 2,900명 + 여분 5%(150명분)으로 산정하여 과다 발주 방지.<br>
+      <b>② 식비 재단 기준 준수:</b> 1인 1식 10,000원 기준 적용 (ICT 기금 사업비 산정 지침).<br>
+      <b>③ 공공요금 실비 정산:</b> 대관 시설별 전기·통신비는 계약서 기반 실비로 정산하며, 사전 견적 확보.<br>
+      <b>④ 정산위탁수수료 필수:</b> 1,500천원을 일반수용비에 <b>필수 계상</b> (재단 지정 항목).<br>
+      <b>⑤ 부가가치세 처리:</b> 과세 기관은 공공요금·제세 항목에 부가가치세를 계상하되, PMS 입력 시 세전 금액으로 입력하여 시스템 자동 10% 가산과 일치시킴 (사업설명회 지침).
     </div>
   </div>
 
-  <div class="note-box">※ 견적서·단가 비교표 원본은 <b>붙임 15</b>에 수록</div>
+  <div class="note-box">
+    ※ 견적서·단가 비교표 원본은 <b>붙임 15</b>에 수록.<br>
+    ※ 사업기간 9개월(4~12월)을 기준으로 사무용품·통신비 등 기간 비례 항목을 산정함.<br>
+    ※ AI Future Festa 부스 운영 식비는 12월 DDP 3일간 운영 기준으로 산정(제안요청서 기준).
+  </div>
 
   <div class="page-num">- 27 -</div>
 </div>

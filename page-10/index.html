@@ -22,7 +22,6 @@
   .body-text b{color:#1E3A5F}
   .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
 
-  /* 문제 개요 테이블 */
   .prob-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
   .prob-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
   .prob-tbl td{border:1px solid #D0D8E0;padding:5px 6px;vertical-align:top}
@@ -34,7 +33,20 @@
   .tag-quant{background:#E3F2FD;color:#1565C0}
   .tag-ai{background:#F3E5F5;color:#7B1FA2}
 
-  /* 차별화 카드 */
+  /* 경기장 규격 박스 */
+  .spec-box{background:#E3F2FD;border:1px solid #90CAF9;border-radius:6px;padding:10px 14px;margin:8px 0;font-size:10px;line-height:165%}
+  .spec-box b{color:#1565C0}
+  .spec-box .spec-title{font-size:11px;font-weight:700;color:#1565C0;margin-bottom:4px}
+
+  /* 차별화 비교표 */
+  .compare-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:8px 0}
+  .compare-tbl th{padding:4px 6px;text-align:center;font-weight:700}
+  .compare-tbl th:first-child{background:#F0F4F8;color:#1E3A5F;width:18%}
+  .compare-tbl th:nth-child(2){background:#FFEBEE;color:#C62828;width:41%}
+  .compare-tbl th:nth-child(3){background:#E8F5E9;color:#2E7D32;width:41%}
+  .compare-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .compare-tbl tr:nth-child(even){background:#FAFBFC}
+
   .diff-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:8px 0}
   .diff-card{border:1px solid #E0E0E0;border-radius:5px;padding:7px 9px;font-size:9.5px;line-height:150%;background:#FAFBFC;border-top:3px solid #1E3A5F}
   .diff-card .dc-title{font-weight:700;color:#1E3A5F;font-size:10px;margin-bottom:2px}
@@ -55,7 +67,7 @@
 
   <div class="sec-header">
     <span class="sec-num">5</span>
-    <span class="sec-title">로보틱스 기초 기획 및 운영</span>
+    <span class="sec-title">청소년 로보틱스 챌린지 기획·운영 추진계획</span>
   </div>
 
   <table class="info-box">
@@ -65,18 +77,28 @@
     </tr>
     <tr>
       <td class="lb">사업설명회<br>강조사항</td>
-      <td class="hl">"<b>자율주행(Autonomous) 필수.</b> 조이스틱·원격조종은 선정 안 될 가능성 높음"</td>
+      <td class="hl">"<b>자율주행(Autonomous) 필수.</b> 조이스틱·원격조종은 선정 안 될 가능성 높음"<br>"경기장 규격: 가로 1,143mm(±50mm) × 세로 1,181mm(±50mm), 우측 하단 시작 구역 600×320mm"</td>
     </tr>
     <tr>
       <td class="lb">제안사<br>핵심포인트</td>
       <td class="pt">
         ① 3종 모두 <b>자율주행 기반 정량 평가</b> ⇒ 완료 시간+패널티 합산으로 순위 즉시 산출, 심사 편향 제로<br>
-        ② 초등 "해변 지킴이", 중학 "자원재활용", 고교 "교통 약자 보호" 등 <b>실생활 밀착 주제</b>로 "이게 왜 필요한지" 체감하며 문제 해결
+        ② 초등 "해변 지킴이", 중학 "자원재활용", 고교 "교통 약자 보호" 등 <b>SDGs 연계 실생활 밀착 주제</b>로 설계<br>
+        ③ 제안요청서 표준 경기장 규격을 100% 준수하되, 트랙별 미션 구조물로 차별화
       </td>
     </tr>
   </table>
 
   <h3>5-1. 예선 문제 개발</h3>
+
+  <!-- ★ 신규 추가: 경기장 표준 규격 박스 -->
+  <div class="spec-box">
+    <div class="spec-title">▸ 경기장 표준 규격 (제안요청서 준수)</div>
+    <b>경기장 평면:</b> 가로 <b>1,143mm</b>(±50mm) × 세로 <b>1,181mm</b>(±50mm)<br>
+    <b>시작 구역:</b> 우측 하단 가로 <b>600mm</b> × 세로 <b>320mm</b> — 로봇이 처음 놓이는 지역<br>
+    <b>구성 원칙:</b> 기본 보드 2매를 연결하여 평면을 구성하며, 필요에 따라 장애물·이동 대상 등을 배치하되 각 물품의 위치·색깔·규격을 구체적으로 표시함.<br>
+    <b>시작 방식:</b> 시작 구역 내에 로봇을 배치한 후 시작 버튼을 누르면 <b>자율주행(Autonomous)</b>으로 수행 — 일체의 외부 조작(조이스틱·원격조종) 불가
+  </div>
 
   <span class="label-mark">▸ 예선 대회 문제 개요</span>
 
@@ -97,7 +119,7 @@
         <td class="title-col">초등<br><br><span style="font-size:8px;color:#555;">지구를 지켜라!<br>해변 지킴이<br>로보독</span></td>
         <td style="font-size:8.5px;">
           <span class="tag tag-auto">자율주행</span><span class="tag tag-quant">정량평가</span><br><br>
-          4족 보행 로봇이 해변을 순찰하며 해양 쓰레기(빨간 큐브)를 리사이클링 구역으로 밀어넣고,
+          표준 경기장(1,143×1,181mm) 위에서 4족 보행 로봇이 해변을 순찰하며 해양 쓰레기(빨간 큐브)를 리사이클링 구역으로 밀어넣고,
           바다거북(초록 큐브)을 인식하여 인사 후 앉기 동작으로 마무리
         </td>
         <td style="font-size:8px;">
@@ -114,7 +136,7 @@
         <td class="title-col">중학<br><br><span style="font-size:8px;color:#555;">AI 클린시티<br>자원재활용<br>챌린지</span></td>
         <td style="font-size:8.5px;">
           <span class="tag tag-auto">자율주행</span><span class="tag tag-ai">AI비전</span><span class="tag tag-quant">정량평가</span><br><br>
-          AI 비전 카메라로 도로 주행(직진/좌/우) 모델을 학습시켜 레인 내 자율주행 수행.
+          표준 경기장(1,143×1,181mm) 위 도로맵에서 AI 비전 카메라로 도로 주행(직진/좌/우) 모델을 학습시켜 레인 내 자율주행 수행.
           신호등(빨강/초록) 인식하여 정지·재출발, 속도표시(30/70) 인식 감속·가속,
           돌발 장애물(사람모형) 10cm 이내 정지
         </td>
@@ -132,7 +154,7 @@
         <td class="title-col">고교<br><br><span style="font-size:8px;color:#555;">교통 약자 보호<br>AI 자율주행<br>챌린지</span></td>
         <td style="font-size:8.5px;">
           <span class="tag tag-auto">자율주행</span><span class="tag tag-ai">딥러닝</span><span class="tag tag-quant">정량평가</span><br><br>
-          도로 주행 맵(3,000×3,000mm)에서 AI 비전 카메라로 신호등·차단바·사람모형·속도표지판 인식.
+          표준 경기장(1,143×1,181mm) 2매 연결 확장맵(약 2,286×1,181mm)에서 AI 비전 카메라로 신호등·차단바·사람모형·속도표지판 인식.
           딥러닝 이미지 분류 모델을 직접 생성하여 자율주행 제어. SDGs 11.2(안전한 교통)을 주제로 교통 약자 보호 미션 수행
         </td>
         <td style="font-size:8px;">
@@ -148,12 +170,48 @@
   </table>
 
   <div class="note-box">
-    ※ 개발 배경, 규정·평가 세부사항, 경기장 맵 도면(축적 포함), 물품 위치·색상·규격, 수행 방법·패널티 규정, 시간 측정 방법, 채점 기준표 등 상세 내용은 <b>붙임 5</b>에 별도 수록함.<br>
-    ※ 예선 문제는 재단 전문가 피드백 후 <b>'26.4월 중 최종 확정</b> 예정이며, 제안서에는 문제 개요를 제안하되 확정 후 세부 조정 가능함.
+    ※ 경기장 도면(축적 포함), 물품 위치·색상·규격, 수행 방법·패널티 규정, 시간 측정 방법, 채점 기준표 등 상세 내용은 <b>붙임 5</b>에 별도 수록함.<br>
+    ※ 예선 문제는 재단 전문가 피드백 후 <b>'26.4월 중 최종 확정</b> 예정이며, 제안서에는 문제 개요를 제안하되 확정 후 세부 조정 가능함.<br>
+    ※ 고교 트랙은 표준 보드 2매를 연결한 확장맵을 사용하며, 초등·중학 트랙은 표준 보드 1매 기본 규격을 사용함.
   </div>
 
-  <!-- 출제 배경 & 차별화 -->
-  <span class="label-mark">▸ 문제 출제 배경 및 타 대회 대비 차별화</span>
+  <!-- ★ 신규 추가: 제안요청서 예시 대비 차별화 비교표 -->
+  <span class="label-mark">▸ 제안요청서 예시 대비 차별화 포인트</span>
+
+  <table class="compare-tbl">
+    <thead>
+      <tr>
+        <th>비교 항목</th>
+        <th>제안요청서 예시</th>
+        <th>본 제안 (차별화)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;">초등 주제</td>
+        <td style="font-size:8.5px;">우리 동네 안전 지킴이 / 스마트 분리수거<br>→ 단일 센서(초음파/컬러) 중심, 바퀴형 로봇</td>
+        <td style="font-size:8.5px;font-weight:700;color:#2E7D32;">해변 지킴이 로보독 (SDGs 14 해양 생태계)<br>→ <b>4족 보행</b>이라는 고유 모빌리티 + AI 색상인식 복합 미션. 스토리텔링 몰입도 강화</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">중학 주제</td>
+        <td style="font-size:8.5px;">라스트마일 정밀 배송 / 재난 구조 탐사<br>→ 라인트레이싱 + 장애물 회피, 규칙 기반 제어</td>
+        <td style="font-size:8.5px;font-weight:700;color:#2E7D32;">AI 클린시티 자원재활용 (기후 위기·환경)<br>→ <b>AI 비전 이미지 분류</b>로 사물을 스스로 판단하는 "인지→판단→제어" 전 과정 경험</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">고교 주제</td>
+        <td style="font-size:8.5px;">AI 자율주행 도로 인식 / 지능형 공정 품질 검수<br>→ 표지판 인식 기반 주행, 사전 학습 모델 활용</td>
+        <td style="font-size:8.5px;font-weight:700;color:#2E7D32;">교통 약자 보호 AI 자율주행 (SDGs 11)<br>→ 단순 '빠른 주행'이 아닌 <b>'보호 구역 준수·돌발 대응'</b> 등 윤리적 판단 포함. 딥러닝 모델 <b>직접 생성</b></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">공통 차별점</td>
+        <td style="font-size:8.5px;">단일 센서·단일 미션 구조<br>실생활 연결성 약함</td>
+        <td style="font-size:8.5px;font-weight:700;color:#2E7D32;"><b>SDGs 연계</b>로 "이게 왜 필요한지" 체감하며 문제 해결<br>트랙별 <b>복합 센서·복합 미션</b>으로 교육적 깊이 확보</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 출제 배경 & 차별화 카드 -->
+  <span class="label-mark">▸ 트랙별 출제 배경 및 교육적 차별화</span>
 
   <div class="diff-grid">
     <div class="diff-card">
@@ -179,6 +237,8 @@
     3개 트랙 모두 <b>자율주행 필수, 100% 정량 평가</b> 원칙을 관철함.
     초등(센서 기초·순차 조건문) → 중학(AI 비전·논리 제어) → 고교(딥러닝 모델 생성·융합 제어)의
     <b>3단계 수준별 심화 체계</b>로, 어떤 학교급이든 수준에 맞는 트랙이 존재하는 포용적 설계임.
+    모든 트랙의 경기장은 제안요청서 표준 규격(1,143×1,181mm)을 기본으로 하되,
+    고교 트랙은 미션 복잡도를 고려하여 2매 연결 확장맵을 사용함.
   </p>
 
   <div class="page-num">- 10 -</div>

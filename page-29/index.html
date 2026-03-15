@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>면수 29 – 여비·업무추진비·연구용역비</title>
+<title>면수 29 – 여비·업무추진비</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
@@ -15,6 +15,7 @@
   .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
   .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
   .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .hl{background:#FFFDE7}
   .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
   h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
   .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
@@ -24,10 +25,15 @@
   .cost-tbl th{background:#1E3A5F;color:#fff;padding:4px 5px;text-align:center;font-weight:700}
   .cost-tbl td{border:1px solid #D0D8E0;padding:3px 5px;vertical-align:top}
   .cost-tbl .sub-total td{background:#F0F4F8;font-weight:700;color:#1E3A5F}
+
+  .warn-box{background:#FFEBEE;border:1px solid #EF9A9A;border-radius:5px;padding:8px 12px;font-size:9.5px;line-height:155%;margin:8px 0}
+  .warn-box b{color:#C62828}
+
   .dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
   .dual-card{border:1px solid #D0D8E0;border-radius:6px;padding:12px;background:#FAFBFD}
   .dual-card .dc-title{font-size:11px;font-weight:700;color:#fff;background:#1E3A5F;padding:4px 10px;border-radius:4px;margin-bottom:6px;display:inline-block}
   .dual-card .dc-body{font-size:9.5px;line-height:160%;color:#333}
+
   .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
   .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
   .highlight-box .h-body{font-size:10px;line-height:165%}
@@ -46,16 +52,20 @@
 
   <div class="sec-header" style="margin-bottom:0;">
     <span class="sec-num">8</span>
-    <span class="sec-title">예산 계획 (계속)</span>
+    <span class="sec-title">예산계획 (계속)</span>
   </div>
 
   <table class="info-box">
-    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적정성(7) + 예산 집행 계획(5)</td></tr>
+    <tr><td class="lb">평가항목(배점)</td><td>집행 계획의 타당성(5)</td></tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"자체 출장 규정 없으면 공무원여비규정 준용. 컨소시엄 각 기관 여비 규정 사전 확인 필수"<br>"<b>강사 교통비는 자문료에 합산. 별도 여비 지급 시 이중집행으로 불인정</b>"</td>
+    </tr>
     <tr>
       <td class="lb">제안사<br>핵심포인트</td>
       <td class="pt">
-        ① 여비: 권역별 출장 횟수 × <b>재단 출장 여비 기준</b>(교통비+숙박비+일비)으로 산출<br>
-        ② 업무추진비: 정기 회의·현장 점검 등 <b>실소요 기반</b> 최소 편성<br>
+        ① 컨소시엄 내 각 기관의 여비 규정을 사전 확인·통일하여, 정산 시 기관 간 기준 불일치로 인한 <b>불인정 리스크를 사전 차단</b><br>
+        ② 여비는 <b>참여 인력(내부 인력)에게만</b> 지급 — 외부 강사·심판의 교통비는 전문가 자문료에 합산 (면수 26 참조)<br>
         ③ 본선 참가팀 교통비·숙박 지원으로 <b>지방 청소년의 경제적 진입장벽</b> 해소
       </td>
     </tr>
@@ -63,30 +73,121 @@
 
   <h3>8-5. 여비</h3>
 
-  <span class="label-mark">▸ 출장 여비 (운영 인력)</span>
+  <!-- ★ 이중집행 방지 경고 -->
+  <div class="warn-box">
+    <b>⚠ 외부 강사·심판 교통비 — 본 항목에 미계상:</b><br>
+    사업설명회 지침에 따라 외부 강사·심판의 교통비는 <b>면수 26 전문가 자문료 단가에 일괄 포함</b>하여 지급함.
+    본 여비 항목에서는 외부 강사·심판에 대한 교통비를 별도로 계상하지 않음 ⇒ <b>이중집행 리스크 원천 차단</b>.
+    여비는 <b>참여 인력(내부 인건비 대상자)에게만</b> 지급됨.
+  </div>
+
+  <span class="label-mark">▸ 출장 여비 (참여 인력 — 내부 인력만 해당)</span>
 
   <table class="cost-tbl">
     <thead>
       <tr>
         <th style="width:4%;">No</th>
         <th style="width:22%;">출장 목적</th>
-        <th style="width:8%;">인원</th>
-        <th style="width:8%;">횟수</th>
+        <th style="width:7%;">인원</th>
+        <th style="width:7%;">횟수</th>
         <th style="width:10%;">교통비<br>(천원)</th>
         <th style="width:10%;">숙박비<br>(천원)</th>
-        <th style="width:8%;">일비<br>(천원)</th>
-        <th style="width:12%;">소계(천원)</th>
-        <th style="width:18%;">기관</th>
+        <th style="width:7%;">일비<br>(천원)</th>
+        <th style="width:11%;">소계<br>(천원)</th>
+        <th style="width:8%;">기관</th>
+        <th style="width:14%;">비고</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td style="text-align:center;">1</td><td>예선 현장 관리 (PM)</td><td style="text-align:center;">2</td><td style="text-align:center;">11</td><td style="text-align:right;">○○</td><td style="text-align:right;">○○</td><td style="text-align:right;">20</td><td style="text-align:right;">○,○○○</td><td style="text-align:center;">블루</td></tr>
-      <tr><td style="text-align:center;">2</td><td>예선 장소 사전 답사</td><td style="text-align:center;">2</td><td style="text-align:center;">5</td><td style="text-align:right;">○○</td><td style="text-align:right;">○○</td><td style="text-align:right;">20</td><td style="text-align:right;">○○○</td><td style="text-align:center;">타임</td></tr>
-      <tr><td style="text-align:center;">3</td><td>예선 현장 운영 (타임 스태프)</td><td style="text-align:center;">5</td><td style="text-align:center;">11</td><td style="text-align:right;">○○</td><td style="text-align:right;">○○</td><td style="text-align:right;">20</td><td style="text-align:right;">○,○○○</td><td style="text-align:center;">타임</td></tr>
-      <tr><td style="text-align:center;">4</td><td>예선 강사·심판 출장</td><td style="text-align:center;">9</td><td style="text-align:center;">11</td><td style="text-align:right;">○○</td><td style="text-align:right;">○○</td><td style="text-align:right;">20</td><td style="text-align:right;">○,○○○</td><td style="text-align:center;">핸즈온</td></tr>
-      <tr><td style="text-align:center;">5</td><td>본선 운영 출장</td><td style="text-align:center;">10</td><td style="text-align:center;">2</td><td style="text-align:right;">○○</td><td style="text-align:right;">○○</td><td style="text-align:right;">20</td><td style="text-align:right;">○,○○○</td><td style="text-align:center;">공동</td></tr>
-      <tr><td style="text-align:center;">6</td><td>멘토 대면 교육 출장</td><td style="text-align:center;">24</td><td style="text-align:center;">1</td><td style="text-align:right;">○○</td><td style="text-align:right;">—</td><td style="text-align:right;">20</td><td style="text-align:right;">○○○</td><td style="text-align:center;">중앙대</td></tr>
-      <tr class="sub-total"><td colspan="7" style="text-align:center;">운영 인력 여비 소계</td><td style="text-align:right;">○○,○○○</td><td></td></tr>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td>예선 현장 관리 (PM)</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">20</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7px;">내부 인력</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>예선 장소 사전 답사</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">20</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7px;">내부 인력</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>예선 현장 운영 (타임 스태프)</td>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">20</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:center;">타임</td>
+        <td style="font-size:7px;">내부 인력</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td>콘텐츠·물류 관리 출장 (핸즈온)</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">20</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:center;">핸즈온</td>
+        <td style="font-size:7px;">내부 인력</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td>본선 운영 지원 출장</td>
+        <td style="text-align:center;">10</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">20</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:center;">공동</td>
+        <td style="font-size:7px;">내부 인력</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">6</td>
+        <td>멘토 대면 교육 출장 (중앙대)</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">20</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">중앙대</td>
+        <td style="font-size:7px;">내부 인력(교수·코디)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">7</td>
+        <td>AI Future Festa 부스 운영 출장</td>
+        <td style="text-align:center;">4</td>
+        <td style="text-align:center;">3</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:right;">20</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">공동</td>
+        <td style="font-size:7px;">내부 인력(12월 DDP)</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="7" style="text-align:center;">참여 인력 여비 소계</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td colspan="2"></td>
+      </tr>
     </tbody>
   </table>
 
@@ -104,13 +205,37 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td style="font-weight:700;">교통비 (지방팀)</td><td style="text-align:center;">비수도권</td><td style="text-align:right;">○○</td><td style="text-align:center;">○○명</td><td style="text-align:right;">○,○○○</td><td style="font-size:7.5px;">비수도권 본선 진출자 왕복 교통비 실비 (KTX 기준)</td></tr>
-      <tr><td style="font-weight:700;">숙박비 (원거리 팀)</td><td style="text-align:center;">편도 2시간+</td><td style="text-align:right;">○○</td><td style="text-align:center;">○○명</td><td style="text-align:right;">○,○○○</td><td style="font-size:7.5px;">본선 전일 숙박 1박, 비즈니스호텔 기준</td></tr>
-      <tr class="sub-total"><td colspan="4" style="text-align:center;">참가팀 지원 소계</td><td style="text-align:right;">○,○○○</td><td></td></tr>
+      <tr>
+        <td style="font-weight:700;">교통비 (지방팀)</td>
+        <td style="text-align:center;">비수도권</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">○○명</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">비수도권 본선 진출자 왕복 교통비 실비 (제안요청서 기준 단가 적용)</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">숙박비 (원거리 팀)</td>
+        <td style="text-align:center;">편도 2시간+</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">○○명</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">본선 전일 숙박 1박, 비즈니스호텔 기준</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="4" style="text-align:center;">참가팀 지원 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 
-  <h3 style="margin-top:10px;">업무추진비</h3>
+  <div class="note-box">
+    ※ 본선 참가팀 교통비 지급 기준 (제안요청서 기준):<br>
+    수도권(서울·인천·경기) 20,000원 / 충청·대전·강원 50,000원 / 경북·대구·전북 100,000원 / 전남·광주·경남·부산·울산 120,000원 / 제주·국외 실비(250,000원 이내)<br>
+    ※ 제주·국외 참가자는 이코노미석 항공료 실비 기준, 1인 25만원 이내. 지도교사(보호자)에게 일괄 지급.
+  </div>
+
+  <h3 style="margin-top:12px;">업무추진비</h3>
 
   <table class="cost-tbl">
     <thead>
@@ -125,10 +250,38 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td style="text-align:center;">1</td><td>정기 운영위원회 회의비</td><td style="text-align:right;">○○</td><td style="text-align:center;">12</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">월 2회 × 6개월, 다과·음료</td></tr>
-      <tr><td style="text-align:center;">2</td><td>컨소시엄 합동 회의비</td><td style="text-align:right;">○○○</td><td style="text-align:center;">3</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">4개 기관 합동 (착수·중간·종료)</td></tr>
-      <tr><td style="text-align:center;">3</td><td>현장 점검 운영비</td><td style="text-align:right;">○○</td><td style="text-align:center;">5</td><td style="text-align:right;">○○○</td><td style="text-align:center;">블루</td><td style="font-size:7.5px;">주요 권역 사전 답사 시 점검 비용</td></tr>
-      <tr class="sub-total"><td colspan="4" style="text-align:center;">업무추진비 소계</td><td style="text-align:right;">○,○○○</td><td colspan="2"></td></tr>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td>정기 운영위원회 회의비</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">18</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">월 2회 × 9개월(4~12월), 다과·음료</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>컨소시엄 합동 회의비</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">4</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">4개 기관 합동 (착수·중간·본선 전·종료)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>현장 점검 운영비</td>
+        <td style="text-align:right;">○○</td>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:center;">블루</td>
+        <td style="font-size:7.5px;">주요 권역 사전 답사 시 점검 비용</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="4" style="text-align:center;">업무추진비 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td colspan="2"></td>
+      </tr>
     </tbody>
   </table>
 
@@ -136,9 +289,10 @@
     <div class="dual-card">
       <span class="dc-title">여비 산출 기준</span>
       <div class="dc-body">
+        <b>적용 규정:</b> 각 기관 자체 출장 규정 우선 적용. 자체 규정 미보유 시 공무원여비규정 준용<br>
         <b>교통비:</b> KTX 일반실 기준 실비 정산<br>
         <b>숙박비:</b> 1박 ○○천원 이내 (비즈니스호텔 기준)<br>
-        <b>일비:</b> 1일 20천원 (재단 지침 준용)<br>
+        <b>일비:</b> 1일 20천원<br>
         <b>정산 방식:</b> 영수증 실비 정산 원칙
       </div>
     </div>
@@ -148,21 +302,27 @@
         <b>사전 승인:</b> 출장 전 PM 승인 필수<br>
         <b>카드 결제:</b> 법인카드 사용 원칙<br>
         <b>월간 정산:</b> 매월 말 집행 내역 보고<br>
-        <b>증빙 보관:</b> 5년간 증빙 서류 보관
+        <b>증빙 보관:</b> 5년간 증빙 서류 보관<br>
+        <b>여비 규정 통일:</b> 컨소시엄 4개 기관의 여비 규정을 사전 확인·대조 완료
       </div>
     </div>
   </div>
 
   <div class="highlight-box">
-    <div class="h-title">참가팀 교통비 지원 의의</div>
+    <div class="h-title">여비 편성 핵심 원칙</div>
     <div class="h-body">
-      지방 거주 청소년의 <b>경제적 진입장벽</b>을 해소하여 본선 참가 포기율을 최소화함.
-      비수도권 본선 진출팀에 교통비·숙박비를 지원함으로써 <b>지역 균형 참여</b>라는 사업 목표에 직접 기여.
-      이는 면수 15(권역 설계)의 "비수도권 55%+" 목표와 연동되는 예산 조치임.
+      <b>① 참여 인력 한정:</b> 여비는 <b>내부 인건비 대상 참여 인력에게만</b> 지급됨. 외부 강사·심판의 교통비는 전문가 자문료에 포함(면수 26) ⇒ 이중집행 원천 차단.<br>
+      <b>② 여비 규정 사전 통일:</b> 컨소시엄 내 각 기관(블루·타임·핸즈온·중앙대)의 출장 여비 규정을 사전 확인하여, 정산 시 기관 간 기준 불일치로 인한 불인정 리스크를 사전 차단함.<br>
+      <b>③ 참가팀 여비 지원:</b> 비수도권 본선 진출팀에 교통비·숙박비를 지원함으로써 <b>지역 균형 참여</b>라는 사업 목표에 직접 기여. 면수 15(권역 설계)의 "비수도권 배분" 목표와 연동되는 예산 조치임.<br>
+      <b>④ Festa 출장 반영:</b> 12월 AI Future Festa 부스 운영(서울 DDP, 3일)에 대한 내부 인력 출장비를 별도 계상하여 사업기간(~12.15) 내 전체 활동을 빠짐없이 반영함.
     </div>
   </div>
 
-  <div class="note-box">※ 출장 여비 정산 양식, 참가팀 지원 신청서 양식은 <b>붙임 17</b>에 수록</div>
+  <div class="note-box">
+    ※ 출장 여비 정산 양식, 참가팀 지원 신청서 양식은 <b>붙임 17</b>에 수록.<br>
+    ※ 면수 26(인건비)의 외부 강사·심판 자문료에 교통비가 포함되어 있으므로, 본 항목에서는 외부 강사·심판에 대한 별도 교통비를 <b>미계상</b>함.<br>
+    ※ 만족도 조사 연구용역은 면수 25 총괄표의 "연구용역비" 항목에 별도 편성됨.
+  </div>
 
   <div class="page-num">- 29 -</div>
 </div>

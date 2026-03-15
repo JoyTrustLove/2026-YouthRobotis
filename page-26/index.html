@@ -15,6 +15,7 @@
   .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
   .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
   .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .hl{background:#FFFDE7}
   .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
   h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
   .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
@@ -26,6 +27,10 @@
   .hr-tbl .org{background:#EEF2F7;font-weight:700;color:#1E3A5F;text-align:center}
   .hr-tbl .sub-total td{background:#F0F4F8;font-weight:700;color:#1E3A5F}
   .hr-tbl .total-row td{background:#1E3A5F;color:#fff;font-weight:700}
+
+  .warn-box{background:#FFEBEE;border:1px solid #EF9A9A;border-radius:5px;padding:8px 12px;font-size:9.5px;line-height:155%;margin:8px 0}
+  .warn-box b{color:#C62828}
+
   .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
   .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
   .highlight-box .h-body{font-size:10px;line-height:165%}
@@ -44,22 +49,34 @@
 
   <div class="sec-header" style="margin-bottom:0;">
     <span class="sec-num">8</span>
-    <span class="sec-title">예산 계획 (계속)</span>
+    <span class="sec-title">예산계획 (계속)</span>
   </div>
 
   <table class="info-box">
-    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적정성(7)</td></tr>
+    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적절성(5)</td></tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"보수(인건비) 외 참여 인력 수당 지급 불가. 회사 수익은 인건비로 처리"<br>"<b>강사 교통비는 자문료에 합산. 별도 여비 지급 시 이중집행으로 불인정</b>"</td>
+    </tr>
     <tr>
       <td class="lb">제안사<br>핵심포인트</td>
       <td class="pt">
-        ① 기관별·직급별 <b>인건비 단가 × 투입 개월 수</b>를 명세표로 투명하게 제시<br>
-        ② 외부 인건비(강사·심판·멘토)는 <b>시간당 단가 × 횟수</b>로 산출 근거를 명시<br>
-        ③ 4대 보험·퇴직급여 등 <b>법정 부담금</b>을 별도 계상하여 실제 소요액 반영
+        ① 핵심 인력의 본과제 참여율+타과제 참여율 합산이 <b>100% 이내로 검증 완료</b> ⇒ 정산 시 불인정 리스크 없는 투명한 인건비 설계<br>
+        ② 외부 강사·심판의 교통비를 <b>전문가 자문료에 일괄 합산</b>하여 이중집행 리스크를 원천 차단 (사업설명회 지침 준수)<br>
+        ③ 일용임금(예선 현장 운영 보조 등)의 산정 기준을 일당·인원·횟수로 명확히 분해하여 정산 근거 사전 확보
       </td>
     </tr>
   </table>
 
   <h3>8-2. 인건비 소요명세</h3>
+
+  <!-- ★ 이중집행 방지 경고 박스 -->
+  <div class="warn-box">
+    <b>⚠ 이중집행 방지 원칙 (사업설명회 지침):</b><br>
+    외부 강사·심판의 교통비는 <b>전문가 자문료 단가에 일괄 포함</b>하여 지급함.
+    별도의 여비 항목으로 외부 강사에게 교통비를 추가 지급하지 않음.
+    이를 통해 이중집행 리스크를 원천 차단하며, ICT 기금 정산 기준에 완전 부합함.
+  </div>
 
   <span class="label-mark">▸ 내부 인건비 (참여 연구원·기획인력)</span>
 
@@ -69,11 +86,12 @@
         <th style="width:10%;">기관</th>
         <th style="width:14%;">직위·역할</th>
         <th style="width:10%;">성명</th>
-        <th style="width:8%;">참여율</th>
-        <th style="width:8%;">기간(월)</th>
-        <th style="width:12%;">월 단가(천원)</th>
-        <th style="width:12%;">소계(천원)</th>
-        <th style="width:26%;">산출 근거</th>
+        <th style="width:8%;">참여율<br>(본)</th>
+        <th style="width:8%;">참여율<br>(타)</th>
+        <th style="width:6%;">기간<br>(월)</th>
+        <th style="width:12%;">월 단가<br>(천원)</th>
+        <th style="width:12%;">소계<br>(천원)</th>
+        <th style="width:20%;">산출 근거</th>
       </tr>
     </thead>
     <tbody>
@@ -82,126 +100,134 @@
         <td style="text-align:center;">PM (총괄)</td>
         <td style="text-align:center;">○○○</td>
         <td style="text-align:center;">100%</td>
+        <td style="text-align:center;">0%</td>
         <td style="text-align:center;">6</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
-        <td style="font-size:7.5px;">경력 10년+, 사업 총괄 관리·재단 대응</td>
+        <td style="font-size:7.5px;">경력 10년+, 사업 총괄·재단 대응. 참여율 합산 100% ✔</td>
       </tr>
       <tr>
         <td style="text-align:center;">기획 담당</td>
         <td style="text-align:center;">○○○</td>
         <td style="text-align:center;">80%</td>
+        <td style="text-align:center;">20%</td>
         <td style="text-align:center;">6</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">예산 관리·정산·보고서 작성</td>
+        <td style="font-size:7.5px;">예산 관리·정산·보고서. 참여율 합산 100% ✔</td>
       </tr>
       <tr>
         <td class="org" rowspan="3">타임</td>
         <td style="text-align:center;">모집 팀장</td>
         <td style="text-align:center;">○○○</td>
         <td style="text-align:center;">100%</td>
+        <td style="text-align:center;">0%</td>
         <td style="text-align:center;">5</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
-        <td style="font-size:7.5px;">전국 모집 총괄, 권역별 현장 관리</td>
+        <td style="font-size:7.5px;">전국 모집 총괄, 권역별 현장 관리. 참여율 합산 100% ✔</td>
       </tr>
       <tr>
         <td style="text-align:center;">운영 담당 (5명)</td>
         <td style="text-align:center;">○○○ 외</td>
         <td style="text-align:center;">80%</td>
+        <td style="text-align:center;">20%</td>
         <td style="text-align:center;">4</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
-        <td style="font-size:7.5px;">5명 × 4개월 × 80%, 권역별 현장 운영</td>
+        <td style="font-size:7.5px;">5명×4개월×80%, 권역별 현장 운영. 참여율 합산 100% ✔</td>
       </tr>
       <tr>
         <td style="text-align:center;">홍보 담당</td>
         <td style="text-align:center;">○○○</td>
         <td style="text-align:center;">60%</td>
+        <td style="text-align:center;">40%</td>
         <td style="text-align:center;">4</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">SNS·학교 공문·학원 네트워크 운영</td>
+        <td style="font-size:7.5px;">SNS·학교·학원 네트워크. 참여율 합산 100% ✔</td>
       </tr>
       <tr>
         <td class="org" rowspan="2">핸즈온</td>
         <td style="text-align:center;">콘텐츠 개발 팀장</td>
         <td style="text-align:center;">○○○</td>
         <td style="text-align:center;">100%</td>
+        <td style="text-align:center;">0%</td>
         <td style="text-align:center;">6</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
-        <td style="font-size:7.5px;">교육·문제 개발 총괄, 로봇 관리</td>
+        <td style="font-size:7.5px;">교육·문제 개발 총괄, 로봇 관리. 참여율 합산 100% ✔</td>
       </tr>
       <tr>
         <td style="text-align:center;">기술 담당</td>
         <td style="text-align:center;">○○○</td>
         <td style="text-align:center;">80%</td>
+        <td style="text-align:center;">20%</td>
         <td style="text-align:center;">5</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">로봇 펌웨어·채점 시스템 개발</td>
+        <td style="font-size:7.5px;">로봇 펌웨어·채점 시스템 개발. 참여율 합산 100% ✔</td>
       </tr>
       <tr>
         <td class="org">중앙대</td>
         <td style="text-align:center;">멘토링 총괄 교수</td>
         <td style="text-align:center;">○○○</td>
         <td style="text-align:center;">30%</td>
+        <td style="text-align:center;">70%</td>
         <td style="text-align:center;">4</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">멘토단 관리·교육 품질 자문</td>
+        <td style="font-size:7.5px;">멘토단 관리·교육 품질 자문. 참여율 합산 100% ✔</td>
       </tr>
       <tr class="sub-total">
-        <td colspan="6" style="text-align:center;">내부 인건비 소계</td>
+        <td colspan="7" style="text-align:center;">내부 인건비 소계</td>
         <td style="text-align:right;">○○,○○○</td>
         <td></td>
       </tr>
     </tbody>
   </table>
 
-  <span class="label-mark">▸ 외부 인건비 (강사·심판·멘토)</span>
+  <span class="label-mark">▸ 외부 인건비 (강사·심판·멘토) — 교통비 포함 단가</span>
 
   <table class="hr-tbl">
     <thead>
       <tr>
         <th style="width:14%;">구분</th>
-        <th style="width:10%;">인원</th>
-        <th style="width:12%;">단가(천원)</th>
-        <th style="width:10%;">횟수/일수</th>
-        <th style="width:12%;">시간/일</th>
+        <th style="width:8%;">인원</th>
+        <th style="width:14%;">단가(천원)<br><span style="font-size:7px;font-weight:400;">※ 교통비 포함</span></th>
+        <th style="width:8%;">횟수<br>/일수</th>
+        <th style="width:10%;">시간/일</th>
         <th style="width:14%;">소계(천원)</th>
-        <th style="width:28%;">산출 근거</th>
+        <th style="width:32%;">산출 근거</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td style="font-weight:700;">예선 강사</td>
         <td style="text-align:center;">33명</td>
-        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">○○○/시간<br><span style="font-size:7px;color:#C62828;">교통비 합산</span></td>
         <td style="text-align:center;">11회</td>
         <td style="text-align:center;">3시간</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">트랙당 강사 3명 × 11회 × 3시간</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="font-size:7.5px;">트랙당 강사 3명×11회×3시간. <b>교통비를 자문료에 포함</b>하여 별도 여비 미지급 (사업설명회 지침)</td>
       </tr>
       <tr>
         <td style="font-weight:700;">예선 심판</td>
         <td style="text-align:center;">22명</td>
-        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">○○○/시간<br><span style="font-size:7px;color:#C62828;">교통비 합산</span></td>
         <td style="text-align:center;">11회</td>
         <td style="text-align:center;">2시간</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">트랙당 심판 2명 × 11회 × 2시간</td>
+        <td style="font-size:7.5px;">트랙당 심판 2명×11회×2시간. <b>교통비를 자문료에 포함</b></td>
       </tr>
       <tr>
         <td style="font-weight:700;">본선 심판</td>
         <td style="text-align:center;">9명</td>
-        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">○○○/시간<br><span style="font-size:7px;color:#C62828;">교통비 합산</span></td>
         <td style="text-align:center;">2일</td>
         <td style="text-align:center;">6시간</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">트랙당 심판 3명 × 2일 × 6시간</td>
+        <td style="font-size:7.5px;">트랙당 심판 3명×2일×6시간. <b>교통비를 자문료에 포함</b></td>
       </tr>
       <tr>
         <td style="font-weight:700;">멘토 활동비</td>
@@ -209,17 +235,26 @@
         <td style="text-align:center;">○○○/주</td>
         <td style="text-align:center;">4주</td>
         <td style="text-align:center;">—</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">멘토 24명 × 4주 × 주당 활동비</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="font-size:7.5px;">멘토 24명×4주×주당 활동비. 온라인 중심 운영으로 교통비 최소화</td>
       </tr>
       <tr>
         <td style="font-weight:700;">멘토 사전교육 강사</td>
         <td style="text-align:center;">4명</td>
-        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">○○○/시간<br><span style="font-size:7px;color:#C62828;">교통비 합산</span></td>
         <td style="text-align:center;">5일</td>
         <td style="text-align:center;">3시간</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="font-size:7.5px;">외부 전문가 4명 × 5일 × 3시간</td>
+        <td style="font-size:7.5px;">외부 전문가 4명×5일×3시간. <b>교통비를 자문료에 포함</b></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">일용임금<br>(예선 현장 보조)</td>
+        <td style="text-align:center;">44명</td>
+        <td style="text-align:center;">○○○/일</td>
+        <td style="text-align:center;">11회</td>
+        <td style="text-align:center;">1일</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">회차당 보조 4명×11회×일당. 등록·안내·교구 배부·회수 업무</td>
       </tr>
       <tr class="sub-total">
         <td colspan="5" style="text-align:center;">외부 인건비 소계</td>
@@ -258,13 +293,18 @@
   <div class="highlight-box">
     <div class="h-title">인건비 편성 핵심 원칙</div>
     <div class="h-body">
-      <b>① 실참여율 기반:</b> 각 인력의 실제 투입 비율(30~100%)을 반영하여 과다 계상을 방지.<br>
-      <b>② 외부 인건비 시장 단가:</b> 강사·심판 단가는 한국과학창의재단 외부 전문가 수당 기준을 준용.<br>
-      <b>③ 멘토 활동비 적정성:</b> 대학원생 생활비 수준을 감안하되, 주당 실활동 시간(6~8시간)에 비례 책정.
+      <b>① 실참여율 기반:</b> 각 인력의 본과제+타과제 참여율 합산이 <b>100% 이내</b>임을 검증하여 과다 계상을 방지함.<br>
+      <b>② 강사 교통비 자문료 합산:</b> 사업설명회 지침에 따라 외부 강사·심판의 교통비를 <b>전문가 자문료에 일괄 포함</b>하여 지급. 별도 여비 항목으로 외부 강사에게 교통비를 추가 지급하지 않음 ⇒ <b>이중집행 리스크 원천 차단</b>.<br>
+      <b>③ 일용임금 명확 분해:</b> 일당 × 인원 × 횟수로 산출 근거를 사전 확보하여 정산 시 즉시 검증 가능.<br>
+      <b>④ 참여 인력 수당 불가:</b> 보수(인건비) 외 참여 인력에 대한 별도 수당 지급 불가 (사업설명회 지침 준수).
     </div>
   </div>
 
-  <div class="note-box">※ 인건비 단가표 원본 및 4대 보험 요율 근거 자료는 <b>붙임 14</b>에 수록</div>
+  <div class="note-box">
+    ※ 인건비 단가표 원본 및 4대 보험 요율 근거 자료는 <b>붙임 14</b>에 수록.<br>
+    ※ 면수 29(여비) 항목에서 외부 강사·심판에 대한 별도 교통비는 <b>미계상</b>함 (본 면수의 자문료에 포함).<br>
+    ※ 참여 인력 이력사항 및 개인정보 동의서는 <b>붙임 3, 붙임 4</b>에 별도 첨부.
+  </div>
 
   <div class="page-num">- 26 -</div>
 </div>

@@ -20,16 +20,22 @@
   .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
   .body-text b{color:#1E3A5F}
   .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
-  .gantt-tbl{width:100%;border-collapse:collapse;font-size:8px;line-height:130%;margin:6px 0}
-  .gantt-tbl th{background:#1E3A5F;color:#fff;padding:4px 3px;text-align:center;font-weight:700}
-  .gantt-tbl td{border:1px solid #D0D8E0;padding:3px;text-align:center;vertical-align:middle;height:16px}
-  .gantt-tbl .task{text-align:left;font-weight:600;font-size:8.5px;padding-left:6px;white-space:nowrap}
-  .bar-recruit{background:#27ae60;border-radius:3px;height:10px}
-  .bar-edu{background:#2196F3;border-radius:3px;height:10px}
-  .bar-prelim{background:#E07C38;border-radius:3px;height:10px}
-  .bar-mentor{background:#7B3FA0;border-radius:3px;height:10px}
-  .bar-final{background:#e74c3c;border-radius:3px;height:10px}
-  .bar-admin{background:#999;border-radius:3px;height:10px}
+
+  /* 간트 테이블 */
+  .gantt-tbl{width:100%;border-collapse:collapse;font-size:7px;line-height:120%;margin:6px 0}
+  .gantt-tbl th{background:#1E3A5F;color:#fff;padding:3px 2px;text-align:center;font-weight:700}
+  .gantt-tbl td{border:1px solid #D0D8E0;padding:2px 1px;text-align:center;vertical-align:middle;height:14px}
+  .gantt-tbl .task{text-align:left;font-weight:600;font-size:7.5px;padding-left:4px;white-space:nowrap}
+  .bar-prep{background:#1E3A5F;border-radius:3px;height:9px}
+  .bar-recruit{background:#27ae60;border-radius:3px;height:9px}
+  .bar-edu{background:#2196F3;border-radius:3px;height:9px}
+  .bar-prelim{background:#E07C38;border-radius:3px;height:9px}
+  .bar-mentor{background:#7B3FA0;border-radius:3px;height:9px}
+  .bar-final{background:#e74c3c;border-radius:3px;height:9px}
+  .bar-festa{background:#f39c12;border-radius:3px;height:9px}
+  .bar-admin{background:#999;border-radius:3px;height:9px}
+
+  /* 리스크 테이블 */
   .risk-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
   .risk-tbl th{background:#e74c3c;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
   .risk-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
@@ -37,6 +43,7 @@
   .sev-high{background:#e74c3c}
   .sev-mid{background:#f39c12}
   .sev-low{background:#27ae60}
+
   .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
   .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
   .highlight-box .h-body{font-size:10px;line-height:165%}
@@ -55,115 +62,214 @@
 
   <div class="sec-header" style="margin-bottom:0;">
     <span class="sec-num">6</span>
-    <span class="sec-title">멘토링 및 성과관리 (계속)</span>
+    <span class="sec-title">청소년 로보틱스 챌린지 성과 확산 추진계획 (계속)</span>
   </div>
 
   <table class="info-box">
-    <tr><td class="lb">평가항목(배점)</td><td>사업 일정의 적절성(5) + 위험 관리 체계(3)</td></tr>
+    <tr><td class="lb">평가항목(배점)</td><td>사업 운영 계획의 실현 가능성(5) + 사업 관리의 적절성(8)</td></tr>
     <tr>
       <td class="lb">제안사<br>핵심포인트</td>
       <td class="pt">
-        ① <b>간트차트</b>로 5월~10월 전체 일정을 주 단위 시각화<br>
-        ② 일정 지연·인력 이탈·예산 초과 등 <b>5대 전략 리스크</b>에 대한 대응 매트릭스 제시<br>
-        ③ 주요 마일스톤별 <b>체크포인트</b>를 설정하여 프로젝트 진척도를 실시간 관리
+        ① 사업기간 <b>협약체결일 ~ 2026.12.15.</b>의 전체 일정을 <b>4~12월 간트차트</b>로 주 단위 시각화<br>
+        ② 4월 착수 → 6~8월 예선 순회 → 11월 본선 → 12월 Festa·정산까지, 물류 순환·권역 배분이 현실적으로 작동하는 것을 검증한 일정<br>
+        ③ 모집 미달·물류 지연·본선 문제 미확정 등 <b>5대 전략 리스크</b>에 대해 구체적 대응 방안 사전 수립
       </td>
     </tr>
   </table>
 
-  <h3>6-4. 추진일정 간트차트</h3>
+  <h3>6-4. 추진일정 간트차트 (협약체결일 ~ 2026.12.15.)</h3>
 
+  <!-- ★ 간트차트: 4~12월 9개월, 36주 -->
   <table class="gantt-tbl">
     <thead>
       <tr>
-        <th style="width:22%;" rowspan="2">업무</th>
-        <th style="width:8%;" rowspan="2">담당</th>
+        <th style="width:16%;" rowspan="2">업무</th>
+        <th style="width:5%;" rowspan="2">담당</th>
+        <th colspan="4">4월</th>
         <th colspan="4">5월</th>
         <th colspan="4">6월</th>
         <th colspan="5">7월</th>
         <th colspan="4">8월</th>
         <th colspan="4">9월</th>
-        <th colspan="3">10월</th>
+        <th colspan="4">10월</th>
+        <th colspan="4">11월</th>
+        <th colspan="3">12월</th>
       </tr>
       <tr>
         <th>1</th><th>2</th><th>3</th><th>4</th>
         <th>1</th><th>2</th><th>3</th><th>4</th>
+        <th>1</th><th>2</th><th>3</th><th>4</th>
         <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+        <th>1</th><th>2</th><th>3</th><th>4</th>
+        <th>1</th><th>2</th><th>3</th><th>4</th>
         <th>1</th><th>2</th><th>3</th><th>4</th>
         <th>1</th><th>2</th><th>3</th><th>4</th>
         <th>1</th><th>2</th><th>3</th>
       </tr>
     </thead>
     <tbody>
+      <!-- 1. 착수·콘텐츠 개발: 4월 1주~5월 4주 -->
+      <tr>
+        <td class="task">착수·문제·교육 개발</td>
+        <td style="font-size:6px;">공동</td>
+        <td colspan="4"><div class="bar-prep"></div></td>
+        <td colspan="4"><div class="bar-edu"></div></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td>
+      </tr>
+      <!-- 2. 홍보·모집: 4월 3주~6월 2주 -->
       <tr>
         <td class="task">홍보·모집</td>
-        <td style="font-size:7px;">타임</td>
+        <td style="font-size:6px;">타임</td>
+        <td></td><td></td>
+        <td colspan="2"><div class="bar-recruit"></div></td>
         <td colspan="4"><div class="bar-recruit"></div></td>
         <td colspan="2"><div class="bar-recruit"></div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td>
       </tr>
+      <!-- 3. 강사 역량강화: 5월 3주~6월 2주 -->
       <tr>
-        <td class="task">교육 콘텐츠 개발</td>
-        <td style="font-size:7px;">핸즈온</td>
-        <td colspan="4"><div class="bar-edu"></div></td>
-        <td colspan="4"><div class="bar-edu"></div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td class="task">예선 교육 실시</td>
-        <td style="font-size:7px;">공동</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
+        <td class="task">강사·심판 역량강화</td>
+        <td style="font-size:6px;">핸즈온</td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td>
         <td colspan="2"><div class="bar-edu"></div></td>
         <td colspan="2"><div class="bar-edu"></div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td>
       </tr>
+      <!-- 4. 예선 대회(11회): 6월 3주~8월 4주 -->
       <tr>
         <td class="task">예선 대회 (11회)</td>
-        <td style="font-size:7px;">타임</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-        <td colspan="3"><div class="bar-prelim"></div></td>
+        <td style="font-size:6px;">타임·핸즈온</td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td>
         <td colspan="2"><div class="bar-prelim"></div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td colspan="5"><div class="bar-prelim"></div></td>
+        <td colspan="4"><div class="bar-prelim"></div></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td>
       </tr>
+      <!-- 5. 본선 진출팀 교육: 9월 1주~10월 2주 -->
       <tr>
-        <td class="task">멘토 선발·교육</td>
-        <td style="font-size:7px;">중앙대</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td>
-        <td colspan="2"><div class="bar-mentor"></div></td>
-        <td colspan="2"><div class="bar-mentor"></div></td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td class="task">본선 진출팀 교육(4차시+)</td>
+        <td style="font-size:6px;">핸즈온</td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td colspan="4"><div class="bar-edu"></div></td>
+        <td colspan="2"><div class="bar-edu"></div></td>
+        <td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td>
       </tr>
+      <!-- 6. 멘토링(문제해결+공모전): 9월~10월 -->
       <tr>
-        <td class="task">본선 멘토링 (4주)</td>
-        <td style="font-size:7px;">중앙대</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td class="task">멘토링(문제해결+공모전)</td>
+        <td style="font-size:6px;">중앙대</td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
         <td colspan="4"><div class="bar-mentor"></div></td>
-        <td colspan="2"><div class="bar-mentor"></div></td>
+        <td colspan="4"><div class="bar-mentor"></div></td>
+        <td></td><td></td><td></td><td></td>
         <td></td><td></td><td></td>
       </tr>
+      <!-- 7. 본선 대회: 11월 2~3주 -->
       <tr>
-        <td class="task">본선 대회</td>
-        <td style="font-size:7px;">공동</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td class="task">본선 대회 (재단 주관)</td>
+        <td style="font-size:6px;">재단+공동</td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td>
         <td colspan="2"><div class="bar-final"></div></td>
+        <td></td>
         <td></td><td></td><td></td>
       </tr>
+      <!-- 8. AI Future Festa: 12월 1~2주 -->
       <tr>
-        <td class="task">정산·성과보고</td>
-        <td style="font-size:7px;">블루</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+        <td class="task">AI Future Festa 부스</td>
+        <td style="font-size:6px;">공동</td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td colspan="2"><div class="bar-festa"></div></td>
+        <td></td>
+      </tr>
+      <!-- 9. 정산·최종보고: 12월 초~15일 -->
+      <tr>
+        <td class="task">정산·최종보고(~12.15)</td>
+        <td style="font-size:6px;">블루</td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
         <td colspan="3"><div class="bar-admin"></div></td>
       </tr>
     </tbody>
   </table>
 
-  <p class="body-text">
-    간트차트 범례: <span style="display:inline-block;width:12px;height:8px;background:#27ae60;border-radius:2px;vertical-align:middle;"></span> 모집 &nbsp;
-    <span style="display:inline-block;width:12px;height:8px;background:#2196F3;border-radius:2px;vertical-align:middle;"></span> 교육 &nbsp;
-    <span style="display:inline-block;width:12px;height:8px;background:#E07C38;border-radius:2px;vertical-align:middle;"></span> 예선 &nbsp;
-    <span style="display:inline-block;width:12px;height:8px;background:#7B3FA0;border-radius:2px;vertical-align:middle;"></span> 멘토링 &nbsp;
-    <span style="display:inline-block;width:12px;height:8px;background:#e74c3c;border-radius:2px;vertical-align:middle;"></span> 본선 &nbsp;
-    <span style="display:inline-block;width:12px;height:8px;background:#999;border-radius:2px;vertical-align:middle;"></span> 정산
+  <p class="body-text" style="font-size:9px;text-indent:0;margin-top:4px;">
+    범례:
+    <span style="display:inline-block;width:10px;height:7px;background:#1E3A5F;border-radius:2px;vertical-align:middle;"></span> 착수 &nbsp;
+    <span style="display:inline-block;width:10px;height:7px;background:#27ae60;border-radius:2px;vertical-align:middle;"></span> 모집 &nbsp;
+    <span style="display:inline-block;width:10px;height:7px;background:#2196F3;border-radius:2px;vertical-align:middle;"></span> 교육·개발 &nbsp;
+    <span style="display:inline-block;width:10px;height:7px;background:#E07C38;border-radius:2px;vertical-align:middle;"></span> 예선 &nbsp;
+    <span style="display:inline-block;width:10px;height:7px;background:#7B3FA0;border-radius:2px;vertical-align:middle;"></span> 멘토링 &nbsp;
+    <span style="display:inline-block;width:10px;height:7px;background:#e74c3c;border-radius:2px;vertical-align:middle;"></span> 본선 &nbsp;
+    <span style="display:inline-block;width:10px;height:7px;background:#f39c12;border-radius:2px;vertical-align:middle;"></span> Festa &nbsp;
+    <span style="display:inline-block;width:10px;height:7px;background:#999;border-radius:2px;vertical-align:middle;"></span> 정산
   </p>
+
+  <!-- 마일스톤 6개 -->
+  <div class="highlight-box">
+    <div class="h-title">마일스톤 체크포인트 (6개)</div>
+    <div class="h-body">
+      <b>CP1 (5월 말):</b> 모집률 30%+ 달성 확인 → 미달 시 타겟 광고 추가 집행 결정<br>
+      <b>CP2 (6월 중):</b> 예선 문제·교육 콘텐츠 최종 확정(재단 피드백 반영) + 모집률 80%+ → 예선 개시 승인<br>
+      <b>CP3 (8월 말):</b> 예선 11회 완료 + 2,900명 달성 확인 → 본선 진출 68팀(초38/중15/고15) 확정·보고<br>
+      <b>CP4 (10월 말):</b> 본선 교육 4차시+ 완료 + 멘토링(문제해결·공모전) 종료 → 본선 대회 참가 준비 확인<br>
+      <b>CP5 (11월 말):</b> 본선 대회 완료(재단 주관) → 수상자 확정, 전체 성과 데이터 수집 완료<br>
+      <b>CP6 (12월 15일):</b> AI Future Festa 부스 운영 완료 + 최종보고서(12.10)·가이드·사례집 제출 → <b>사업 종료</b>
+    </div>
+  </div>
 
   <h3 style="margin-top:12px;">전략 리스크 관리 매트릭스</h3>
 
@@ -171,75 +277,68 @@
     <thead>
       <tr>
         <th style="width:4%;">No</th>
-        <th style="width:16%;">리스크</th>
-        <th style="width:8%;">발생<br>확률</th>
-        <th style="width:8%;">영향도</th>
-        <th style="width:8%;">등급</th>
-        <th style="width:28%;">예방 조치</th>
-        <th style="width:28%;">발생 시 대응</th>
+        <th style="width:15%;">리스크</th>
+        <th style="width:7%;">발생<br>확률</th>
+        <th style="width:7%;">영향도</th>
+        <th style="width:7%;">등급</th>
+        <th style="width:30%;">예방 조치</th>
+        <th style="width:30%;">발생 시 대응</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td style="text-align:center;">1</td>
-        <td style="font-weight:700;">일정 지연<br>(교육 콘텐츠)</td>
+        <td style="font-weight:700;">모집 인원 미달<br>(2,900명 미충족)</td>
         <td style="text-align:center;">중</td>
         <td style="text-align:center;">상</td>
         <td style="text-align:center;"><span class="sev sev-high">상</span></td>
-        <td style="font-size:8.5px;">콘텐츠 개발 2주 버퍼 확보, 주간 진척률 보고 의무화</td>
-        <td style="font-size:8.5px;">핸즈온 외부 전문가 긴급 투입, 콘텐츠 범위 축소 후 보강</td>
+        <td style="font-size:8.5px;">D-30부터 주간 모집 현황 모니터링, 자동 알림 트리거(50%/70%/90%). 과학관·축제 연동 모집 채널 다변화</td>
+        <td style="font-size:8.5px;">D-14 기준 70% 미만 시 ① 타겟 광고 추가 집행(예비비) ② 캡파 확대(회차당 인원↑) ③ 추가 회차 편성</td>
       </tr>
       <tr>
         <td style="text-align:center;">2</td>
-        <td style="font-weight:700;">핵심 인력 이탈</td>
-        <td style="text-align:center;">하</td>
+        <td style="font-weight:700;">일정 지연<br>(콘텐츠 개발)</td>
+        <td style="text-align:center;">중</td>
         <td style="text-align:center;">상</td>
-        <td style="text-align:center;"><span class="sev sev-mid">중</span></td>
-        <td style="font-size:8.5px;">직무별 후보 인력 1명 사전 지정, 업무 매뉴얼 문서화</td>
-        <td style="font-size:8.5px;">7일 내 후보 인력 투입, 인수인계 체크리스트 즉시 가동</td>
+        <td style="text-align:center;"><span class="sev sev-high">상</span></td>
+        <td style="font-size:8.5px;">콘텐츠 개발 2주 버퍼 확보(4~5월), 주간 진척률 보고 의무화</td>
+        <td style="font-size:8.5px;">핸즈온 외부 전문가 긴급 투입, 콘텐츠 범위 축소 후 보강</td>
       </tr>
       <tr>
         <td style="text-align:center;">3</td>
-        <td style="font-weight:700;">예산 초과</td>
+        <td style="font-weight:700;">본선 문제 미확정<br>(재단 주관)</td>
         <td style="text-align:center;">중</td>
         <td style="text-align:center;">중</td>
         <td style="text-align:center;"><span class="sev sev-mid">중</span></td>
-        <td style="font-size:8.5px;">예비비 5% 별도 편성, 월간 집행률 모니터링</td>
-        <td style="font-size:8.5px;">저비용 대안 전환(장소 변경·온라인 병행), 재단 사전 협의</td>
+        <td style="font-size:8.5px;">본선 교육을 "정밀 실행·디버깅·전략 수립" 범용 역량 중심으로 설계 → 문제 확정 전에도 유효</td>
+        <td style="font-size:8.5px;">문제 확정 즉시 2주 내 맞춤 보충 교육 추가 편성</td>
       </tr>
       <tr>
         <td style="text-align:center;">4</td>
-        <td style="font-weight:700;">로봇 공급 차질</td>
-        <td style="text-align:center;">하</td>
-        <td style="text-align:center;">상</td>
+        <td style="font-weight:700;">물류 지연·로봇 고장</td>
+        <td style="text-align:center;">중</td>
+        <td style="text-align:center;">중</td>
         <td style="text-align:center;"><span class="sev sev-mid">중</span></td>
-        <td style="font-size:8.5px;">핸즈온 자체 보유 재고 활용, 계약 시 납기 보증 조항</td>
-        <td style="font-size:8.5px;">대체 로봇 긴급 임차, 트랙별 순차 운영으로 수량 분산</td>
+        <td style="font-size:8.5px;">예비 장비 15~20% 상시 대기, D-3 전수 동작 테스트, 핸즈온 기술진 현장 상주</td>
+        <td style="font-size:8.5px;">30분 내 교체 프로토콜, 대체 로봇 긴급 임차, 트랙별 순차 운영으로 수량 분산</td>
       </tr>
       <tr>
         <td style="text-align:center;">5</td>
-        <td style="font-weight:700;">자연재해·감염병</td>
+        <td style="font-weight:700;">타 수행기관 권역 겹침</td>
+        <td style="text-align:center;">중</td>
         <td style="text-align:center;">하</td>
-        <td style="text-align:center;">상</td>
         <td style="text-align:center;"><span class="sev sev-low">하</span></td>
-        <td style="font-size:8.5px;">온라인 전환 시나리오 사전 수립, 행사 취소 보험 검토</td>
-        <td style="font-size:8.5px;">전면 온라인 전환 또는 일정 연기, 재단과 즉시 협의</td>
+        <td style="font-size:8.5px;">권역·일정을 유연하게 설계, 수도권 3회분 중 1회를 타 권역으로 이전하는 재배분 시나리오 사전 수립</td>
+        <td style="font-size:8.5px;">재단 조율에 따라 즉시 권역·일정 재배치. "협력 요청에 가장 빠르게 응하는 파트너" 포지셔닝</td>
       </tr>
     </tbody>
   </table>
 
-  <div class="highlight-box">
-    <div class="h-title">마일스톤 체크포인트</div>
-    <div class="h-body">
-      <b>CP1 (5월 말):</b> 모집률 30%+ 달성 확인 → 미달 시 광고비 추가 집행 결정<br>
-      <b>CP2 (6월 말):</b> 교육 콘텐츠 개발 완료 + 모집률 80%+ → 예선 교육 개시 승인<br>
-      <b>CP3 (7월 말):</b> 예선 6회 완료 + 중간 만족도 4.0+ → 후반부 예선 진행 확정<br>
-      <b>CP4 (8월 말):</b> 예선 전체 완료 + 본선 진출팀 확정 → 멘토링 개시<br>
-      <b>CP5 (9월 말):</b> 본선 완료 → 정산·성과보고 착수
-    </div>
+  <div class="note-box">
+    ※ 사업기간: <b>협약체결일 ~ 2026.12.15.</b> (제안요청서 기준).<br>
+    ※ 최종보고서 제출 목표: 2026.12.10. / 최종평가: 12월 3주 / 정산보고서: 2027.1.14. (제안요청서 추진일정 준수).<br>
+    ※ 상세 주간 WBS(Work Breakdown Structure)는 <b>붙임 11</b>에 수록.
   </div>
-
-  <div class="note-box">※ 상세 주간 WBS(Work Breakdown Structure)는 <b>붙임 11</b>에 수록</div>
 
   <div class="page-num">- 22 -</div>
 </div>

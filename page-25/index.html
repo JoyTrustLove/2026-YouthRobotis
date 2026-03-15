@@ -15,6 +15,7 @@
   .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
   .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
   .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .hl{background:#FFFDE7}
   .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
   h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
   .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
@@ -42,6 +43,8 @@
   .pie-bar div{display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#fff}
   .pie-legend{font-size:8.5px;line-height:160%;color:#555;margin-top:4px}
   .pie-legend span{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle;margin-right:3px}
+  .warn-box{background:#FFEBEE;border:1px solid #EF9A9A;border-radius:5px;padding:6px 10px;font-size:9px;line-height:150%;margin:6px 0}
+  .warn-box b{color:#C62828}
   .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
   .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
 </style>
@@ -57,17 +60,21 @@
 
   <div class="sec-header" style="margin-bottom:0;">
     <span class="sec-num">8</span>
-    <span class="sec-title">예산 계획</span>
+    <span class="sec-title">예산계획</span>
   </div>
 
   <table class="info-box">
-    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적정성(7) + 예산 집행 계획(5)</td></tr>
+    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적절성(5)</td></tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"간접비·기업이윤 절대 불가. PMS 부가세 입력 주의. 인건비만 잔뜩이면 운영 10회 의심"</td>
+    </tr>
     <tr>
       <td class="lb">제안사<br>핵심포인트</td>
       <td class="pt">
-        ① 총 사업비 <b>200,000천원</b>을 인건비·운영비·여비·기타로 4대 항목 편성<br>
-        ② 기관별 배분 — 블루 ○○M / 타임 ○○M / 핸즈온 ○○M / 중앙대 ○○M<br>
-        ③ 인건비 비율 ○○%, 운영비 비율 ○○%로 <b>재단 가이드라인 준수</b>
+        ① 간접비·기업이윤 제로, 인건비 ○○% 대 운영비 ○○%의 균형 잡힌 예산 구조 ⇒ 11회 이상 전국 예선을 실제로 돌릴 수 있는 운영비가 확보된 설계<br>
+        ② ICT 기금 정산 경험 기반으로 PMS 부가세 입력 오류·비목 간 이동 제한 등 정산 리스크를 사전 차단하는 예산 편성<br>
+        ③ 총 사업비 <b>400,000천원(4억원, 부가가치세 포함)</b> — 기관별 배분은 지원신청서·확약서와 정확히 일치
       </td>
     </tr>
   </table>
@@ -79,19 +86,19 @@
     <div class="card">
       <div class="c-icon">💰</div>
       <div class="c-title">총 사업비</div>
-      <div class="c-num">200,000</div>
-      <div class="c-sub">천원 (2억원)</div>
+      <div class="c-num">400,000</div>
+      <div class="c-sub">천원 (4억원, 부가가치세 포함)</div>
     </div>
     <div class="card">
       <div class="c-icon">👤</div>
       <div class="c-title">인건비</div>
-      <div class="c-num">○○,○○○</div>
+      <div class="c-num">○○○,○○○</div>
       <div class="c-sub">천원 (○○%)</div>
     </div>
     <div class="card">
       <div class="c-icon">⚙️</div>
       <div class="c-title">운영비</div>
-      <div class="c-num">○○,○○○</div>
+      <div class="c-num">○○○,○○○</div>
       <div class="c-sub">천원 (○○%)</div>
     </div>
     <div class="card">
@@ -102,8 +109,59 @@
     </div>
   </div>
 
-  <!-- 총괄표 -->
-  <span class="label-mark">▸ 사업비 총괄 편성표</span>
+  <!-- 기관별 배분 요약 -->
+  <span class="label-mark">▸ 기관별 사업비 배분 (지원신청서·확약서 기준)</span>
+
+  <table class="budget-tbl">
+    <thead>
+      <tr>
+        <th style="width:25%;">기관명</th>
+        <th style="width:20%;">역할</th>
+        <th style="width:20%;">분담금액(천원)</th>
+        <th style="width:15%;">비율(%)</th>
+        <th style="width:20%;">비고</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;">블루커뮤니케이션</td>
+        <td style="text-align:center;">주관기관</td>
+        <td style="text-align:right;font-weight:700;">200,000</td>
+        <td style="text-align:center;">50</td>
+        <td style="font-size:8px;">총괄 PM·예산 집행·감독</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">타임교육 C&P</td>
+        <td style="text-align:center;">협력기관 1</td>
+        <td style="text-align:right;font-weight:700;">80,000</td>
+        <td style="text-align:center;">20</td>
+        <td style="font-size:8px;">전국 모객·현장 운영</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">핸즈온테크놀러지</td>
+        <td style="text-align:center;">협력기관 2</td>
+        <td style="text-align:right;font-weight:700;">80,000</td>
+        <td style="text-align:center;">20</td>
+        <td style="font-size:8px;">문제 출제·교육·물류</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">중앙대학교</td>
+        <td style="text-align:center;">협력기관 3</td>
+        <td style="text-align:right;font-weight:700;">40,000</td>
+        <td style="text-align:center;">10</td>
+        <td style="font-size:8px;">멘토단·부트캠프·기술 자문</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="2" style="text-align:center;">합계</td>
+        <td style="text-align:right;">400,000</td>
+        <td style="text-align:center;">100</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 비목별 총괄표 -->
+  <span class="label-mark">▸ 비목별 사업비 총괄 편성표</span>
 
   <table class="budget-tbl">
     <thead>
@@ -122,17 +180,17 @@
         <td style="text-align:center;">1</td>
         <td class="cat" rowspan="3">인건비</td>
         <td>내부 인건비</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
       </tr>
       <tr>
         <td style="text-align:center;">2</td>
-        <td>외부 인건비 (강사·심판)</td>
+        <td>외부 인건비 (강사·심판)<br><span style="font-size:7.5px;color:#888;">※ 강사 교통비 포함 단가</span></td>
         <td style="text-align:right;">—</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
         <td style="text-align:right;">—</td>
       </tr>
       <tr>
@@ -141,20 +199,20 @@
         <td style="text-align:right;">—</td>
         <td style="text-align:right;">—</td>
         <td style="text-align:right;">—</td>
-        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
       </tr>
       <tr class="sub-total">
         <td></td>
         <td colspan="2" style="text-align:center;">인건비 소계</td>
-        <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
       </tr>
       <tr>
         <td style="text-align:center;">4</td>
-        <td class="cat" rowspan="6">운영비</td>
-        <td>일반수용비 (인쇄·소모품)</td>
+        <td class="cat" rowspan="7">운영비</td>
+        <td>일반수용비 (인쇄·소모품)<br><span style="font-size:7.5px;color:#888;">※ 정산위탁수수료 1,500천원 포함</span></td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
@@ -162,23 +220,23 @@
       </tr>
       <tr>
         <td style="text-align:center;">5</td>
-        <td>공공요금 (통신·전기)</td>
-        <td style="text-align:right;">○○○</td>
-        <td style="text-align:right;">○○○</td>
+        <td>공공요금·제세 (통신·전기)<br><span style="font-size:7.5px;color:#888;">※ 부가가치세 계상</span></td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○○○</td>
         <td style="text-align:right;">—</td>
       </tr>
       <tr>
         <td style="text-align:center;">6</td>
         <td>특근매식비</td>
-        <td style="text-align:right;">○○○</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○○○</td>
-        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
       </tr>
       <tr>
         <td style="text-align:center;">7</td>
-        <td>임차료 (로봇·장소)</td>
+        <td>임차료 (로봇·장소·장비)</td>
         <td style="text-align:right;">—</td>
         <td style="text-align:right;">○○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
@@ -186,40 +244,48 @@
       </tr>
       <tr>
         <td style="text-align:center;">8</td>
-        <td>재료비 (교구·아레나)</td>
+        <td>재료비 (교구·아레나·배터리)</td>
         <td style="text-align:right;">—</td>
         <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
         <td style="text-align:right;">—</td>
       </tr>
       <tr>
         <td style="text-align:center;">9</td>
-        <td>용역비 (홍보·디자인)</td>
-        <td style="text-align:right;">○,○○○</td>
+        <td>일반용역비 (홍보·영상·보험)</td>
+        <td style="text-align:right;">○○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">—</td>
         <td style="text-align:right;">—</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">10</td>
+        <td>예비비 (총 사업비의 5% 이내)</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○○</td>
       </tr>
       <tr class="sub-total">
         <td></td>
         <td colspan="2" style="text-align:center;">운영비 소계</td>
-        <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
         <td style="text-align:right;">○○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">10</td>
-        <td class="cat" rowspan="2">여비</td>
-        <td>국내 출장 여비</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
-        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
         <td style="text-align:right;">○,○○○</td>
       </tr>
       <tr>
         <td style="text-align:center;">11</td>
-        <td>본선 참가팀 교통비 지원</td>
+        <td class="cat" rowspan="2">여비</td>
+        <td>국내 출장 여비 (운영 인력)<br><span style="font-size:7.5px;color:#888;">※ 외부 강사 교통비는 자문료에 합산</span></td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">12</td>
+        <td>본선 참가팀 교통비·숙박 지원</td>
         <td style="text-align:right;">○,○○○</td>
         <td style="text-align:right;">—</td>
         <td style="text-align:right;">—</td>
@@ -234,7 +300,7 @@
         <td style="text-align:right;">○,○○○</td>
       </tr>
       <tr>
-        <td style="text-align:center;">12</td>
+        <td style="text-align:center;">13</td>
         <td class="cat">업무추진비</td>
         <td>회의비·행사 운영비</td>
         <td style="text-align:right;">○,○○○</td>
@@ -243,7 +309,16 @@
         <td style="text-align:right;">○○○</td>
       </tr>
       <tr>
-        <td style="text-align:center;">13</td>
+        <td style="text-align:center;">14</td>
+        <td class="cat">연구용역비</td>
+        <td>만족도 조사 연구용역</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">15</td>
         <td class="cat">자산취득비</td>
         <td>딥코 보드 베이직 추가 구매</td>
         <td style="text-align:right;">—</td>
@@ -254,15 +329,15 @@
       <tr class="total-row">
         <td></td>
         <td colspan="2" style="text-align:center;">기관별 합계</td>
-        <td style="text-align:right;">○○,○○○</td>
-        <td style="text-align:right;">○○,○○○</td>
-        <td style="text-align:right;">○○,○○○</td>
-        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">200,000</td>
+        <td style="text-align:right;">80,000</td>
+        <td style="text-align:right;">80,000</td>
+        <td style="text-align:right;">40,000</td>
       </tr>
       <tr class="total-row">
         <td></td>
         <td colspan="2" style="text-align:center;">총 사업비</td>
-        <td colspan="4" style="text-align:center;font-size:12px;">200,000 천원</td>
+        <td colspan="4" style="text-align:center;font-size:13px;">400,000 천원 (4억원, 부가가치세 포함)</td>
       </tr>
     </tbody>
   </table>
@@ -274,10 +349,11 @@
     <div class="pie-card">
       <div class="pc-title">비목별 비율</div>
       <div class="pie-bar">
-        <div style="width:35%;background:#1E3A5F;">인건비</div>
-        <div style="width:40%;background:#E07C38;">운영비</div>
+        <div style="width:32%;background:#1E3A5F;">인건비</div>
+        <div style="width:42%;background:#E07C38;">운영비</div>
         <div style="width:12%;background:#27ae60;">여비</div>
-        <div style="width:8%;background:#7B3FA0;">기타</div>
+        <div style="width:5%;background:#7B3FA0;">추진비</div>
+        <div style="width:4%;background:#2196F3;">연구</div>
         <div style="width:5%;background:#999;">자산</div>
       </div>
       <div class="pie-legend">
@@ -285,37 +361,52 @@
         <span style="background:#E07C38;"></span>운영비 ○○% &nbsp;
         <span style="background:#27ae60;"></span>여비 ○○%<br>
         <span style="background:#7B3FA0;"></span>업무추진비 ○% &nbsp;
+        <span style="background:#2196F3;"></span>연구용역비 ○% &nbsp;
         <span style="background:#999;"></span>자산취득비 ○%
       </div>
     </div>
     <div class="pie-card">
       <div class="pc-title">기관별 비율</div>
       <div class="pie-bar">
-        <div style="width:20%;background:#1E3A5F;">블루</div>
-        <div style="width:35%;background:#E07C38;">타임</div>
-        <div style="width:30%;background:#27ae60;">핸즈온</div>
-        <div style="width:15%;background:#7B3FA0;">중앙대</div>
+        <div style="width:50%;background:#1E3A5F;">블루 50%</div>
+        <div style="width:20%;background:#E07C38;">타임 20%</div>
+        <div style="width:20%;background:#27ae60;">핸즈온 20%</div>
+        <div style="width:10%;background:#7B3FA0;">중앙대 10%</div>
       </div>
       <div class="pie-legend">
-        <span style="background:#1E3A5F;"></span>블루 ○○% &nbsp;
-        <span style="background:#E07C38;"></span>타임 ○○% &nbsp;
-        <span style="background:#27ae60;"></span>핸즈온 ○○% &nbsp;
-        <span style="background:#7B3FA0;"></span>중앙대 ○○%
+        <span style="background:#1E3A5F;"></span>블루 200,000천원(50%) &nbsp;
+        <span style="background:#E07C38;"></span>타임 80,000천원(20%)<br>
+        <span style="background:#27ae60;"></span>핸즈온 80,000천원(20%) &nbsp;
+        <span style="background:#7B3FA0;"></span>중앙대 40,000천원(10%)
       </div>
     </div>
+  </div>
+
+  <!-- 부가세 처리 안내 -->
+  <div class="warn-box">
+    <b>⚠ 부가가치세 처리 방식 (사업설명회 지침 반영):</b><br>
+    · 본 예산안은 <b>부가가치세 포함 총 400,000천원</b> 기준으로 편성됨.<br>
+    · 과세 기관: 공공요금·제세 항목에 부가가치세를 계상하되, <b>PMS 입력 시에는 세전 금액으로 입력</b>하여 시스템 자동 10% 가산과 일치시킴.<br>
+    · 비과세 기관(대학 등): 부가가치세를 미계상하고 총액 400,000천원 기준으로 편성.<br>
+    · ○○○ 표기 항목은 최종 예산 확정 시 실금액으로 대체 예정.
   </div>
 
   <div class="highlight-box">
-    <div class="h-title">예산 편성 원칙</div>
+    <div class="h-title">예산 편성 5대 원칙</div>
     <div class="h-body">
-      <b>① 인건비 상한 준수:</b> 한국과학창의재단 가이드라인에 따라 인건비 비율을 총 사업비의 ○○% 이내로 편성.<br>
-      <b>② 현물 기여 반영:</b> 컨소시엄 기관의 기존 보유 장비(노트북·카메라 등)를 현물 기여로 반영하여 사업비 효율화.<br>
-      <b>③ 예비비 확보:</b> 운영비 내 예비비 5%(○,○○○천원)를 별도 편성하여 돌발 상황에 대응.<br>
-      <b>④ 집행 투명성:</b> 월간 집행률 보고 + 분기 정산으로 재단 모니터링 체계에 부합.
+      <b>① 간접비·기업이윤 제로:</b> ICT 정보통신진흥기금 규정에 따라 간접비 및 기업이윤을 일체 미산정함.<br>
+      <b>② 인건비 상한 관리:</b> 인건비 비율을 총 사업비의 ○○% 이내로 편성하여, 11회 이상 전국 예선을 실제 운영할 수 있는 운영비를 확보함.<br>
+      <b>③ 현물 기여 반영:</b> 컨소시엄 기관의 기존 보유 장비(노트북·카메라 등)를 현물 기여로 활용하여 사업비 효율화.<br>
+      <b>④ 예비비 확보:</b> 운영비 내 예비비를 총 사업비의 5% 이내(○○,○○○천원)로 별도 편성하여 돌발 상황에 대응.<br>
+      <b>⑤ 부가가치세 처리:</b> 과세 기관은 제세공과금 항목에 부가가치세를 계상하되, PMS 입력 시에는 세전 금액으로 입력하여 시스템 자동 계산과 일치시킴.
     </div>
   </div>
 
-  <div class="note-box">※ ○○○ 표기 항목은 최종 예산 확정 시 실금액으로 대체. 비목별 산출내역은 <b>면수 26~30</b>에 상세 기술</div>
+  <div class="note-box">
+    ※ 비목별 세부 산출내역은 <b>면수 26~30</b>에 상세 기술.<br>
+    ※ 정산위탁수수료 1,500천원은 일반수용비에 필수 포함 (재단 지정).<br>
+    ※ 외부 강사 교통비는 전문가 자문료에 일괄 합산하여 이중집행 리스크를 원천 차단함 (사업설명회 지침).
+  </div>
 
   <div class="page-num">- 25 -</div>
 </div>

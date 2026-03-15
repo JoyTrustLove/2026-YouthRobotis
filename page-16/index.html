@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 16 – 예선 대회 운영: 장소·일정</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+
+  .sched-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .sched-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .sched-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top;text-align:center}
+  .sched-tbl .rn{font-weight:700;color:#1E3A5F;background:#EEF2F7}
+  .sched-tbl .phase{font-weight:700;font-size:8px;border-radius:10px;padding:2px 8px;color:#fff;display:inline-block}
+  .ph-recruit{background:#27ae60}
+  .ph-edu{background:#2196F3}
+  .ph-prelim{background:#E07C38}
+  .ph-final{background:#7B3FA0}
+
+  .timeline{display:flex;align-items:flex-start;gap:0;margin:10px 0;overflow-x:auto}
+  .tl-month{flex:1;min-width:55px;text-align:center;border-right:1px dashed #ddd;padding:4px 2px}
+  .tl-month:last-child{border-right:none}
+  .tl-label{font-size:8px;font-weight:700;color:#1E3A5F;margin-bottom:4px}
+  .tl-bar{height:12px;border-radius:3px;margin:2px 0}
+
+  .venue-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .venue-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .venue-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .venue-tbl .rn{font-weight:700;color:#1E3A5F;background:#EEF2F7;text-align:center}
+
+  .day-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .day-tbl th{background:#E07C38;color:#fff;padding:4px 6px;text-align:center;font-weight:700}
+  .day-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+
+  .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
+  .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
+  .highlight-box .h-body{font-size:10px;line-height:165%}
+
+  .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
+
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-15/index.html" style="margin-left:8px;">← 면수 15</a>
+    <a href="../page-17/index.html" style="margin-left:8px;">면수 17 →</a>
+
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">5</span>
+    <span class="sec-title">로보틱스 기초 기획 및 운영 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr><td class="lb">평가항목(배점)</td><td>대회 운영 적합성(5) + 사업 일정의 적절성(5)</td></tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 중간·기말 시험, 수학여행 등 <b>학사 일정 회피</b>를 우선 원칙으로 예선 일정 배치<br>
+        ② 권역별 장소는 <b>대중교통 30분 이내 + 수용 200명 이상 + Wi-Fi 완비</b> 3요건 충족 시설 확보<br>
+        ③ 1일 운영 타임테이블을 분 단위로 제시하여 <b>현장 실행력</b> 입증
+      </td>
+    </tr>
+  </table>
+
+  <h3>5-7. 예선 대회 운영: 장소·일정 계획</h3>
+
+  <!-- 마스터 일정표 -->
+  <span class="label-mark">▸ 전체 사업 마스터 일정</span>
+
+  <table class="sched-tbl">
+    <thead>
+      <tr>
+        <th style="width:10%;">단계</th>
+        <th style="width:14%;">기간</th>
+        <th style="width:38%;">주요 활동</th>
+        <th style="width:14%;">담당</th>
+        <th style="width:24%;">산출물</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="phase ph-recruit">모집</span></td>
+        <td>5월 1주~6월 2주</td>
+        <td style="text-align:left;">온·오프라인 홍보, 학교·교육청 공문 발송, 참가 신청 접수</td>
+        <td>타임에듀C&P</td>
+        <td style="text-align:left;">참가 신청서 2,900건+</td>
+      </tr>
+      <tr>
+        <td><span class="phase ph-edu">교육</span></td>
+        <td>6월 3주~7월 2주</td>
+        <td style="text-align:left;">5개 권역 예선 교육 실시(초·중·고 트랙별 2시간)</td>
+        <td>타임에듀C&P<br>핸즈온테크놀로지</td>
+        <td style="text-align:left;">교육 이수 확인서, 교구 배포 기록</td>
+      </tr>
+      <tr>
+        <td><span class="phase ph-prelim">예선</span></td>
+        <td>7월 3주~8월 2주</td>
+        <td style="text-align:left;">전국 5개 권역 11회 예선 대회 운영</td>
+        <td>타임에듀C&P<br>블루커뮤니케이션</td>
+        <td style="text-align:left;">예선 성적표, 본선 진출자 명단</td>
+      </tr>
+      <tr>
+        <td><span class="phase ph-edu">본선교육</span></td>
+        <td>8월 3주~9월 2주</td>
+        <td style="text-align:left;">본선 진출팀 멘토링(4주, 온·오프라인 병행)</td>
+        <td>핸즈온테크놀로지<br>중앙대학교</td>
+        <td style="text-align:left;">멘토링 보고서, 진척도 체크리스트</td>
+      </tr>
+      <tr>
+        <td><span class="phase ph-final">본선</span></td>
+        <td>9월 3주~4주</td>
+        <td style="text-align:left;">본선 대회 (1~2일), 시상·성과 발표</td>
+        <td>전 기관 공동</td>
+        <td style="text-align:left;">최종 성적표, 수상 기록, 성과보고서</td>
+      </tr>
+      <tr>
+        <td><span class="phase" style="background:#999;">정산</span></td>
+        <td>10월 1주~2주</td>
+        <td style="text-align:left;">사업 정산, 성과 분석, 최종보고서 제출</td>
+        <td>블루커뮤니케이션</td>
+        <td style="text-align:left;">최종보고서, 정산서</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 권역별 장소 -->
+  <span class="label-mark">▸ 권역별 예선 장소 계획 (후보)</span>
+
+  <table class="venue-tbl">
+    <thead>
+      <tr>
+        <th style="width:10%;">권역</th>
+        <th style="width:8%;">회차</th>
+        <th style="width:26%;">후보 장소</th>
+        <th style="width:16%;">예정 일자</th>
+        <th style="width:8%;">수용(명)</th>
+        <th style="width:32%;">선정 사유</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="rn" rowspan="3">수도권</td>
+        <td>1</td>
+        <td style="text-align:left;">서울 코엑스 컨퍼런스룸</td>
+        <td>7월 3주 토</td>
+        <td>300</td>
+        <td style="text-align:left;">2호선 삼성역 도보 5분, Wi-Fi·전원 완비</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td style="text-align:left;">경기 수원컨벤션센터</td>
+        <td>7월 4주 토</td>
+        <td>250</td>
+        <td style="text-align:left;">수인분당선 광교중앙역 10분, 경기남부 접근</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td style="text-align:left;">인천 송도컨벤시아</td>
+        <td>8월 1주 토</td>
+        <td>300</td>
+        <td style="text-align:left;">인천1호선 센트럴파크역 3분, 인천·서부경기 커버</td>
+      </tr>
+      <tr>
+        <td class="rn" rowspan="2">충청</td>
+        <td>4</td>
+        <td style="text-align:left;">대전 DCC(대전컨벤션센터)</td>
+        <td>7월 4주 일</td>
+        <td>250</td>
+        <td style="text-align:left;">대전역 버스 20분, 충북·세종 접근 용이</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td style="text-align:left;">세종시 정부세종컨벤션센터</td>
+        <td>8월 1주 일</td>
+        <td>200</td>
+        <td style="text-align:left;">세종·충남 접근, 신도시 수요 집중 대응</td>
+      </tr>
+      <tr>
+        <td class="rn" rowspan="2">호남</td>
+        <td>6</td>
+        <td style="text-align:left;">광주 김대중컨벤션센터</td>
+        <td>8월 1주 토</td>
+        <td>280</td>
+        <td style="text-align:left;">광주송정역 20분, 광주·전남 커버</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td style="text-align:left;">전주 한국전통문화전당</td>
+        <td>8월 1주 일</td>
+        <td>200</td>
+        <td style="text-align:left;">전주역 15분, 전북 접근</td>
+      </tr>
+      <tr>
+        <td class="rn" rowspan="3">영남</td>
+        <td>8</td>
+        <td style="text-align:left;">부산 BEXCO 제2전시장</td>
+        <td>7월 3주 일</td>
+        <td>300</td>
+        <td style="text-align:left;">2호선 벡스코역 직결, 부산·경남 커버</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td style="text-align:left;">대구 EXCO</td>
+        <td>7월 4주 토</td>
+        <td>260</td>
+        <td style="text-align:left;">3호선 엑스코역 직결, 대구·경북 커버</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td style="text-align:left;">울산 울산전시컨벤션센터</td>
+        <td>8월 2주 토</td>
+        <td>200</td>
+        <td style="text-align:left;">울산역 셔틀 15분, 울산·양산권 대응</td>
+      </tr>
+      <tr>
+        <td class="rn">강원·제주</td>
+        <td>11</td>
+        <td style="text-align:left;">춘천 강원대학교 백령아트센터</td>
+        <td>8월 2주 일</td>
+        <td>200</td>
+        <td style="text-align:left;">춘천역 10분, 강원 중심 / 제주는 온라인 병행</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 1일 타임테이블 -->
+  <span class="label-mark">▸ 예선 1일 운영 타임테이블 (표준)</span>
+
+  <table class="day-tbl">
+    <thead>
+      <tr>
+        <th style="width:14%;">시간</th>
+        <th style="width:10%;">소요</th>
+        <th style="width:22%;">활동</th>
+        <th style="width:18%;">담당</th>
+        <th style="width:36%;">세부 내용</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center;">08:00~08:30</td>
+        <td style="text-align:center;">30분</td>
+        <td>현장 세팅</td>
+        <td>타임에듀 현장팀</td>
+        <td style="font-size:8.5px;">로봇 배치, 아레나 설치, Wi-Fi·전원 테스트, 안전 점검</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">08:30~09:00</td>
+        <td style="text-align:center;">30분</td>
+        <td>참가자 등록</td>
+        <td>타임에듀 접수팀</td>
+        <td style="font-size:8.5px;">QR 출석, 로봇·키트 배부, 트랙별 좌석 안내</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">09:00~09:10</td>
+        <td style="text-align:center;">10분</td>
+        <td>개회식·안내</td>
+        <td>블루커뮤니케이션 PM</td>
+        <td style="font-size:8.5px;">사업 소개, 안전 수칙, 트랙별 진행 순서 안내</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">09:10~10:50</td>
+        <td style="text-align:center;">100분</td>
+        <td>예선 교육 (3차시)</td>
+        <td>핸즈온 강사진</td>
+        <td style="font-size:8.5px;">트랙별 교육 프로그램 실시 (40분×3차시, 쉬는 시간 포함)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">10:50~11:00</td>
+        <td style="text-align:center;">10분</td>
+        <td>휴식·경기 준비</td>
+        <td>전체</td>
+        <td style="font-size:8.5px;">아레나 최종 점검, 참가자 이동</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">11:00~12:30</td>
+        <td style="text-align:center;">90분</td>
+        <td>예선 경기</td>
+        <td>핸즈온 심판단</td>
+        <td style="font-size:8.5px;">트랙별 순차 경기 (1인 3회 시도, 최고 기록 채택)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">12:30~13:00</td>
+        <td style="text-align:center;">30분</td>
+        <td>채점·결과 발표</td>
+        <td>블루커뮤니케이션 PM</td>
+        <td style="font-size:8.5px;">즉석 채점 집계, 본선 진출 안내, 설문 실시, 교구 회수</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <div class="h-title">학사 일정 회피 원칙</div>
+    <div class="h-body">
+      중간고사(4~5월, 10월)·기말고사(6~7월, 12월)·수능(11월) 기간을 피해 <b>7월 하순~8월 상순(여름방학)</b>을 예선 핵심 기간으로 설정함.
+      수학여행·체험학습 등 학교별 일정은 참가 신청 시 "회피 희망일" 항목을 수집하여 권역 내 <b>복수 일정 선택제</b>를 운영함.
+    </div>
+  </div>
+
+  <div class="note-box">
+    ※ 장소는 후보 리스트이며, 계약 확정 후 공지 예정. 각 장소의 대관료·시설 상세는 <b>붙임 7</b>에 수록
+  </div>
+
+  <div class="page-num">- 16 -</div>
+</div>
+</body>
+</html>

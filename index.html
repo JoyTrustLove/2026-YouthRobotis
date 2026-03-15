@@ -13,34 +13,28 @@
     display:flex; flex-direction:column; align-items:center;
     padding:40px 20px;
   }
-
   h1 { color:#1E3A5F; font-size:24px; margin-bottom:6px; }
   .subtitle { color:#666; font-size:14px; margin-bottom:10px; }
-
   .progress-wrap { width:100%; max-width:1100px; margin-bottom:28px; }
   .progress-label { font-size:12px; color:#888; margin-bottom:4px; display:flex; justify-content:space-between; }
   .progress-bar { width:100%; height:10px; background:#E0E0E0; border-radius:5px; overflow:hidden; }
   .progress-fill { height:100%; background:linear-gradient(90deg,#1E3A5F,#E07C38); border-radius:5px; transition:width 0.5s; }
-
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; max-width:1100px; width:100%; }
-
   .card { background:#fff; border-radius:10px; padding:18px 20px; text-decoration:none; color:#262626; box-shadow:0 2px 8px rgba(0,0,0,0.06); border-left:4px solid #1E3A5F; transition:transform 0.2s,box-shadow 0.2s; display:flex; flex-direction:column; gap:5px; }
   .card:hover { transform:translateY(-4px); box-shadow:0 6px 20px rgba(0,0,0,0.12); border-left-color:#E07C38; }
-
   .card .page-num { font-size:11px; color:#1E3A5F; font-weight:700; background:#EEF2F7; display:inline-block; padding:2px 8px; border-radius:4px; width:fit-content; }
   .card .title { font-size:14px; font-weight:700; color:#1E3A5F; }
   .card .eval { font-size:10.5px; color:#888; line-height:1.4; }
   .card .desc { font-size:10px; color:#555; line-height:1.5; border-top:1px dashed #E0E0E0; padding-top:5px; margin-top:2px; }
   .card .status { font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px; width:fit-content; margin-top:3px; }
   .status-done { background:#E8F5E9; color:#2E7D32; }
-  .status-wip { background:#FFF3E0; color:#E65100; }
-  .status-pending { background:#F3E5F5; color:#7B1FA2; }
-
   .section-label { grid-column:1/-1; font-size:13px; font-weight:700; color:#1E3A5F; border-bottom:2px solid #1E3A5F; padding-bottom:4px; margin-top:12px; }
-
   .legend { max-width:1100px; width:100%; margin-top:24px; padding-top:12px; border-top:1px solid #E0E0E0; display:flex; gap:16px; font-size:11px; color:#888; }
   .legend span { display:flex; align-items:center; gap:4px; }
   .legend .dot { width:10px; height:10px; border-radius:3px; display:inline-block; }
+  .complete-banner { max-width:1100px; width:100%; margin-top:20px; background:linear-gradient(90deg,#1E3A5F,#E07C38); color:#fff; border-radius:10px; padding:20px; text-align:center; }
+  .complete-banner h2 { font-size:18px; margin-bottom:4px; }
+  .complete-banner p { font-size:12px; opacity:0.9; }
 </style>
 </head>
 <body>
@@ -48,14 +42,13 @@
 <h1>2026 청소년 로보틱스 챌린지</h1>
 <p class="subtitle">사업계획서 면수별 작성 현황 · 블루커뮤니케이션 컨소시엄</p>
 
-<!-- 진행률 -->
 <div class="progress-wrap">
   <div class="progress-label">
     <span>전체 진행률</span>
-    <span><b>16</b> / 30 페이지 완료</span>
+    <span><b>30</b> / 30 페이지 완료</span>
   </div>
   <div class="progress-bar">
-    <div class="progress-fill" style="width:53%;"></div>
+    <div class="progress-fill" style="width:100%;"></div>
   </div>
 </div>
 
@@ -68,7 +61,7 @@
     <span class="page-num">면수 3</span>
     <span class="title">3-1~3. 지원배경 · 기관소개 · 실적</span>
     <span class="eval">사업목표 이해도(5) + 대회·교육 역량(8)</span>
-    <span class="desc">정책 배경(AI 한글화→전국민 AI 경진대회) → 제로 바리어 확산형 모델 → 4개 기관 카드형 소개 → 실적 9건 태그 테이블</span>
+    <span class="desc">정책 배경 → 제로 바리어 모델 → 4개 기관 소개 → 실적 9건 태그 테이블</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -76,23 +69,23 @@
     <span class="page-num">면수 4</span>
     <span class="title">3-4~5. 추진체계 · 컨소시엄 배경</span>
     <span class="eval">사업 운영 역량(7)</span>
-    <span class="desc">재단↔주관↔협력 관계도 다이어그램 → 기관별 역할·산출물 표 → 컨소시엄 4대 장점 카드</span>
+    <span class="desc">관계도 다이어그램 → 역할·산출물 표 → 컨소시엄 4대 장점 카드</span>
     <span class="status status-done">● 완료</span>
   </a>
 
   <a href="./page-05/index.html" class="card">
     <span class="page-num">면수 5</span>
-    <span class="title">3-6. 전담조직 · 인력 구성 (상)</span>
+    <span class="title">3-6. 전담조직·인력 구성 (상)</span>
     <span class="eval">참여 인력 전문성(8)</span>
-    <span class="desc">인력 요약 박스 → 5개 팀 조직도 → 전담인력 명단 테이블 (블루 3 + 타임 14 + 핸즈온 3 + 중앙대 2)</span>
+    <span class="desc">5개 팀 조직도 → 전담인력 명단 테이블 (블루3+타임14+핸즈온3+중앙대2)</span>
     <span class="status status-done">● 완료</span>
   </a>
 
   <a href="./page-06/index.html" class="card">
     <span class="page-num">면수 6</span>
-    <span class="title">3-6. 전담조직 · 인력 구성 (하)</span>
+    <span class="title">3-6. 전담조직·인력 구성 (하)</span>
     <span class="eval">운영 인력 역량(7)</span>
-    <span class="desc">PM·핵심인력 전문성 요약 표 → 채용 예정 인력 확보 방안 → 강사·멘토·현장 3종 역량 강화 교육</span>
+    <span class="desc">PM·핵심인력 전문성 → 채용 확보 방안 → 3종 역량 강화 교육</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -103,7 +96,7 @@
     <span class="page-num">면수 7</span>
     <span class="title">4-1. 사업 추진목표</span>
     <span class="eval">사업목표 이해도(5) + 기대효과(5)</span>
-    <span class="desc">3단계 플로우(참여→즐기고→성장) → KPI 7개 표(필달 태그) → 기대효과 4분할 카드</span>
+    <span class="desc">3단계 플로우(참여→즐기고→성장) → KPI 7개 표 → 기대효과 4분할 카드</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -111,7 +104,7 @@
     <span class="page-num">면수 8</span>
     <span class="title">4-2. 추진내용 및 전략</span>
     <span class="eval">대회 운영 적합성(5)</span>
-    <span class="desc">3대 설계 원칙(진입장벽·정량평가·자율주행) → 추진내용 ①②(기초대회 + 멘토링) → 비교표</span>
+    <span class="desc">3대 설계 원칙 → 추진내용(기초대회+멘토링) → 기존 vs 제안 비교표</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -119,18 +112,18 @@
     <span class="page-num">면수 9</span>
     <span class="title">4-3. 차별화 · 두 수행기관 대응</span>
     <span class="eval">실현 가능성(5)</span>
-    <span class="desc">범용/한정 기능 구분표 7행 → 설계 원리 노트 → 유연성 3종 카드 → 핵심 메시지 배너</span>
+    <span class="desc">기능 구분표 7행 → 설계 원리 노트 → 이원 구조 역할표 → 유연성 3종 카드</span>
     <span class="status status-done">● 완료</span>
   </a>
 
-  <!-- ===== 섹션 5: 로보틱스 기초 기획 및 운영 ===== -->
+  <!-- ===== 섹션 5: 교육 프로그램 ===== -->
   <div class="section-label">5. 로보틱스 기초 기획 및 운영 – 교육 프로그램</div>
 
   <a href="./page-10/index.html" class="card">
     <span class="page-num">면수 10</span>
     <span class="title">5-1. 예선 문제 개발</span>
     <span class="eval">교육 차별성(8) + 프로그램 개발 역량(8)</span>
-    <span class="desc">초·중·고 3종 문제 개요표 → 출제 배경(SDGs 연계) → 차별화 3분할 카드 → 자율주행·정량평가 원칙</span>
+    <span class="desc">초·중·고 3종 문제 개요표 → 자율주행·정량평가 원칙 → 차별화 카드</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -138,7 +131,7 @@
     <span class="page-num">면수 11</span>
     <span class="title">5-2. 로봇 선정 및 활용 전략</span>
     <span class="eval">교육 차별성(8) + 대회 운영 적합성(5)</span>
-    <span class="desc">설명회 7원칙 충족표(전항목 ✔) → 로봇 3종 스펙 비교 → 임차 비용 구조(사업비 대비 ○○%)</span>
+    <span class="desc">7원칙 충족표 → 로봇 3종 스펙 비교 → 임차 비용 구조</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -146,7 +139,7 @@
     <span class="page-num">면수 12</span>
     <span class="title">5-3. 예선 교육 프로그램 (초등)</span>
     <span class="eval">교육 내용의 적절성(7)</span>
-    <span class="desc">로보독 코딩 캠프 3차시 → 교구재 표 → 교육-대회 일체형 연계성 → 붙임6 안내</span>
+    <span class="desc">로보독 코딩 캠프 3차시 → 교구재 표 → 교육-대회 연계성</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -154,7 +147,7 @@
     <span class="page-num">면수 13</span>
     <span class="title">5-4. 예선 교육 프로그램 (중학)</span>
     <span class="eval">교육 내용의 적절성(7)</span>
-    <span class="desc">딥코봇 AI 자율주행 3차시(도로주행·신호등 인식) → 디버깅 중심 실습 → 예선 1:1 대응</span>
+    <span class="desc">딥코봇 AI 자율주행 3차시 → 디버깅 실습 → 예선 1:1 대응</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -162,63 +155,161 @@
     <span class="page-num">면수 14</span>
     <span class="title">5-5. 예선 교육 프로그램 (고교)</span>
     <span class="eval">교육 적절성(7) + 차별성(8)</span>
-    <span class="desc">딥코 보드 피지컬 AI 크래프팅 3차시 → 비전+데이터 모델 → 3단계 수준별 심화 비교표</span>
+    <span class="desc">딥코 보드 피지컬 AI 3차시 → 비전+데이터 모델 → 수준별 심화 비교표</span>
     <span class="status status-done">● 완료</span>
   </a>
 
-  <!-- ===== 섹션 5 계속: 예선 운영 + 본선 지원 ===== -->
+  <!-- ===== 섹션 5: 예선 운영 ===== -->
   <div class="section-label">5. 로보틱스 기초 기획 및 운영 – 예선 운영 · 결과 · 본선 지원</div>
 
   <a href="./page-15/index.html" class="card">
     <span class="page-num">면수 15</span>
     <span class="title">5-6. 예선 운영: 권역·규모</span>
-    <span class="eval">대회 운영 적합성(5) + 참여자 확보 방안 적절성(5)</span>
-    <span class="desc">5개 권역 11회 배분표(초·중·고 인원·산출근거) → 트랙 비율 40:34:26 → 3대 설계 원칙(1시간 접근성·학생수 비례·실적 보정) → 본선 진출 구조</span>
+    <span class="eval">대회 운영 적합성(5) + 참여자 확보(5)</span>
+    <span class="desc">5개 권역 11회 배분표 → 트랙 비율 40:34:26 → 3대 설계 원칙 → 본선 진출 구조</span>
     <span class="status status-done">● 완료</span>
   </a>
 
   <a href="./page-16/index.html" class="card">
     <span class="page-num">면수 16</span>
     <span class="title">5-7. 예선 운영: 장소·일정</span>
-    <span class="eval">대회 운영 적합성(5) + 사업 일정의 적절성(5)</span>
-    <span class="desc">6단계 마스터 일정(모집→정산) → 11개 후보 장소 상세표(수용·선정사유) → 1일 타임테이블(08:00~13:00 분단위) → 학사 회피 원칙</span>
+    <span class="eval">대회 운영 적합성(5) + 일정 적절성(5)</span>
+    <span class="desc">6단계 마스터 일정 → 11개 후보 장소표 → 1일 타임테이블 → 학사 회피 원칙</span>
     <span class="status status-done">● 완료</span>
   </a>
 
   <a href="./page-17/index.html" class="card">
     <span class="page-num">면수 17</span>
     <span class="title">5-8. 환경·물류·미달 대응</span>
-    <span class="eval">대회 운영 적합성(5) + 위험 관리 체계(3)</span>
-    <span class="desc">현장 환경 3대 표준(아레나·조명·네트워크) → 로봇 물류 5단계 → 로봇별 수량·예비율 표 → 7대 리스크 대응표 → 품질 체크리스트 → 미달 의사결정 플로우</span>
+    <span class="eval">대회 운영 적합성(5) + 위험 관리(3)</span>
+    <span class="desc">현장 3대 표준 → 물류 5단계 → 로봇별 수량표 → 7대 리스크 → 품질 체크리스트</span>
     <span class="status status-done">● 완료</span>
   </a>
 
   <a href="./page-18/index.html" class="card">
     <span class="page-num">면수 18</span>
     <span class="title">5-9. 결과 관리 + 본선 대회 지원</span>
-    <span class="eval">대회 운영 적합성(5) + 성과 관리 체계(5) + 사후 관리(3)</span>
-    <span class="desc">결과 처리 5단계(즉석집계→공식확정) → 3트랙 채점 기준표 → 본선 68팀+ 4주 멘토링 → 데이터 연속성 관리 → 본선 지원 패키지</span>
+    <span class="eval">운영 적합성(5) + 성과 관리(5) + 사후 관리(3)</span>
+    <span class="desc">결과 처리 5단계 → 3트랙 채점 기준 → 4주 멘토링 → 데이터 연속성</span>
     <span class="status status-done">● 완료</span>
   </a>
 
-  <!-- ===== 향후 작성 예정 ===== -->
-  <div class="section-label">6~8. 향후 작성 예정</div>
+  <!-- ===== 섹션 6: 멘토링 및 성과관리 ===== -->
+  <div class="section-label">6. 멘토링 및 성과관리</div>
 
-  <div class="card" style="opacity:0.5; pointer-events:none; border-left-color:#CCC;">
-    <span class="page-num" style="background:#EEE; color:#999;">면수 19~30</span>
-    <span class="title" style="color:#999;">홍보·확산 · 멘토링 상세 · 성과관리 · 인프라 · 예산 · 기대효과 · 붙임</span>
-    <span class="eval" style="color:#BBB;">나머지 12개 면수</span>
-    <span class="desc" style="color:#BBB;">홍보 채널 전략 · 온라인 플랫폼 · 본선 운영 상세 · 멘토링 4주 커리큘럼 · KPI 모니터링 체계 · 정보 인프라 · 예산 총괄표 · 항목별 산출내역 · 기대효과 종합 · 지속가능성 · 붙임 목록</span>
-    <span class="status status-pending">○ 대기</span>
-  </div>
+  <a href="./page-19/index.html" class="card">
+    <span class="page-num">면수 19</span>
+    <span class="title">6-1. 멘토단 구성·역량강화</span>
+    <span class="eval">멘토링 운영 계획(8) + 인력 전문성(8)</span>
+    <span class="desc">멘토 24명 구성표 → 선발 5단계 → 사전교육 5일 커리큘럼 → 품질 관리 지표</span>
+    <span class="status status-done">● 완료</span>
+  </a>
 
+  <a href="./page-20/index.html" class="card">
+    <span class="page-num">면수 20</span>
+    <span class="title">6-2. 멘토링 세부 운영 + 홍보부스</span>
+    <span class="eval">멘토링 운영(8) + 홍보·확산(5)</span>
+    <span class="desc">주차별 멘토링 상세 → 커뮤니케이션 도구 3종 → 체험 홍보부스 → 8종 채널 전략</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-21/index.html" class="card">
+    <span class="page-num">면수 21</span>
+    <span class="title">6-3. 성과지표 + 환류 + 고도화</span>
+    <span class="eval">성과 관리(5) + 사후 관리(3) + 기대효과(5)</span>
+    <span class="desc">KPI 11개 총괄표 → PDCA 환류 체계 → 2027~2028 고도화 로드맵</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-22/index.html" class="card">
+    <span class="page-num">면수 22</span>
+    <span class="title">6-4. 간트차트 + 리스크 관리</span>
+    <span class="eval">일정 적절성(5) + 위험 관리(3)</span>
+    <span class="desc">5월~10월 주간 간트차트 → 5대 전략 리스크 매트릭스 → 5개 마일스톤 CP</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <!-- ===== 섹션 7: 인프라 ===== -->
+  <div class="section-label">7. 교육 인프라 및 물류</div>
+
+  <a href="./page-23/index.html" class="card">
+    <span class="page-num">면수 23</span>
+    <span class="title">7-1. 시설·장비·교구재 인프라</span>
+    <span class="eval">시설·장비 적절성(5) + 교구재 확보(5)</span>
+    <span class="desc">시설 5대 요건 → 장비·교구 총괄 현황표 → IT 인프라 사양 → 확보 전략</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-24/index.html" class="card">
+    <span class="page-num">면수 24</span>
+    <span class="title">7-2. 물류 계획·파트너 기관 현황</span>
+    <span class="eval">교구재 확보(5) + 대회 운영 적합성(5)</span>
+    <span class="desc">물류 전 주기 5단계 → 권역별 비용 산출 → 4개 컨소시엄 + 외부 협력기관</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <!-- ===== 섹션 8: 예산 ===== -->
+  <div class="section-label">8. 예산 계획</div>
+
+  <a href="./page-25/index.html" class="card">
+    <span class="page-num">면수 25</span>
+    <span class="title">8-1. 예산 총괄표</span>
+    <span class="eval">예산 적정성(7) + 집행 계획(5)</span>
+    <span class="desc">총 200,000천원 → 비목별·기관별 총괄 편성표 → 비율 시각화 바 → 편성 4대 원칙</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-26/index.html" class="card">
+    <span class="page-num">면수 26</span>
+    <span class="title">8-2. 인건비 소요명세</span>
+    <span class="eval">예산 적정성(7)</span>
+    <span class="desc">내부 인건비(기관별·직급별) → 외부 인건비(강사·심판·멘토) → 법정 부담금</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-27/index.html" class="card">
+    <span class="page-num">면수 27</span>
+    <span class="title">8-3. 일반수용비·공공요금·특근매식비</span>
+    <span class="eval">예산 적정성(7)</span>
+    <span class="desc">인쇄·소모품 6종 → 전기·통신 4종 → 현장 식비 5종 → 재단 단가 기준 준수</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-28/index.html" class="card">
+    <span class="page-num">면수 28</span>
+    <span class="title">8-4. 임차료·재료비·용역비·기타</span>
+    <span class="eval">예산 적정성(7) + 교구재 확보(5)</span>
+    <span class="desc">로봇 임차 3종 + 장소 대관 → 아레나·소모품·배터리 → 홍보·영상·보험 용역</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-29/index.html" class="card">
+    <span class="page-num">면수 29</span>
+    <span class="title">8-5. 여비·업무추진비</span>
+    <span class="eval">예산 적정성(7) + 집행 계획(5)</span>
+    <span class="desc">운영 인력 출장 여비 → 본선 참가팀 교통·숙박 지원 → 회의비 → 집행 관리 원칙</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-30/index.html" class="card">
+    <span class="page-num">면수 30</span>
+    <span class="title">8-6. 자산취득비 + 예산 유의사항</span>
+    <span class="eval">예산 적정성(7) + 집행 계획(5)</span>
+    <span class="desc">딥코 보드 20세트 취득 → 유의사항 10항목 자가점검 → 예산 총요약 → 집행 관리 체계</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+</div>
+
+<!-- 완성 배너 -->
+<div class="complete-banner">
+  <h2>사업계획서 30페이지 전체 완성</h2>
+  <p>블루커뮤니케이션 컨소시엄 | 전국 2,900명 청소년에게 AI·로봇의 첫 경험을</p>
 </div>
 
 <!-- 범례 -->
 <div class="legend">
-  <span><span class="dot" style="background:#2E7D32;"></span> 완료</span>
-  <span><span class="dot" style="background:#E65100;"></span> 작성 중</span>
-  <span><span class="dot" style="background:#7B1FA2;"></span> 대기</span>
+  <span><span class="dot" style="background:#2E7D32;"></span> 완료 (30/30)</span>
 </div>
 
 </body>

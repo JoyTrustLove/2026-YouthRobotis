@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 26 – 인건비 소요명세</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+  .hr-tbl{width:100%;border-collapse:collapse;font-size:8.5px;line-height:135%;margin:6px 0}
+  .hr-tbl th{background:#1E3A5F;color:#fff;padding:4px 5px;text-align:center;font-weight:700}
+  .hr-tbl td{border:1px solid #D0D8E0;padding:3px 5px;vertical-align:top}
+  .hr-tbl .org{background:#EEF2F7;font-weight:700;color:#1E3A5F;text-align:center}
+  .hr-tbl .sub-total td{background:#F0F4F8;font-weight:700;color:#1E3A5F}
+  .hr-tbl .total-row td{background:#1E3A5F;color:#fff;font-weight:700}
+  .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
+  .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
+  .highlight-box .h-body{font-size:10px;line-height:165%}
+  .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-25/index.html" style="margin-left:8px;">← 면수 25</a>
+    <a href="../page-27/index.html" style="margin-left:8px;">면수 27 →</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">8</span>
+    <span class="sec-title">예산 계획 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적정성(7)</td></tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 기관별·직급별 <b>인건비 단가 × 투입 개월 수</b>를 명세표로 투명하게 제시<br>
+        ② 외부 인건비(강사·심판·멘토)는 <b>시간당 단가 × 횟수</b>로 산출 근거를 명시<br>
+        ③ 4대 보험·퇴직급여 등 <b>법정 부담금</b>을 별도 계상하여 실제 소요액 반영
+      </td>
+    </tr>
+  </table>
+
+  <h3>8-2. 인건비 소요명세</h3>
+
+  <span class="label-mark">▸ 내부 인건비 (참여 연구원·기획인력)</span>
+
+  <table class="hr-tbl">
+    <thead>
+      <tr>
+        <th style="width:10%;">기관</th>
+        <th style="width:14%;">직위·역할</th>
+        <th style="width:10%;">성명</th>
+        <th style="width:8%;">참여율</th>
+        <th style="width:8%;">기간(월)</th>
+        <th style="width:12%;">월 단가(천원)</th>
+        <th style="width:12%;">소계(천원)</th>
+        <th style="width:26%;">산출 근거</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="org" rowspan="2">블루</td>
+        <td style="text-align:center;">PM (총괄)</td>
+        <td style="text-align:center;">○○○</td>
+        <td style="text-align:center;">100%</td>
+        <td style="text-align:center;">6</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="font-size:7.5px;">경력 10년+, 사업 총괄 관리·재단 대응</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">기획 담당</td>
+        <td style="text-align:center;">○○○</td>
+        <td style="text-align:center;">80%</td>
+        <td style="text-align:center;">6</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">예산 관리·정산·보고서 작성</td>
+      </tr>
+      <tr>
+        <td class="org" rowspan="3">타임</td>
+        <td style="text-align:center;">모집 팀장</td>
+        <td style="text-align:center;">○○○</td>
+        <td style="text-align:center;">100%</td>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="font-size:7.5px;">전국 모집 총괄, 권역별 현장 관리</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">운영 담당 (5명)</td>
+        <td style="text-align:center;">○○○ 외</td>
+        <td style="text-align:center;">80%</td>
+        <td style="text-align:center;">4</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="font-size:7.5px;">5명 × 4개월 × 80%, 권역별 현장 운영</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">홍보 담당</td>
+        <td style="text-align:center;">○○○</td>
+        <td style="text-align:center;">60%</td>
+        <td style="text-align:center;">4</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">SNS·학교 공문·학원 네트워크 운영</td>
+      </tr>
+      <tr>
+        <td class="org" rowspan="2">핸즈온</td>
+        <td style="text-align:center;">콘텐츠 개발 팀장</td>
+        <td style="text-align:center;">○○○</td>
+        <td style="text-align:center;">100%</td>
+        <td style="text-align:center;">6</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="font-size:7.5px;">교육·문제 개발 총괄, 로봇 관리</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">기술 담당</td>
+        <td style="text-align:center;">○○○</td>
+        <td style="text-align:center;">80%</td>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">로봇 펌웨어·채점 시스템 개발</td>
+      </tr>
+      <tr>
+        <td class="org">중앙대</td>
+        <td style="text-align:center;">멘토링 총괄 교수</td>
+        <td style="text-align:center;">○○○</td>
+        <td style="text-align:center;">30%</td>
+        <td style="text-align:center;">4</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">멘토단 관리·교육 품질 자문</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="6" style="text-align:center;">내부 인건비 소계</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="label-mark">▸ 외부 인건비 (강사·심판·멘토)</span>
+
+  <table class="hr-tbl">
+    <thead>
+      <tr>
+        <th style="width:14%;">구분</th>
+        <th style="width:10%;">인원</th>
+        <th style="width:12%;">단가(천원)</th>
+        <th style="width:10%;">횟수/일수</th>
+        <th style="width:12%;">시간/일</th>
+        <th style="width:14%;">소계(천원)</th>
+        <th style="width:28%;">산출 근거</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;">예선 강사</td>
+        <td style="text-align:center;">33명</td>
+        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">11회</td>
+        <td style="text-align:center;">3시간</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">트랙당 강사 3명 × 11회 × 3시간</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">예선 심판</td>
+        <td style="text-align:center;">22명</td>
+        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">11회</td>
+        <td style="text-align:center;">2시간</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">트랙당 심판 2명 × 11회 × 2시간</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">본선 심판</td>
+        <td style="text-align:center;">9명</td>
+        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">2일</td>
+        <td style="text-align:center;">6시간</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">트랙당 심판 3명 × 2일 × 6시간</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">멘토 활동비</td>
+        <td style="text-align:center;">24명</td>
+        <td style="text-align:center;">○○○/주</td>
+        <td style="text-align:center;">4주</td>
+        <td style="text-align:center;">—</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">멘토 24명 × 4주 × 주당 활동비</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">멘토 사전교육 강사</td>
+        <td style="text-align:center;">4명</td>
+        <td style="text-align:center;">○○○/시간</td>
+        <td style="text-align:center;">5일</td>
+        <td style="text-align:center;">3시간</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="font-size:7.5px;">외부 전문가 4명 × 5일 × 3시간</td>
+      </tr>
+      <tr class="sub-total">
+        <td colspan="5" style="text-align:center;">외부 인건비 소계</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="label-mark">▸ 법정 부담금</span>
+
+  <table class="hr-tbl">
+    <thead>
+      <tr>
+        <th style="width:24%;">항목</th>
+        <th style="width:16%;">요율</th>
+        <th style="width:20%;">대상 금액(천원)</th>
+        <th style="width:20%;">소계(천원)</th>
+        <th style="width:20%;">비고</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight:700;">국민연금</td><td style="text-align:center;">4.5%</td><td style="text-align:right;">○○,○○○</td><td style="text-align:right;">○,○○○</td><td style="font-size:8px;">내부 인건비 대상</td></tr>
+      <tr><td style="font-weight:700;">건강보험</td><td style="text-align:center;">3.545%</td><td style="text-align:right;">○○,○○○</td><td style="text-align:right;">○,○○○</td><td style="font-size:8px;">내부 인건비 대상</td></tr>
+      <tr><td style="font-weight:700;">고용보험</td><td style="text-align:center;">0.9%</td><td style="text-align:right;">○○,○○○</td><td style="text-align:right;">○○○</td><td style="font-size:8px;">내부 인건비 대상</td></tr>
+      <tr><td style="font-weight:700;">산재보험</td><td style="text-align:center;">0.7%</td><td style="text-align:right;">○○,○○○</td><td style="text-align:right;">○○○</td><td style="font-size:8px;">내부 인건비 대상</td></tr>
+      <tr><td style="font-weight:700;">퇴직급여</td><td style="text-align:center;">8.33%</td><td style="text-align:right;">○○,○○○</td><td style="text-align:right;">○,○○○</td><td style="font-size:8px;">1년 미만 근무자 비율 반영</td></tr>
+      <tr class="sub-total">
+        <td colspan="3" style="text-align:center;">법정 부담금 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <div class="h-title">인건비 편성 핵심 원칙</div>
+    <div class="h-body">
+      <b>① 실참여율 기반:</b> 각 인력의 실제 투입 비율(30~100%)을 반영하여 과다 계상을 방지.<br>
+      <b>② 외부 인건비 시장 단가:</b> 강사·심판 단가는 한국과학창의재단 외부 전문가 수당 기준을 준용.<br>
+      <b>③ 멘토 활동비 적정성:</b> 대학원생 생활비 수준을 감안하되, 주당 실활동 시간(6~8시간)에 비례 책정.
+    </div>
+  </div>
+
+  <div class="note-box">※ 인건비 단가표 원본 및 4대 보험 요율 근거 자료는 <b>붙임 14</b>에 수록</div>
+
+  <div class="page-num">- 26 -</div>
+</div>
+</body>
+</html>

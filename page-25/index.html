@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 25 – 예산 총괄표</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+  .budget-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .budget-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .budget-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .budget-tbl .cat{background:#EEF2F7;font-weight:700;color:#1E3A5F}
+  .budget-tbl .total-row td{background:#1E3A5F;color:#fff;font-weight:700}
+  .budget-tbl .sub-total td{background:#F0F4F8;font-weight:700;color:#1E3A5F}
+  .card-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+  .card{background:#F8FAFE;border:1px solid #C5D3E3;border-radius:6px;padding:10px 8px;text-align:center}
+  .card .c-icon{font-size:22px;margin-bottom:3px}
+  .card .c-title{font-size:10px;font-weight:700;color:#1E3A5F;margin-bottom:2px}
+  .card .c-num{font-size:16px;font-weight:900;color:#E07C38}
+  .card .c-sub{font-size:8.5px;color:#666;margin-top:2px}
+  .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
+  .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
+  .highlight-box .h-body{font-size:10px;line-height:165%}
+  .pie-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .pie-card{border:1px solid #D0D8E0;border-radius:6px;padding:12px;background:#FAFBFD}
+  .pie-card .pc-title{font-size:11px;font-weight:700;color:#1E3A5F;margin-bottom:8px;border-bottom:1px solid #E0E0E0;padding-bottom:4px}
+  .pie-bar{display:flex;height:18px;border-radius:4px;overflow:hidden;margin:4px 0}
+  .pie-bar div{display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#fff}
+  .pie-legend{font-size:8.5px;line-height:160%;color:#555;margin-top:4px}
+  .pie-legend span{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle;margin-right:3px}
+  .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-24/index.html" style="margin-left:8px;">← 면수 24</a>
+    <a href="../page-26/index.html" style="margin-left:8px;">면수 26 →</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">8</span>
+    <span class="sec-title">예산 계획</span>
+  </div>
+
+  <table class="info-box">
+    <tr><td class="lb">평가항목(배점)</td><td>예산 편성의 적정성(7) + 예산 집행 계획(5)</td></tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 총 사업비 <b>200,000천원</b>을 인건비·운영비·여비·기타로 4대 항목 편성<br>
+        ② 기관별 배분 — 블루 ○○M / 타임 ○○M / 핸즈온 ○○M / 중앙대 ○○M<br>
+        ③ 인건비 비율 ○○%, 운영비 비율 ○○%로 <b>재단 가이드라인 준수</b>
+      </td>
+    </tr>
+  </table>
+
+  <h3>8-1. 예산 총괄표</h3>
+
+  <!-- 총량 카드 -->
+  <div class="card-row">
+    <div class="card">
+      <div class="c-icon">💰</div>
+      <div class="c-title">총 사업비</div>
+      <div class="c-num">200,000</div>
+      <div class="c-sub">천원 (2억원)</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">👤</div>
+      <div class="c-title">인건비</div>
+      <div class="c-num">○○,○○○</div>
+      <div class="c-sub">천원 (○○%)</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">⚙️</div>
+      <div class="c-title">운영비</div>
+      <div class="c-num">○○,○○○</div>
+      <div class="c-sub">천원 (○○%)</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">🏢</div>
+      <div class="c-title">기관 수</div>
+      <div class="c-num">4</div>
+      <div class="c-sub">블루·타임·핸즈온·중앙대</div>
+    </div>
+  </div>
+
+  <!-- 총괄표 -->
+  <span class="label-mark">▸ 사업비 총괄 편성표</span>
+
+  <table class="budget-tbl">
+    <thead>
+      <tr>
+        <th style="width:6%;">No</th>
+        <th style="width:14%;">비목(대)</th>
+        <th style="width:22%;">비목(중)</th>
+        <th style="width:14%;">블루<br>(천원)</th>
+        <th style="width:14%;">타임<br>(천원)</th>
+        <th style="width:14%;">핸즈온<br>(천원)</th>
+        <th style="width:14%;">중앙대<br>(천원)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td class="cat" rowspan="3">인건비</td>
+        <td>내부 인건비</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>외부 인건비 (강사·심판)</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>멘토 활동비</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">○,○○○</td>
+      </tr>
+      <tr class="sub-total">
+        <td></td>
+        <td colspan="2" style="text-align:center;">인건비 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td class="cat" rowspan="6">운영비</td>
+        <td>일반수용비 (인쇄·소모품)</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td>공공요금 (통신·전기)</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">6</td>
+        <td>특근매식비</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">7</td>
+        <td>임차료 (로봇·장소)</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">8</td>
+        <td>재료비 (교구·아레나)</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">9</td>
+        <td>용역비 (홍보·디자인)</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr class="sub-total">
+        <td></td>
+        <td colspan="2" style="text-align:center;">운영비 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">10</td>
+        <td class="cat" rowspan="2">여비</td>
+        <td>국내 출장 여비</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">11</td>
+        <td>본선 참가팀 교통비 지원</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr class="sub-total">
+        <td></td>
+        <td colspan="2" style="text-align:center;">여비 소계</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○,○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">12</td>
+        <td class="cat">업무추진비</td>
+        <td>회의비·행사 운영비</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">○○○</td>
+        <td style="text-align:right;">○○○</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">13</td>
+        <td class="cat">자산취득비</td>
+        <td>딥코 보드 베이직 추가 구매</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">—</td>
+        <td style="text-align:right;">○,○○○</td>
+        <td style="text-align:right;">—</td>
+      </tr>
+      <tr class="total-row">
+        <td></td>
+        <td colspan="2" style="text-align:center;">기관별 합계</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+        <td style="text-align:right;">○○,○○○</td>
+      </tr>
+      <tr class="total-row">
+        <td></td>
+        <td colspan="2" style="text-align:center;">총 사업비</td>
+        <td colspan="4" style="text-align:center;font-size:12px;">200,000 천원</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 비율 시각화 -->
+  <span class="label-mark">▸ 예산 구성 비율 시각화</span>
+
+  <div class="pie-grid">
+    <div class="pie-card">
+      <div class="pc-title">비목별 비율</div>
+      <div class="pie-bar">
+        <div style="width:35%;background:#1E3A5F;">인건비</div>
+        <div style="width:40%;background:#E07C38;">운영비</div>
+        <div style="width:12%;background:#27ae60;">여비</div>
+        <div style="width:8%;background:#7B3FA0;">기타</div>
+        <div style="width:5%;background:#999;">자산</div>
+      </div>
+      <div class="pie-legend">
+        <span style="background:#1E3A5F;"></span>인건비 ○○% &nbsp;
+        <span style="background:#E07C38;"></span>운영비 ○○% &nbsp;
+        <span style="background:#27ae60;"></span>여비 ○○%<br>
+        <span style="background:#7B3FA0;"></span>업무추진비 ○% &nbsp;
+        <span style="background:#999;"></span>자산취득비 ○%
+      </div>
+    </div>
+    <div class="pie-card">
+      <div class="pc-title">기관별 비율</div>
+      <div class="pie-bar">
+        <div style="width:20%;background:#1E3A5F;">블루</div>
+        <div style="width:35%;background:#E07C38;">타임</div>
+        <div style="width:30%;background:#27ae60;">핸즈온</div>
+        <div style="width:15%;background:#7B3FA0;">중앙대</div>
+      </div>
+      <div class="pie-legend">
+        <span style="background:#1E3A5F;"></span>블루 ○○% &nbsp;
+        <span style="background:#E07C38;"></span>타임 ○○% &nbsp;
+        <span style="background:#27ae60;"></span>핸즈온 ○○% &nbsp;
+        <span style="background:#7B3FA0;"></span>중앙대 ○○%
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="h-title">예산 편성 원칙</div>
+    <div class="h-body">
+      <b>① 인건비 상한 준수:</b> 한국과학창의재단 가이드라인에 따라 인건비 비율을 총 사업비의 ○○% 이내로 편성.<br>
+      <b>② 현물 기여 반영:</b> 컨소시엄 기관의 기존 보유 장비(노트북·카메라 등)를 현물 기여로 반영하여 사업비 효율화.<br>
+      <b>③ 예비비 확보:</b> 운영비 내 예비비 5%(○,○○○천원)를 별도 편성하여 돌발 상황에 대응.<br>
+      <b>④ 집행 투명성:</b> 월간 집행률 보고 + 분기 정산으로 재단 모니터링 체계에 부합.
+    </div>
+  </div>
+
+  <div class="note-box">※ ○○○ 표기 항목은 최종 예산 확정 시 실금액으로 대체. 비목별 산출내역은 <b>면수 26~30</b>에 상세 기술</div>
+
+  <div class="page-num">- 25 -</div>
+</div>
+</body>
+</html>

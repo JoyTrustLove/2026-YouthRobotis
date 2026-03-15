@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 21 – 성과지표 + 환류 + 고도화</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+  .kpi-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .kpi-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .kpi-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .kpi-tbl .must{background:#E8F5E9;color:#2E7D32;font-weight:700;text-align:center;font-size:8px;border-radius:10px;padding:2px 6px}
+  .kpi-tbl .opt{background:#FFF3E0;color:#E65100;font-weight:700;text-align:center;font-size:8px;border-radius:10px;padding:2px 6px}
+  .flow-row{display:flex;align-items:center;justify-content:center;gap:4px;margin:10px 0;flex-wrap:wrap}
+  .flow-step{border-radius:6px;padding:7px 10px;font-size:9px;font-weight:700;text-align:center;color:#fff;min-width:110px}
+  .flow-arrow{font-size:14px;color:#E07C38;font-weight:900}
+  .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+  .card{background:#F8FAFE;border:1px solid #C5D3E3;border-radius:6px;padding:10px 8px;text-align:center}
+  .card .c-icon{font-size:22px;margin-bottom:3px}
+  .card .c-title{font-size:10px;font-weight:700;color:#1E3A5F;margin-bottom:2px}
+  .card .c-desc{font-size:9px;color:#555;line-height:150%}
+  .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
+  .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
+  .highlight-box .h-body{font-size:10px;line-height:165%}
+  .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-20/index.html" style="margin-left:8px;">← 면수 20</a>
+    <a href="../page-22/index.html" style="margin-left:8px;">면수 22 →</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">6</span>
+    <span class="sec-title">멘토링 및 성과관리 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr><td class="lb">평가항목(배점)</td><td>성과 관리 체계(5) + 사후 관리·환류(3) + 기대효과(5)</td></tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 필수 KPI 7개 + 권장 KPI 4개를 <b>측정 시점·방법·목표치</b>와 함께 명시<br>
+        ② 중간 점검 → 최종 평가 → 환류의 <b>3단계 PDCA 사이클</b> 운영<br>
+        ③ 2027년 이후 <b>고도화 로드맵</b>으로 사업의 지속가능성 입증
+      </td>
+    </tr>
+  </table>
+
+  <h3>6-3. 성과지표 체계</h3>
+
+  <span class="label-mark">▸ KPI 총괄표</span>
+
+  <table class="kpi-tbl">
+    <thead>
+      <tr>
+        <th style="width:4%;">No</th>
+        <th style="width:8%;">구분</th>
+        <th style="width:20%;">성과지표</th>
+        <th style="width:12%;">목표치</th>
+        <th style="width:12%;">측정 시점</th>
+        <th style="width:26%;">측정 방법</th>
+        <th style="width:18%;">데이터 출처</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td style="text-align:center;"><span class="must">필수</span></td>
+        <td style="font-weight:700;">예선 참가자 수</td>
+        <td style="text-align:center;">≥ 2,900명</td>
+        <td style="text-align:center;">예선 종료 후</td>
+        <td style="font-size:8.5px;">참가 신청 시스템 확정 인원 집계</td>
+        <td style="font-size:8.5px;">접수 시스템 DB</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td style="text-align:center;"><span class="must">필수</span></td>
+        <td style="font-weight:700;">예선 개최 횟수</td>
+        <td style="text-align:center;">11회</td>
+        <td style="text-align:center;">예선 종료 후</td>
+        <td style="font-size:8.5px;">권역별 개최 실적 확인서</td>
+        <td style="font-size:8.5px;">현장 운영 보고서</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td style="text-align:center;"><span class="must">필수</span></td>
+        <td style="font-weight:700;">본선 진출 팀 수</td>
+        <td style="text-align:center;">≥ 68팀</td>
+        <td style="text-align:center;">예선 확정 후</td>
+        <td style="font-size:8.5px;">트랙별 상위 선발 결과표</td>
+        <td style="font-size:8.5px;">공식 결과표</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td style="text-align:center;"><span class="must">필수</span></td>
+        <td style="font-weight:700;">참가자 만족도</td>
+        <td style="text-align:center;">≥ 4.5/5</td>
+        <td style="text-align:center;">예선·본선 직후</td>
+        <td style="font-size:8.5px;">5점 척도 설문(교육·대회·운영·재참여)</td>
+        <td style="font-size:8.5px;">온라인 설문 시스템</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td style="text-align:center;"><span class="must">필수</span></td>
+        <td style="font-weight:700;">본선 교육 이수율</td>
+        <td style="text-align:center;">≥ 90%</td>
+        <td style="text-align:center;">멘토링 종료 후</td>
+        <td style="font-size:8.5px;">4주 멘토링 출석률 기반 이수 판정</td>
+        <td style="font-size:8.5px;">멘토링 출석 로그</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">6</td>
+        <td style="text-align:center;"><span class="must">필수</span></td>
+        <td style="font-weight:700;">AI·로봇 인식 변화</td>
+        <td style="text-align:center;">≥ +20pp</td>
+        <td style="text-align:center;">사전-사후</td>
+        <td style="font-size:8.5px;">5문항 사전-사후 설문 차이</td>
+        <td style="font-size:8.5px;">설문 시스템</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">7</td>
+        <td style="text-align:center;"><span class="must">필수</span></td>
+        <td style="font-weight:700;">예산 집행률</td>
+        <td style="text-align:center;">≥ 95%</td>
+        <td style="text-align:center;">사업 종료 후</td>
+        <td style="font-size:8.5px;">집행액 / 교부액 × 100</td>
+        <td style="font-size:8.5px;">정산서</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">8</td>
+        <td style="text-align:center;"><span class="opt">권장</span></td>
+        <td style="font-weight:700;">지역 균형 참여율</td>
+        <td style="text-align:center;">비수도권 ≥ 55%</td>
+        <td style="text-align:center;">예선 종료 후</td>
+        <td style="font-size:8.5px;">비수도권 참가자 / 전체 참가자 × 100</td>
+        <td style="font-size:8.5px;">접수 시스템</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">9</td>
+        <td style="text-align:center;"><span class="opt">권장</span></td>
+        <td style="font-weight:700;">홍보 도달률</td>
+        <td style="text-align:center;">노출 50만+</td>
+        <td style="text-align:center;">모집 종료 후</td>
+        <td style="font-size:8.5px;">SNS 노출 수 + 공문 발송 학교 수 합산</td>
+        <td style="font-size:8.5px;">광고 대시보드</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">10</td>
+        <td style="text-align:center;"><span class="opt">권장</span></td>
+        <td style="font-weight:700;">멘토링 만족도</td>
+        <td style="text-align:center;">≥ 4.5/5</td>
+        <td style="text-align:center;">멘토링 종료 후</td>
+        <td style="font-size:8.5px;">본선 진출팀 별도 설문</td>
+        <td style="font-size:8.5px;">설문 시스템</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">11</td>
+        <td style="text-align:center;"><span class="opt">권장</span></td>
+        <td style="font-weight:700;">언론 보도 건수</td>
+        <td style="text-align:center;">≥ 10건</td>
+        <td style="text-align:center;">사업 종료 후</td>
+        <td style="font-size:8.5px;">뉴스 클리핑 기반 집계</td>
+        <td style="font-size:8.5px;">클리핑 서비스</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:10px;">환류 체계 (PDCA)</h3>
+
+  <div class="flow-row">
+    <div class="flow-step" style="background:#1E3A5F;">Plan<br><span style="font-size:8px;font-weight:400;">KPI 설정·계획 수립</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#2196F3;">Do<br><span style="font-size:8px;font-weight:400;">사업 집행·데이터 수집</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#E07C38;">Check<br><span style="font-size:8px;font-weight:400;">중간·최종 점검</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#27ae60;">Act<br><span style="font-size:8px;font-weight:400;">개선·고도화 반영</span></div>
+  </div>
+
+  <p class="body-text">
+    <b>중간 점검(7월 말):</b> 예선 6회차 종료 시점에서 모집률·만족도·현장 이슈를 점검하고, 미달 권역 대응·교육 콘텐츠 보완 등 즉시 개선 조치를 시행함.
+    <b>최종 평가(10월):</b> 전체 KPI 달성도를 분석하고, 재단 제출용 성과보고서를 작성함.
+    <b>환류(11월):</b> 성과 분석 결과를 2027년 사업 계획에 반영하고, 미달 지표에 대한 원인 분석·개선 방안을 수립함.
+  </p>
+
+  <h3 style="margin-top:10px;">고도화 로드맵 (2027~2028)</h3>
+
+  <div class="card-row">
+    <div class="card">
+      <div class="c-icon">🚀</div>
+      <div class="c-title">2027년</div>
+      <div class="c-desc">참가자 4,000명 확대<br>권역 7개로 세분화<br>온라인 예선 트랙 신설<br>음성 AI 기능 추가</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">🌏</div>
+      <div class="c-title">2028년</div>
+      <div class="c-desc">국제 교류전 시범 운영<br>APAC 3개국 초청<br>AI 심사 보조 시스템 도입<br>로봇 자체 개발 트랙</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">♻️</div>
+      <div class="c-title">지속가능성</div>
+      <div class="c-desc">지자체 매칭 펀드 확보<br>기업 후원 모델 구축<br>참가자 OB 멘토 전환<br>오픈소스 교안 공개</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="h-title">성과관리 핵심 메시지</div>
+    <div class="h-body">
+      "측정할 수 없으면 관리할 수 없다" — 모든 KPI에 <b>측정 시점·방법·데이터 출처</b>를 명시하여 사후 검증 가능성을 100% 확보함.
+      중간 점검을 통해 실시간 보정하고, 환류를 통해 차년도 사업에 즉시 반영하는 <b>살아있는 성과관리 체계</b>를 운영함.
+    </div>
+  </div>
+
+  <div class="note-box">※ 설문 문항 상세, 성과보고서 양식은 <b>붙임 10</b>에 수록</div>
+
+  <div class="page-num">- 21 -</div>
+</div>
+</body>
+</html>

@@ -17,101 +17,30 @@
   h1 { color:#1E3A5F; font-size:24px; margin-bottom:6px; }
   .subtitle { color:#666; font-size:14px; margin-bottom:10px; }
 
-  /* ── 진행률 바 ── */
-  .progress-wrap {
-    width:100%; max-width:1100px;
-    margin-bottom:28px;
-  }
-  .progress-label {
-    font-size:12px; color:#888; margin-bottom:4px;
-    display:flex; justify-content:space-between;
-  }
-  .progress-bar {
-    width:100%; height:10px;
-    background:#E0E0E0; border-radius:5px;
-    overflow:hidden;
-  }
-  .progress-fill {
-    height:100%;
-    background: linear-gradient(90deg, #1E3A5F, #E07C38);
-    border-radius:5px;
-    transition: width 0.5s;
-  }
+  .progress-wrap { width:100%; max-width:1100px; margin-bottom:28px; }
+  .progress-label { font-size:12px; color:#888; margin-bottom:4px; display:flex; justify-content:space-between; }
+  .progress-bar { width:100%; height:10px; background:#E0E0E0; border-radius:5px; overflow:hidden; }
+  .progress-fill { height:100%; background:linear-gradient(90deg,#1E3A5F,#E07C38); border-radius:5px; transition:width 0.5s; }
 
-  /* ── 카드 그리드 ── */
-  .grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap:14px;
-    max-width:1100px;
-    width:100%;
-  }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; max-width:1100px; width:100%; }
 
-  .card {
-    background:#fff;
-    border-radius:10px;
-    padding:18px 20px;
-    text-decoration:none;
-    color:#262626;
-    box-shadow:0 2px 8px rgba(0,0,0,0.06);
-    border-left:4px solid #1E3A5F;
-    transition: transform 0.2s, box-shadow 0.2s;
-    display:flex; flex-direction:column; gap:5px;
-  }
-  .card:hover {
-    transform:translateY(-4px);
-    box-shadow:0 6px 20px rgba(0,0,0,0.12);
-    border-left-color:#E07C38;
-  }
+  .card { background:#fff; border-radius:10px; padding:18px 20px; text-decoration:none; color:#262626; box-shadow:0 2px 8px rgba(0,0,0,0.06); border-left:4px solid #1E3A5F; transition:transform 0.2s,box-shadow 0.2s; display:flex; flex-direction:column; gap:5px; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 6px 20px rgba(0,0,0,0.12); border-left-color:#E07C38; }
 
-  .card .page-num {
-    font-size:11px; color:#1E3A5F; font-weight:700;
-    background:#EEF2F7; display:inline-block;
-    padding:2px 8px; border-radius:4px;
-    width:fit-content;
-  }
-  .card .title {
-    font-size:14px; font-weight:700; color:#1E3A5F;
-  }
-  .card .eval {
-    font-size:10.5px; color:#888; line-height:1.4;
-  }
-  .card .desc {
-    font-size:10px; color:#555; line-height:1.5;
-    border-top:1px dashed #E0E0E0;
-    padding-top:5px; margin-top:2px;
-  }
-  .card .status {
-    font-size:10px; font-weight:600;
-    padding:2px 8px; border-radius:4px;
-    width:fit-content; margin-top:3px;
-  }
-  .status-done    { background:#E8F5E9; color:#2E7D32; }
-  .status-wip     { background:#FFF3E0; color:#E65100; }
+  .card .page-num { font-size:11px; color:#1E3A5F; font-weight:700; background:#EEF2F7; display:inline-block; padding:2px 8px; border-radius:4px; width:fit-content; }
+  .card .title { font-size:14px; font-weight:700; color:#1E3A5F; }
+  .card .eval { font-size:10.5px; color:#888; line-height:1.4; }
+  .card .desc { font-size:10px; color:#555; line-height:1.5; border-top:1px dashed #E0E0E0; padding-top:5px; margin-top:2px; }
+  .card .status { font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px; width:fit-content; margin-top:3px; }
+  .status-done { background:#E8F5E9; color:#2E7D32; }
+  .status-wip { background:#FFF3E0; color:#E65100; }
   .status-pending { background:#F3E5F5; color:#7B1FA2; }
 
-  /* ── 섹션 구분 ── */
-  .section-label {
-    grid-column: 1 / -1;
-    font-size:13px; font-weight:700; color:#1E3A5F;
-    border-bottom:2px solid #1E3A5F;
-    padding-bottom:4px;
-    margin-top:12px;
-  }
+  .section-label { grid-column:1/-1; font-size:13px; font-weight:700; color:#1E3A5F; border-bottom:2px solid #1E3A5F; padding-bottom:4px; margin-top:12px; }
 
-  /* ── 범례 ── */
-  .legend {
-    max-width:1100px; width:100%;
-    margin-top:24px; padding-top:12px;
-    border-top:1px solid #E0E0E0;
-    display:flex; gap:16px;
-    font-size:11px; color:#888;
-  }
+  .legend { max-width:1100px; width:100%; margin-top:24px; padding-top:12px; border-top:1px solid #E0E0E0; display:flex; gap:16px; font-size:11px; color:#888; }
   .legend span { display:flex; align-items:center; gap:4px; }
-  .legend .dot {
-    width:10px; height:10px; border-radius:3px;
-    display:inline-block;
-  }
+  .legend .dot { width:10px; height:10px; border-radius:3px; display:inline-block; }
 </style>
 </head>
 <body>
@@ -123,10 +52,10 @@
 <div class="progress-wrap">
   <div class="progress-label">
     <span>전체 진행률</span>
-    <span><b>7</b> / 30 페이지 완료</span>
+    <span><b>12</b> / 30 페이지 완료</span>
   </div>
   <div class="progress-bar">
-    <div class="progress-fill" style="width:23%;"></div>
+    <div class="progress-fill" style="width:40%;"></div>
   </div>
 </div>
 
@@ -139,10 +68,7 @@
     <span class="page-num">면수 3</span>
     <span class="title">3-1~3. 지원배경 · 기관소개 · 실적</span>
     <span class="eval">사업목표 이해도(5) + 대회·교육 역량(8)</span>
-    <span class="desc">
-      정책 배경(AI 한글화→전국민 AI 경진대회) → 제로 바리어 확산형 모델 →
-      4개 기관 카드형 소개 → 실적 9건 태그 테이블
-    </span>
+    <span class="desc">정책 배경(AI 한글화→전국민 AI 경진대회) → 제로 바리어 확산형 모델 → 4개 기관 카드형 소개 → 실적 9건 태그 테이블</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -150,10 +76,7 @@
     <span class="page-num">면수 4</span>
     <span class="title">3-4~5. 추진체계 · 컨소시엄 배경</span>
     <span class="eval">사업 운영 역량(7)</span>
-    <span class="desc">
-      재단↔주관↔협력 관계도 다이어그램 → 기관별 역할·산출물 표 →
-      컨소시엄 4대 장점 카드(모객·로봇생태계·랩멘토링·행정효율)
-    </span>
+    <span class="desc">재단↔주관↔협력 관계도 다이어그램 → 기관별 역할·산출물 표 → 컨소시엄 4대 장점 카드</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -161,10 +84,7 @@
     <span class="page-num">면수 5</span>
     <span class="title">3-6. 전담조직 · 인력 구성 (상)</span>
     <span class="eval">참여 인력 전문성(8)</span>
-    <span class="desc">
-      인력 요약 박스 → 5개 팀 조직도 → 전담인력 명단 테이블
-      (블루 3명 + 타임 14명 + 핸즈온 3명 + 중앙대 2명)
-    </span>
+    <span class="desc">인력 요약 박스 → 5개 팀 조직도 → 전담인력 명단 테이블 (블루 3 + 타임 14 + 핸즈온 3 + 중앙대 2)</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -172,10 +92,7 @@
     <span class="page-num">면수 6</span>
     <span class="title">3-6. 전담조직 · 인력 구성 (하)</span>
     <span class="eval">운영 인력 역량(7)</span>
-    <span class="desc">
-      PM·핵심인력 전문성 요약 표 → 채용 예정 인력 확보 방안 →
-      강사·멘토·현장 운영 3종 역량 강화 교육 계획
-    </span>
+    <span class="desc">PM·핵심인력 전문성 요약 표 → 채용 예정 인력 확보 방안 → 강사·멘토·현장 3종 역량 강화 교육</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -186,10 +103,7 @@
     <span class="page-num">면수 7</span>
     <span class="title">4-1. 사업 추진목표</span>
     <span class="eval">사업목표 이해도(5) + 기대효과(5)</span>
-    <span class="desc">
-      3단계 플로우(참여→즐기고→성장) → KPI 7개 표(필달 태그 포함) →
-      기대효과 4분할 카드
-    </span>
+    <span class="desc">3단계 플로우(참여→즐기고→성장) → KPI 7개 표(필달 태그) → 기대효과 4분할 카드</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -197,10 +111,7 @@
     <span class="page-num">면수 8</span>
     <span class="title">4-2. 추진내용 및 전략</span>
     <span class="eval">대회 운영 적합성(5)</span>
-    <span class="desc">
-      3대 설계 원칙(진입장벽·정량평가·자율주행) →
-      추진내용 ①②(기초대회 3파트 + 멘토링·내실화) → 비교표
-    </span>
+    <span class="desc">3대 설계 원칙(진입장벽·정량평가·자율주행) → 추진내용 ①②(기초대회 + 멘토링) → 비교표</span>
     <span class="status status-done">● 완료</span>
   </a>
 
@@ -208,20 +119,60 @@
     <span class="page-num">면수 9</span>
     <span class="title">4-3. 차별화 · 두 수행기관 대응</span>
     <span class="eval">실현 가능성(5)</span>
-    <span class="desc">
-      범용/한정 기능 구분표 7행 → 설계 원리 노트 →
-      유연성 3종 카드(권역·시기·본선) → 핵심 메시지 배너
-    </span>
+    <span class="desc">범용/한정 기능 구분표 7행 → 설계 원리 노트 → 유연성 3종 카드 → 핵심 메시지 배너</span>
     <span class="status status-done">● 완료</span>
   </a>
 
-  <!-- ===== 섹션 5~8: 미작성 영역 (향후 확장) ===== -->
-  <div class="section-label">5~8. 향후 작성 예정</div>
+  <!-- ===== 섹션 5: 로보틱스 기초 기획 및 운영 ===== -->
+  <div class="section-label">5. 로보틱스 기초 기획 및 운영</div>
+
+  <a href="./page-10/index.html" class="card">
+    <span class="page-num">면수 10</span>
+    <span class="title">5-1. 예선 문제 개발</span>
+    <span class="eval">교육 차별성(8) + 프로그램 개발 역량(8)</span>
+    <span class="desc">초·중·고 3종 문제 개요표 → 출제 배경(SDGs 연계) → 차별화 3분할 카드 → 자율주행·정량평가 원칙</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-11/index.html" class="card">
+    <span class="page-num">면수 11</span>
+    <span class="title">5-2. 로봇 선정 및 활용 전략</span>
+    <span class="eval">교육 차별성(8) + 대회 운영 적합성(5)</span>
+    <span class="desc">설명회 7원칙 충족표(전항목 ✔) → 로봇 3종 스펙 비교 → 임차 비용 구조(사업비 대비 ○○%)</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-12/index.html" class="card">
+    <span class="page-num">면수 12</span>
+    <span class="title">5-3. 예선 교육 프로그램 (초등)</span>
+    <span class="eval">교육 내용의 적절성(7)</span>
+    <span class="desc">로보독 코딩 캠프 3차시 → 교구재 표 → 교육-대회 일체형 연계성 → 붙임6 안내</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-13/index.html" class="card">
+    <span class="page-num">면수 13</span>
+    <span class="title">5-4. 예선 교육 프로그램 (중학)</span>
+    <span class="eval">교육 내용의 적절성(7)</span>
+    <span class="desc">딥코봇 AI 자율주행 3차시(도로주행·신호등 인식) → 디버깅 중심 실습 → 예선 1:1 대응</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <a href="./page-14/index.html" class="card">
+    <span class="page-num">면수 14</span>
+    <span class="title">5-5. 예선 교육 프로그램 (고교)</span>
+    <span class="eval">교육 적절성(7) + 차별성(8)</span>
+    <span class="desc">딥코 보드 피지컬 AI 크래프팅 3차시 → 비전+데이터 모델 → 3단계 수준별 심화 비교표</span>
+    <span class="status status-done">● 완료</span>
+  </a>
+
+  <!-- ===== 향후 작성 예정 ===== -->
+  <div class="section-label">5-6 ~ 8. 향후 작성 예정</div>
 
   <div class="card" style="opacity:0.5; pointer-events:none; border-left-color:#CCC;">
-    <span class="page-num" style="background:#EEE; color:#999;">면수 10~30</span>
-    <span class="title" style="color:#999;">예선 문제 · 교육 프로그램 · 로봇 선정 · 예선 운영 · 멘토링 · 성과 · 인프라 · 예산</span>
-    <span class="eval" style="color:#BBB;">나머지 21개 면수</span>
+    <span class="page-num" style="background:#EEE; color:#999;">면수 15~30</span>
+    <span class="title" style="color:#999;">예선 운영(권역·장소·물류) · 본선 지원 · 멘토링 · 성과 · 인프라 · 예산</span>
+    <span class="eval" style="color:#BBB;">나머지 16개 면수</span>
     <span class="status status-pending">○ 대기</span>
   </div>
 

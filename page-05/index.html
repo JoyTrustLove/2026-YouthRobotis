@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 5 – 전담조직 및 인력 구성 (상)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Malgun Gothic',sans-serif; background:#E8EAED; display:flex; justify-content:center; padding:30px 10px; }
+  .page { width:210mm; min-height:297mm; background:#fff; padding:15mm 20mm; box-shadow:0 2px 20px rgba(0,0,0,0.08); position:relative; }
+  .nav { margin-bottom:12px; }
+  .nav a { font-size:11px; color:#1E3A5F; text-decoration:none; border:1px solid #C5D3E3; padding:3px 10px; border-radius:4px; }
+  .nav a:hover { background:#F0F4F8; }
+  .sec-header { display:flex; align-items:center; gap:10px; border-bottom:2px solid #1E3A5F; padding-bottom:6px; }
+  .sec-num { background:#1E3A5F; color:#fff; font-size:16px; font-weight:800; padding:4px 14px; border-radius:3px; }
+  .sec-title { font-size:16px; font-weight:700; color:#1E3A5F; }
+
+  .info-box { width:100%; border-collapse:collapse; font-size:9.5px; line-height:145%; margin:8px 0 10px 0; }
+  .info-box td { border:1px solid #C5D3E3; padding:4px 8px; vertical-align:top; }
+  .info-box .lb { background:#F0F4F8; font-weight:700; text-align:center; color:#1E3A5F; width:95px; }
+  .info-box .pt { background:#FFF8E1; border-left:3px solid #F9A825; }
+
+  h3 { font-size:12px; color:#1E3A5F; border-left:3px solid #1E3A5F; padding-left:8px; margin:12px 0 5px 0; }
+  .body-text { font-size:11px; line-height:170%; text-indent:8px; margin:2px 0; color:#262626; }
+  .body-text b { color:#1E3A5F; }
+
+  .summary-box {
+    background:#EEF2F7; border:1px solid #C5D3E3; border-radius:5px;
+    padding:8px 12px; font-size:10px; line-height:160%;
+    margin:6px 0 10px 0;
+  }
+
+  /* 조직도 */
+  .orgchart {
+    border:1px solid #D0D8E0; border-radius:8px;
+    padding:12px; margin:8px 0; background:#FAFBFC;
+    text-align:center; font-size:9px;
+  }
+  .oc-top {
+    display:inline-block; background:#1E3A5F; color:#fff;
+    padding:6px 20px; border-radius:5px; font-weight:700; font-size:10px;
+  }
+  .oc-arrow { font-size:14px; color:#1E3A5F; margin:4px 0; }
+  .oc-row { display:flex; justify-content:center; gap:6px; margin-top:4px; }
+  .oc-box {
+    border:1.5px solid #1E3A5F; border-radius:5px;
+    padding:6px 8px; background:#fff; flex:1; max-width:130px;
+    text-align:center;
+  }
+  .oc-box .oc-role { font-size:7px; color:#888; }
+  .oc-box .oc-name { font-size:9px; font-weight:700; color:#1E3A5F; }
+  .oc-box .oc-ppl { font-size:8px; color:#555; }
+
+  /* 인력 테이블 */
+  .staff-tbl {
+    width:100%; border-collapse:collapse;
+    font-size:8px; line-height:130%; margin-top:6px;
+  }
+  .staff-tbl th {
+    background:#1E3A5F; color:#fff; padding:3px 4px;
+    text-align:center; font-weight:700; font-size:7.5px;
+  }
+  .staff-tbl td {
+    border:1px solid #D0D8E0; padding:2px 4px; vertical-align:top;
+  }
+  .staff-tbl tr:nth-child(even) { background:#F8FAFC; }
+  .staff-tbl .grp-header {
+    background:#EEF2F7; font-weight:700; text-align:center;
+    font-size:8.5px; color:#1E3A5F;
+  }
+
+  .page-num { position:absolute; bottom:10mm; left:0; right:0; text-align:center; font-size:10px; color:#999; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-04/index.html" style="margin-left:8px;">← 면수 4</a>
+    <a href="../page-06/index.html" style="margin-left:8px;">면수 6 →</a>
+  </div>
+
+  <div class="sec-header">
+    <span class="sec-num">3</span>
+    <span class="sec-title">신청기관 개요 및 현황 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr>
+      <td class="lb">평가항목(배점)</td>
+      <td>참여 인력 전문성(8) + 운영 인력 역량(7)</td>
+    </tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 전담인력 ○명 중 <b>OO%가 로보틱스 대회 운영·교육 개발 3년 이상</b> 경력자 ⇒ 업계 평균 대비 높은 전문 인력 밀도<br>
+        ② 초등·중학·고교·멘토링·대회운영을 <b>프로그램별 전담제</b>로 운영하여, 전국 11회 이상 예선을 병렬로 돌릴 수 있는 조직 체계<br>
+        ③ 전국 파견 강사 전원에게 착수 전 <b>역량 강화 교육</b>을 실시하여, 어디서든 동일 품질 보장
+      </td>
+    </tr>
+  </table>
+
+  <h3>3-6. 전담조직 및 인력 구성(안)</h3>
+
+  <div class="summary-box">
+    전담조직의 장 <b>1명</b>, 전담인력 <b>OO명</b>으로 총 <b>OO명</b> 구성 (OO명 확정, O명 채용 예정).<br>
+    전담인력 중 로보틱스 관련 3년 이상 경력자 <b>OO명(OO%)</b>.
+  </div>
+
+  <!-- 조직도 -->
+  <div class="orgchart">
+    <div class="oc-top">사업총괄 PM (1명) — 블루커뮤니케이션 대표 OOO</div>
+    <div class="oc-arrow">▼</div>
+    <div class="oc-row">
+      <div class="oc-box">
+        <div class="oc-role">블루커뮤니케이션</div>
+        <div class="oc-name">기획·행정관리팀</div>
+        <div class="oc-ppl">기획팀장 + 성과관리</div>
+      </div>
+      <div class="oc-box">
+        <div class="oc-role">타임교육 C&P</div>
+        <div class="oc-name">모객·현장운영팀</div>
+        <div class="oc-ppl">운영파트장 + 13명</div>
+      </div>
+      <div class="oc-box">
+        <div class="oc-role">핸즈온테크놀러지</div>
+        <div class="oc-name">교육콘텐츠개발팀</div>
+        <div class="oc-ppl">콘텐츠팀장 + 2명</div>
+      </div>
+      <div class="oc-box">
+        <div class="oc-role">중앙대학교</div>
+        <div class="oc-name">멘토링·본선지원팀</div>
+        <div class="oc-ppl">교수 + 멘토코디</div>
+      </div>
+      <div class="oc-box">
+        <div class="oc-role">블루커뮤니케이션</div>
+        <div class="oc-name">성과관리·확산팀</div>
+        <div class="oc-ppl">성과관리 담당</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 인력 명단 -->
+  <table class="staff-tbl">
+    <thead>
+      <tr>
+        <th style="width:5%;">No.</th>
+        <th style="width:7%;">성명</th>
+        <th style="width:12%;">소속/직위</th>
+        <th style="width:30%;">담당 업무</th>
+        <th style="width:5%;">경력</th>
+        <th style="width:11%;">전공/학위</th>
+        <th style="width:6%;">참여율<br>(본)</th>
+        <th style="width:6%;">참여율<br>(타)</th>
+        <th style="width:6%;">고용<br>형태</th>
+        <th style="width:4%;">급여</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 블루커뮤니케이션 -->
+      <tr><td colspan="10" class="grp-header">블루커뮤니케이션 (주관)</td></tr>
+      <tr>
+        <td>—</td><td>OOO</td><td>대표/PM</td>
+        <td>사업 총괄 기획, 예산 집행·감독, 재단·협력기관 조율, 성과 보고</td>
+        <td>OO년</td><td>교육공학 석사</td><td>100%</td><td>0%</td><td>정규직</td><td>Y</td>
+      </tr>
+      <tr>
+        <td>—</td><td>OOO</td><td>기획팀장</td>
+        <td>예선 일정·장소 확정, 현장 리허설, 행정·정산, 운영 매뉴얼</td>
+        <td>OO년</td><td>경영학 학사</td><td>100%</td><td>0%</td><td>정규직</td><td>Y</td>
+      </tr>
+      <tr>
+        <td>—</td><td>OOO</td><td>성과관리</td>
+        <td>KPI 설계·모니터링, 가이드북·케이스북 집필, 최종 성과보고서</td>
+        <td>OO년</td><td>언론홍보학 학사</td><td>OO%</td><td>OO%</td><td>정규직</td><td>Y</td>
+      </tr>
+
+      <!-- 타임교육 -->
+      <tr><td colspan="10" class="grp-header">타임교육 C&P (협력1)</td></tr>
+      <tr><td>—</td><td>OOO</td><td>운영파트장</td><td>전국 5개 권역 모객 전략, 참가 접수·등록</td><td>OO년</td><td>교육학 학사</td><td>OO%</td><td>OO%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>1</td><td>정영진</td><td>이사</td><td>타임교육 C&P 사업 총괄</td><td>17년</td><td>커뮤니케이션학 석사</td><td>15%</td><td>60%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>2</td><td>백성민</td><td>부장</td><td>모객 전략 기획·총괄</td><td>10년</td><td>교육학 석사</td><td>20%</td><td>60%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>3</td><td>남정룡</td><td>수석연구원</td><td>모객 콘텐츠·홍보물 기획</td><td>10년</td><td>수학과 학사</td><td>25%</td><td>0%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>4</td><td>조성애</td><td>차장</td><td>수도권 모객·현장 운영 관리</td><td>23년</td><td>컴퓨터교육학 석사</td><td>15%</td><td>80%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>5</td><td>김영웅</td><td>차장</td><td>비수도권 모객·현장 운영 관리</td><td>12년</td><td>바이오환경 학사</td><td>25%</td><td>0%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>6</td><td>이동익</td><td>과장</td><td>참가 접수·등록 시스템 관리</td><td>4년</td><td>한문교육학 학사</td><td>25%</td><td>70%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>7</td><td>문슬기</td><td>책임연구원</td><td>모객 대시보드·데이터 모니터링</td><td>17년</td><td>통계학 학사</td><td>25%</td><td>0%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>8</td><td>김진</td><td>과장</td><td>예산·정산·행정 실무</td><td>8년</td><td>경영학 석사</td><td>20%</td><td>0%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>9</td><td>양지희</td><td>과장</td><td>예선 현장 운영 기획·조율</td><td>12년</td><td>화학공학 학사</td><td>25%</td><td>0%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>10</td><td>김정숙</td><td>대리</td><td>학교·교사 네트워크 운영</td><td>3년</td><td>정보통계학 학사</td><td>20%</td><td>60%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>11</td><td>유아영</td><td>대리</td><td>현장 운영 지원·기록 관리</td><td>6년</td><td>스마트미디어 전문학사</td><td>25%</td><td>60%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>12</td><td>이나영</td><td>대리</td><td>온라인 홍보·이벤트 운영</td><td>6년</td><td>경영학 학사</td><td>20%</td><td>0%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>13</td><td>서주경</td><td>대리</td><td>성과 확산·보고서 지원</td><td>3년</td><td>교육학 학사</td><td>25%</td><td>0%</td><td>정규직</td><td>Y</td></tr>
+
+      <!-- 핸즈온 -->
+      <tr><td colspan="10" class="grp-header">핸즈온테크놀러지 (협력2)</td></tr>
+      <tr><td>—</td><td>OOO</td><td>콘텐츠개발 팀장</td><td>예선 3종 문제 출제·검수, 채점 기준, 교육 커리큘럼 개발</td><td>OO년</td><td>로봇공학 석사</td><td>OO%</td><td>OO%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>—</td><td>OOO</td><td>교구·물류 담당</td><td>로봇 300대+여유 확보·입출고, 파손 대응, 본선 세팅</td><td>OO년</td><td>전자공학 학사</td><td>OO%</td><td>OO%</td><td>정규직</td><td>Y</td></tr>
+      <tr><td>—</td><td>OOO</td><td>AI콘텐츠 담당</td><td>AI 툴 연동 교육 모듈, 어썸봇 콘텐츠, 대회 AI 요소 반영</td><td>OO년</td><td>컴퓨터공학 석사</td><td>OO%</td><td>OO%</td><td>비정규직</td><td>Y</td></tr>
+
+      <!-- 중앙대 -->
+      <tr><td colspan="10" class="grp-header">중앙대학교 (협력3)</td></tr>
+      <tr><td>—</td><td>OOO</td><td>교수/멘토링총괄</td><td>멘토 풀 25명+ 구축·관리, 사전 캠프 기획, 기술 자문</td><td>OO년</td><td>로봇공학 박사</td><td>OO%</td><td>OO%</td><td>정규직</td><td>N</td></tr>
+      <tr><td>—</td><td>OOO</td><td>대학원/멘토코디</td><td>부트캠프 보조, 멘토 스케줄 관리, 성과 데이터 수집</td><td>OO년</td><td>교육공학 석사과정</td><td>OO%</td><td>OO%</td><td>비정규직</td><td>Y</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-num">- 5 -</div>
+</div>
+</body>
+</html>

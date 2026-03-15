@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 6 – 전담조직 및 인력 구성 (하)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Malgun Gothic',sans-serif; background:#E8EAED; display:flex; justify-content:center; padding:30px 10px; }
+  .page { width:210mm; min-height:297mm; background:#fff; padding:15mm 20mm; box-shadow:0 2px 20px rgba(0,0,0,0.08); position:relative; }
+  .nav { margin-bottom:12px; }
+  .nav a { font-size:11px; color:#1E3A5F; text-decoration:none; border:1px solid #C5D3E3; padding:3px 10px; border-radius:4px; }
+  .nav a:hover { background:#F0F4F8; }
+  h3 { font-size:12px; color:#1E3A5F; border-left:3px solid #1E3A5F; padding-left:8px; margin:12px 0 5px 0; }
+  .body-text { font-size:11px; line-height:170%; text-indent:8px; margin:2px 0; color:#262626; }
+  .body-text b { color:#1E3A5F; }
+  .label-mark { display:inline-block; font-size:10px; font-weight:700; color:#1E3A5F; margin:8px 0 3px 0; }
+
+  /* PM 전문성 테이블 */
+  .pm-tbl {
+    width:100%; border-collapse:collapse;
+    font-size:9px; line-height:140%; margin:6px 0 10px 0;
+  }
+  .pm-tbl th {
+    background:#1E3A5F; color:#fff; padding:4px 6px;
+    text-align:center; font-weight:700;
+  }
+  .pm-tbl td {
+    border:1px solid #D0D8E0; padding:4px 6px; vertical-align:top;
+  }
+  .pm-tbl tr:nth-child(even) { background:#F8FAFC; }
+  .pm-tbl .role-col {
+    text-align:center; font-weight:700; color:#1E3A5F;
+    background:#EEF2F7; width:12%;
+  }
+
+  /* 역량강화 테이블 */
+  .train-tbl {
+    width:100%; border-collapse:collapse;
+    font-size:9px; line-height:140%; margin:6px 0;
+  }
+  .train-tbl th {
+    background:#E07C38; color:#fff; padding:4px 6px;
+    text-align:center; font-weight:700;
+  }
+  .train-tbl td {
+    border:1px solid #D0D8E0; padding:4px 6px; vertical-align:top;
+  }
+  .train-tbl tr:nth-child(even) { background:#FFF8F2; }
+
+  /* 채용 박스 */
+  .recruit-box {
+    background:#F3E5F5; border:1px solid #CE93D8; border-radius:5px;
+    padding:8px 12px; font-size:10px; line-height:160%; margin:8px 0;
+  }
+  .recruit-box b { color:#7B1FA2; }
+
+  .page-num { position:absolute; bottom:10mm; left:0; right:0; text-align:center; font-size:10px; color:#999; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-05/index.html" style="margin-left:8px;">← 면수 5</a>
+    <a href="../page-07/index.html" style="margin-left:8px;">면수 7 →</a>
+  </div>
+
+  <h3>PM 및 핵심 인력 전문성 요약</h3>
+
+  <table class="pm-tbl">
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>성명/직위</th>
+        <th>업무분장</th>
+        <th>세부 경력</th>
+        <th>전문성</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="role-col">전담조직의 장</td>
+        <td>OOO / 대표·PM</td>
+        <td>사업 총괄 기획, 예산 집행·감독, 재단·협력기관 조율</td>
+        <td>· 2024 청소년 디지털 문제해결 PM (OOO명)<br>· 한국코드페어 총괄 PM (OO,OOO명)<br>· SW미래채움 총괄 (O,OOO명)</td>
+        <td>교육공학 석사. 국가 단위 교육사업 기획·운영 OO년. ICT 기금 정산 O회</td>
+      </tr>
+      <tr>
+        <td class="role-col">전담인력<br>(기획)</td>
+        <td>OOO / 기획팀장</td>
+        <td>예선 일정·장소 확정, 현장 리허설, 운영 매뉴얼</td>
+        <td>· 한국코드페어 운영 매니저 (전국 O개 권역)<br>· 2024 디지털 문제해결 현장 총괄</td>
+        <td>경영학 학사. 대규모 행사 현장 운영 OO년</td>
+      </tr>
+      <tr>
+        <td class="role-col">전담인력<br>(교육개발)</td>
+        <td>OOO / 콘텐츠팀장<br>(핸즈온)</td>
+        <td>예선 문제 3종 출제·검수, 교육 커리큘럼 개발</td>
+        <td>· WRO 한국 대회 OO년 연속 문제 출제<br>· FLL 교육 프로그램 개발<br>· LEGO Education 공식 교육 과정 참여</td>
+        <td>로봇공학 석사. 글로벌 로봇 대회 문제 출제·교육 OO년</td>
+      </tr>
+      <tr>
+        <td class="role-col">전담인력<br>(멘토링)</td>
+        <td>OOO / 교수<br>(중앙대)</td>
+        <td>멘토 풀 구축, 사전 캠프 기획, 기술 자문</td>
+        <td>· 융합공학부 캡스톤 지도 OO년<br>· 로보틱스 논문 OO편<br>· 국제 대회 지도(입상 O회)</td>
+        <td>로봇공학 박사. 학계 멘토링·기술자문 최적 인력</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 채용 예정 인력 -->
+  <h3>인력 확보 방안 (채용 예정 인력)</h3>
+
+  <div class="recruit-box">
+    채용 예정 인력은 로보틱스 대회 수상·지도 경험자를 우선 확보 대상으로 하며,
+    협력기관 내부 인력풀 및 로보틱스 교육 커뮤니티를 통해 <b>4월 착수 전까지 전원 확정</b>하여
+    사업 착수 즉시 투입 가능한 상태를 유지함.<br>
+    · 핸즈온테크놀러지 AI콘텐츠 담당(비정규직 1명): 딥러닝 기반 AI 교육 모듈 설계 경험자, <b>3월 내 확보 완료</b> 목표<br>
+    · 채용 요건: 로보틱스 관련 교육·대회 운영 경험 1년 이상
+  </div>
+
+  <!-- 역량 강화 -->
+  <h3>강사·멘토 등 운영 인력 역량 강화 방안</h3>
+
+  <p class="body-text">
+    전국 5개 권역 11회 이상 예선을 동일 품질로 운영하기 위해,
+    모든 파견 강사·현장 운영 인력에 대해 <b>착수 전 역량 강화 교육</b>을 실시함.
+    서울·부산·광주 어디서든 동일 품질을 보장하는 표준화된 강사 운영 체계를 구현하며,
+    예선 1~2회차 운영 결과를 바탕으로 강사 피드백을 수집하여 후속 회차에 즉시 반영하는 실시간 개선 프로세스를 가동함.
+  </p>
+
+  <table class="train-tbl">
+    <thead>
+      <tr>
+        <th style="width:12%;">구분</th>
+        <th style="width:18%;">대상</th>
+        <th style="width:38%;">교육 주제</th>
+        <th style="width:15%;">방법</th>
+        <th style="width:12%;">시기</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;">강사 역량 강화</td>
+        <td>예선 현장 교육 강사 (전국 파견)</td>
+        <td>① 트랙별 커리큘럼 숙달 (초·중·고 3종) ② 로봇 교구 세팅·트러블슈팅 ③ 정량 평가 채점 기준 통일 ④ 안전 관리·비상 대응</td>
+        <td>2일 집합 교육 + 모의 리허설</td>
+        <td>4월 중<br>(착수 직후)</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">멘토 역량 강화</td>
+        <td>중앙대 멘토단 25명+</td>
+        <td>① 청소년 멘토링 기법 ② 대회 규정·평가 기준 이해 ③ 팀 프로젝트 지도법·소통법 ④ 트랙별 기술 심화</td>
+        <td>Pre-Mentoring 캠프 8시간<br>(오프라인 집합)</td>
+        <td>5월 중</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">현장 운영 인력 교육</td>
+        <td>타임교육 현장 매니저·보조</td>
+        <td>① 대회 현장 운영 매뉴얼 ② 참가자 등록·안전 동선 ③ 모객 대시보드 활용</td>
+        <td>온라인 사전 교육 + 첫 예선 OJT</td>
+        <td>4월 중</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-num">- 6 -</div>
+</div>
+</body>
+</html>

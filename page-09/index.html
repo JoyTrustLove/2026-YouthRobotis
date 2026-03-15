@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 9 – 차별화·두 수행기관 구조 대응</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Malgun Gothic',sans-serif; background:#E8EAED; display:flex; justify-content:center; padding:30px 10px; }
+  .page { width:210mm; min-height:297mm; background:#fff; padding:15mm 20mm; box-shadow:0 2px 20px rgba(0,0,0,0.08); position:relative; }
+  .nav { margin-bottom:12px; }
+  .nav a { font-size:11px; color:#1E3A5F; text-decoration:none; border:1px solid #C5D3E3; padding:3px 10px; border-radius:4px; }
+  .nav a:hover { background:#F0F4F8; }
+  .sec-header { display:flex; align-items:center; gap:10px; border-bottom:2px solid #1E3A5F; padding-bottom:6px; }
+  .sec-num { background:#1E3A5F; color:#fff; font-size:16px; font-weight:800; padding:4px 14px; border-radius:3px; }
+  .sec-title { font-size:16px; font-weight:700; color:#1E3A5F; }
+  .info-box { width:100%; border-collapse:collapse; font-size:9.5px; line-height:145%; margin:8px 0 10px 0; }
+  .info-box td { border:1px solid #C5D3E3; padding:4px 8px; vertical-align:top; }
+  .info-box .lb { background:#F0F4F8; font-weight:700; text-align:center; color:#1E3A5F; width:95px; }
+  .info-box .hl { background:#FFFDE7; }
+  .info-box .pt { background:#FFF8E1; border-left:3px solid #F9A825; }
+  h3 { font-size:12px; color:#1E3A5F; border-left:3px solid #1E3A5F; padding-left:8px; margin:12px 0 5px 0; }
+  .body-text { font-size:11px; line-height:170%; text-indent:8px; margin:2px 0; color:#262626; }
+  .body-text b { color:#1E3A5F; }
+  .label-mark { display:inline-block; font-size:10px; font-weight:700; color:#1E3A5F; margin:8px 0 3px 0; }
+
+  /* ── 범용/한정 구분표 ── */
+  .scope-tbl {
+    width:100%; border-collapse:collapse;
+    font-size:9px; line-height:140%; margin:6px 0;
+  }
+  .scope-tbl th {
+    background:#1E3A5F; color:#fff; padding:4px 6px;
+    text-align:center; font-weight:700;
+  }
+  .scope-tbl td {
+    border:1px solid #D0D8E0; padding:4px 6px; vertical-align:top;
+  }
+  .scope-tbl tr:nth-child(even) { background:#F8FAFC; }
+  .scope-tbl .yes { color:#2E7D32; font-weight:700; text-align:center; }
+  .scope-tbl .no  { color:#C62828; font-weight:700; text-align:center; }
+  .scope-tbl .cond { color:#E65100; font-weight:700; text-align:center; font-size:8px; }
+
+  /* ── 유연성 카드 ── */
+  .flex-grid {
+    display:grid; grid-template-columns:1fr 1fr 1fr;
+    gap:6px; margin:8px 0;
+  }
+  .flex-card {
+    border:1px solid #E0E0E0; border-radius:5px;
+    padding:7px 9px; font-size:9.5px; line-height:150%;
+    background:#FAFBFC; border-top:3px solid #E07C38;
+  }
+  .flex-card .fc-title {
+    font-weight:700; color:#E07C38; font-size:10px; margin-bottom:3px;
+  }
+
+  /* ── 핵심 메시지 박스 ── */
+  .key-msg {
+    background:#1E3A5F; color:#fff; border-radius:6px;
+    padding:12px 16px; margin:10px 0;
+    font-size:11px; line-height:170%;
+    text-align:center;
+  }
+  .key-msg b { color:#FFD54F; }
+
+  .note-box {
+    background:#F3E5F5; border:1px solid #CE93D8; border-radius:5px;
+    padding:6px 10px; font-size:9.5px; line-height:155%;
+    margin:6px 0;
+  }
+
+  .page-num { position:absolute; bottom:10mm; left:0; right:0; text-align:center; font-size:10px; color:#999; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-08/index.html" style="margin-left:8px;">← 면수 8</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">4</span>
+    <span class="sec-title">사업 목표 및 추진전략 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr>
+      <td class="lb">평가항목(배점)</td>
+      <td>사업 운영 계획의 실현 가능성(5)</td>
+    </tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"두 수행기관은 <b>예선에서 독립, 본선에서 협력</b>. 어느 회사에 불리하게 하지 않겠으나 약간의 양보를 바랄 수도 있음"</td>
+    </tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 우리 로봇의 핵심 기능이 <b>범용적</b>이어서 어떤 본선 문제에도 대응 가능 ⇒ 예선 한정 기능이 빠져도 경쟁력 손실 없는 설계<br>
+        ② 재단의 권역·일정·본선 규칙 조율 시 <b>즉시 수용 가능한 유연성</b> ⇒ "협력 요청에 가장 빠르게 응할 수 있는 파트너"
+      </td>
+    </tr>
+  </table>
+
+  <h3>4-3. 제안사의 특징 및 차별화 전략 (수행기관 2개 선정 구조 대응)</h3>
+
+  <!-- 범용/한정 구분표 -->
+  <span class="label-mark">▸ 우리 로봇의 "범용적 강점" vs "예선 한정 차별화 기능"</span>
+
+  <table class="scope-tbl">
+    <thead>
+      <tr>
+        <th style="width:18%;">기능 영역</th>
+        <th style="width:25%;">세부 기능</th>
+        <th style="width:8%;">예선</th>
+        <th style="width:8%;">본선<br>유지</th>
+        <th style="width:41%;">근거</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;">자율주행 제어</td>
+        <td>블록/텍스트 코딩 → 자율 운행</td>
+        <td class="yes">○</td>
+        <td class="yes">○</td>
+        <td>양쪽 수행기관 공통 요건. 조이스틱 모드 없는 범용 구조</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">AI 비전 인식</td>
+        <td>카메라 기반 색상·사물·표지판 인식</td>
+        <td class="yes">○</td>
+        <td class="yes">○</td>
+        <td>표준 AI 비전 기능. 본선 문제에서도 활용 가능성 높음</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">센서 기반 제어</td>
+        <td>거리·컬러·자이로 센서 연동</td>
+        <td class="yes">○</td>
+        <td class="yes">○</td>
+        <td>로봇 종류 불문 범용 역량</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">모터·조향 정밀 제어</td>
+        <td>PID 제어, 감속/가속, 정밀 정지</td>
+        <td class="yes">○</td>
+        <td class="yes">○</td>
+        <td>본선 "더 정확한 실행" 평가에 직결</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">딥러닝 모델 생성 (고교)</td>
+        <td>딥코 스튜디오 기반 이미지 분류</td>
+        <td class="yes">○</td>
+        <td class="cond">조건부 ○</td>
+        <td>본선 규칙에 따라 플랫폼 제한 가능 → <b>범용 AI 역량(데이터 수집·모델 학습 원리)은 플랫폼 불문 이전 가능</b></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">4족 보행 로봇 (초등)</td>
+        <td>로보독 보행·방향 전환·앉기</td>
+        <td class="yes">○</td>
+        <td class="cond">조건부 ○</td>
+        <td>예선 고유 차별화. 본선 로봇 변경 시에도 <b>센서·코딩 역량은 이전 가능</b></td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">특정 플랫폼 전용 기능</td>
+        <td>딥코 스튜디오 전용 앱빌더 UI</td>
+        <td class="yes">○</td>
+        <td class="no">×</td>
+        <td>예선에서만 차별화. <b>본선 제한 시 범용 코딩 환경으로 전환</b> — 사전 대비 완료</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note-box">
+    <b>설계 원리:</b> 예선 문제를 설계할 때 특정 플랫폼 과도 의존 기능을 미션 핵심으로 삼지 않고,
+    자율주행·AI 비전·센서 제어 등 <b>범용 로봇 기능 기반</b>으로 구성함.
+    따라서 본선에서 고유 기술 일부가 제한되더라도 참가 학생의 역량 손실 없이 대회 참여 가능.
+    예선 문제는 재단 전문가 피드백 후 <b>'26.4월 중 최종 확정</b> 예정이며, 확정 후 세부 조정 가능함을 전제로 함.
+  </div>
+
+  <!-- 유연성 선언 -->
+  <span class="label-mark">▸ 재단·타 수행기관 협력을 위한 유연성</span>
+
+  <div class="flex-grid">
+    <div class="flex-card">
+      <div class="fc-title">권역 조율</div>
+      타 수행기관과 겹칠 경우 우리 강점 권역 중심으로 하되 재배분에 유연 대응.
+      모든 권역에 파트너·강사 네트워크 확보 완료 — 어떤 조합에서도 운영 품질 보장.
+    </div>
+    <div class="flex-card">
+      <div class="fc-title">시기 조율</div>
+      4~9월 예선 일정을 상충 없이 조정.
+      물류 순환 모델 기반 설계로 일정 변경 시 이동 경로만 조정하면 되는 유연한 물류 구조.
+    </div>
+    <div class="flex-card">
+      <div class="fc-title">본선 규칙 수용</div>
+      본선에서 특정 기업 고유 기술 제한 시 즉시 수용.
+      범용 기능 기반으로 본선 교육 커리큘럼 조정 가능.
+    </div>
+  </div>
+
+  <!-- 핵심 메시지 -->
+  <div class="key-msg">
+    블루커뮤니케이션 컨소시엄은<br>
+    <b>"협력 요청에 가장 빠르게 응할 수 있는 파트너"</b>로서<br>
+    사업의 성공적 수행을 위해 두 수행기관 간 건설적 협력에 적극 참여함.
+  </div>
+
+  <div class="page-num">- 9 -</div>
+</div>
+</body>
+</html>

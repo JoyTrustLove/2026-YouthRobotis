@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 4 – 사업추진 체계 + 컨소시엄 구성 배경</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Pretendard','Malgun Gothic','휴먼고딕',sans-serif;
+    background:#E8EAED;
+    display:flex; justify-content:center;
+    padding:30px 10px;
+  }
+  .page {
+    width:210mm; min-height:297mm;
+    background:#fff;
+    padding:15mm 20mm;
+    box-shadow:0 2px 20px rgba(0,0,0,0.08);
+    position:relative;
+  }
+  .nav { margin-bottom:12px; }
+  .nav a {
+    font-size:11px; color:#1E3A5F; text-decoration:none;
+    border:1px solid #C5D3E3; padding:3px 10px; border-radius:4px;
+  }
+  .nav a:hover { background:#F0F4F8; }
+
+  .sec-header {
+    display:flex; align-items:center; gap:10px;
+    border-bottom:2px solid #1E3A5F; padding-bottom:6px;
+  }
+  .sec-num { background:#1E3A5F; color:#fff; font-size:16px; font-weight:800; padding:4px 14px; border-radius:3px; }
+  .sec-title { font-size:16px; font-weight:700; color:#1E3A5F; }
+
+  .info-box { width:100%; border-collapse:collapse; font-size:9.5px; line-height:145%; margin:8px 0 10px 0; }
+  .info-box td { border:1px solid #C5D3E3; padding:4px 8px; vertical-align:top; }
+  .info-box .lb { background:#F0F4F8; font-weight:700; text-align:center; color:#1E3A5F; width:95px; }
+  .info-box .hl { background:#FFFDE7; }
+  .info-box .pt { background:#FFF8E1; border-left:3px solid #F9A825; }
+
+  h3 { font-size:12px; color:#1E3A5F; border-left:3px solid #1E3A5F; padding-left:8px; margin:14px 0 5px 0; }
+  .body-text { font-size:11px; line-height:170%; text-indent:8px; margin:2px 0; color:#262626; }
+  .body-text b { color:#1E3A5F; }
+  .label-mark { display:inline-block; font-size:10px; font-weight:700; color:#1E3A5F; margin:6px 0 2px 0; }
+
+  /* ── 추진체계 다이어그램 ── */
+  .diagram {
+    border:1px solid #D0D8E0;
+    border-radius:8px;
+    padding:14px;
+    margin:8px 0;
+    background:#FAFBFC;
+    font-size:9px;
+    line-height:160%;
+  }
+  .dia-row {
+    display:flex; align-items:stretch; justify-content:center;
+    gap:8px; margin:6px 0;
+  }
+  .dia-box {
+    border:2px solid #1E3A5F;
+    border-radius:6px;
+    padding:8px 10px;
+    text-align:center;
+    background:#fff;
+    flex:1;
+    max-width:160px;
+  }
+  .dia-box.main {
+    background:#1E3A5F; color:#fff;
+    font-weight:700; font-size:10px;
+  }
+  .dia-box.top {
+    background:#E3F2FD; border-color:#1565C0;
+    max-width:300px;
+  }
+  .dia-box .box-role { font-size:7.5px; color:#888; }
+  .dia-box .box-name { font-size:10px; font-weight:700; color:#1E3A5F; }
+  .dia-box.main .box-name { color:#fff; }
+  .dia-box .box-desc { font-size:8px; color:#555; margin-top:2px; }
+  .dia-box.main .box-desc { color:#CFD8DC; }
+  .dia-arrow {
+    text-align:center; font-size:14px; color:#1E3A5F;
+    margin:2px 0; font-weight:700;
+  }
+
+  /* ── 역할 테이블 ── */
+  .role-tbl {
+    width:100%; border-collapse:collapse;
+    font-size:9px; line-height:140%; margin-top:6px;
+  }
+  .role-tbl th {
+    background:#1E3A5F; color:#fff; padding:4px 6px;
+    text-align:center; font-weight:700;
+  }
+  .role-tbl td {
+    border:1px solid #D0D8E0; padding:4px 6px; vertical-align:top;
+  }
+  .role-tbl .org-col {
+    text-align:center; font-weight:700; background:#EEF2F7;
+    width:12%; font-size:8.5px;
+  }
+  .role-tbl .out-col { font-size:8px; color:#555; }
+
+  /* ── 컨소시엄 배경 ── */
+  .benefit-grid {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:6px; margin:6px 0;
+  }
+  .benefit-card {
+    border:1px solid #E0E0E0; border-radius:5px;
+    padding:6px 8px; font-size:9.5px; line-height:150%;
+    background:#FAFBFC;
+  }
+  .benefit-card .bf-title {
+    font-weight:700; color:#1E3A5F; font-size:10px;
+    margin-bottom:2px;
+  }
+
+  .page-num { position:absolute; bottom:10mm; left:0; right:0; text-align:center; font-size:10px; color:#999; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-03/index.html" style="margin-left:8px;">← 면수 3</a>
+    <a href="../page-05/index.html" style="margin-left:8px;">면수 5 →</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">3</span>
+    <span class="sec-title">신청기관 개요 및 현황 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr>
+      <td class="lb">평가항목(배점)</td>
+      <td colspan="3">사업 운영 역량(7)</td>
+    </tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td colspan="3" class="hl">"로봇 회사 전문가가 같이 들어가야 함. 두 수행기관 간 예선은 독립, 본선은 협력"</td>
+    </tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td colspan="3" class="pt">
+        ① 교육 운영(주관) × 로봇 기술(협력)이 현장에서 분리되지 않는 구조 ⇒ 예선 대회장에서 교육 강사와 로봇 엔지니어가 한 팀으로 움직이는 <b>원스톱 운영 체계</b><br>
+        ② 예선에서는 자사 로봇·문제·교육의 고유 경쟁력으로 차별화하되, 본선에서는 재단·타 수행기관과 즉시 협력 가능한 <b>유연한 포지셔닝</b>
+      </td>
+    </tr>
+  </table>
+
+  <!-- 3-4 사업추진 체계 -->
+  <h3>3-4. 사업추진 체계</h3>
+
+  <div class="diagram">
+    <!-- 최상단: 재단 -->
+    <div class="dia-row" style="justify-content:center;">
+      <div class="dia-box top" style="max-width:320px;">
+        <div class="box-name" style="color:#1565C0;">한국과학창의재단 (발주·감독)</div>
+        <div class="box-desc">협약·사업비 교부 ↕ 보고·정산</div>
+      </div>
+    </div>
+    <div class="dia-arrow">▼ 단일 소통 창구</div>
+
+    <!-- 주관기관 -->
+    <div class="dia-row" style="justify-content:center;">
+      <div class="dia-box main" style="max-width:380px;">
+        <div class="box-name">블루커뮤니케이션 (주관) — 2억원 (50%)</div>
+        <div class="box-desc">사업 총괄 PM / 예산 집행·감독 / 성과지표 관리 / DDP 홍보 부스 / 가이드·사례집</div>
+      </div>
+    </div>
+    <div class="dia-arrow">▼ 사업비 교부 + 관리감독</div>
+
+    <!-- 협력기관 3개 -->
+    <div class="dia-row">
+      <div class="dia-box">
+        <div class="box-role">협력기관 1</div>
+        <div class="box-name">타임교육 C&P</div>
+        <div class="box-desc">8천만원 (20%)<br>전국 모객 · 현장 운영</div>
+      </div>
+      <div class="dia-box">
+        <div class="box-role">협력기관 2</div>
+        <div class="box-name">핸즈온테크놀러지</div>
+        <div class="box-desc">8천만원 (20%)<br>문제 출제 · 교육 개발 · 물류</div>
+      </div>
+      <div class="dia-box">
+        <div class="box-role">협력기관 3</div>
+        <div class="box-name">중앙대학교</div>
+        <div class="box-desc">4천만원 (10%)<br>멘토단 · 부트캠프 · 기술 자문</div>
+      </div>
+    </div>
+    <div style="text-align:center; font-size:8px; color:#888; margin-top:4px;">
+      ↕ 예선: 각 기관 독립 운영 &nbsp;|&nbsp; 본선: 재단·타 수행기관과 협력
+    </div>
+  </div>
+
+  <!-- 역할표 -->
+  <table class="role-tbl">
+    <thead>
+      <tr>
+        <th>기관명</th>
+        <th>세부 역할</th>
+        <th>핵심 산출물</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="org-col">블루커뮤니케이션<br>(주관)</td>
+        <td>① 사업 총괄 PM: 일정·예산·품질 관리, 재단 단일 창구 ② 협력사 사업비 교부·집행 감독 ③ 자체 AI 교구 연동 ④ 68팀 선발·여비 지급 ⑤ DDP 홍보 부스 ⑥ 가이드·사례집·성과지표 ⑦ 최종 보고서</td>
+        <td class="out-col">중간·최종보고서, 가이드·사례집, KPI 결과서, 여비 정산 증빙</td>
+      </tr>
+      <tr>
+        <td class="org-col">타임교육<br>C&P<br>(협력1)</td>
+        <td>① 5개 권역 2,900명 모집 전략·홍보 ② 예선 현장 운영(대관·안전·등록) ③ 모객 대시보드 ④ DDP 부스 인력</td>
+        <td class="out-col">모객 실적보고, 현장 운영보고, 대시보드 데이터</td>
+      </tr>
+      <tr>
+        <td class="org-col">핸즈온<br>테크놀러지<br>(협력2)</td>
+        <td>① 예선 문제 3종(도면·규정·채점표) ② 트랙별 2차시+ 교육 개발 ③ 로봇 300세트+ 순환 물류 ④ 경기장 설치·회수 ⑤ 본선 교구 대여</td>
+        <td class="out-col">문제 3종, 교육 3종, 물류 TAT 보고, 임차 정산서</td>
+      </tr>
+      <tr>
+        <td class="org-col">중앙대학교<br>(협력3)</td>
+        <td>① 25명+ 멘토단 구축 ② Pre-Mentoring 캠프 8h ③ 메이커스페이스 개방·부트캠프 ④ 교수진 기술 자문</td>
+        <td class="out-col">멘토단 명단, 캠프 결과, 멘토링 활동보고(팀별), 부트캠프 결과</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 3-5 컨소시엄 구성 배경 -->
+  <h3>3-5. 컨소시엄 구성 배경</h3>
+
+  <p class="body-text">
+    본 사업은 ①전국 2,900명 모객 ②국제 수준 문제 3종 출제 ③로봇 300세트 11회 순환 물류 ④25명+ 멘토단 운영이라는
+    4가지 이질적 역량을 동시에 요구함. 각 분야 최고 수준의 실적·인프라를 보유한 4개 기관이 역할을 분담하여,
+    단독 기관으로는 도달할 수 없는 사업 완성도를 구현하고자 컨소시엄을 구성함.
+  </p>
+
+  <div class="benefit-grid">
+    <div class="benefit-card">
+      <div class="bf-title">① 모객·운영 리스크 제로</div>
+      타임교육의 전국 OO개 거점 + OOO개 학교 네트워크에 과학관·AI 페스티벌 채널 결합.
+      "과학관 프로그램은 열기만 하면 매진"되는 채널 최우선 활용.
+    </div>
+    <div class="benefit-card">
+      <div class="bf-title">② 다양한 로봇 생태계</div>
+      블루커뮤니케이션의 어썸봇·카(AI 비전 특화) + 핸즈온의 LEGO SPIKE(기구 조립 특화) 병행 투입.
+      단일 로봇 독점 없는 다양한 참여 환경 조성. 로봇사가 <b>컨소시엄에 직접 참여</b>하여 현장 기술지원 수행.
+    </div>
+    <div class="benefit-card">
+      <div class="bf-title">③ '랩 기반' 프리미엄 멘토링</div>
+      중앙대 실험 장비·공간 + 전공 인력이 결합된 대학 랩 기반 멘토링.
+      외부 강사 섭외 의존이 아닌 상시 접근 가능한 구조로 본선 팀의 기술 수준을 실질적으로 끌어올림.
+    </div>
+    <div class="benefit-card">
+      <div class="bf-title">④ 행정 효율 극대화</div>
+      4개 기관 참여하나 재단과의 협약·사업비 교부는 <b>주관기관 1곳 단일 창구</b> 처리.
+      행정적 복잡성은 2개사 컨소시엄과 동일 수준 유지.
+    </div>
+  </div>
+
+  <div class="page-num">- 4 -</div>
+</div>
+</body>
+</html>

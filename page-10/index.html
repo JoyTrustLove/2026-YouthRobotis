@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 10 – 예선 문제 개발</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .hl{background:#FFFDE7}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+
+  /* 문제 개요 테이블 */
+  .prob-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .prob-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .prob-tbl td{border:1px solid #D0D8E0;padding:5px 6px;vertical-align:top}
+  .prob-tbl .grade{text-align:center;font-weight:700;background:#EEF2F7;color:#1E3A5F;width:8%}
+  .prob-tbl .title-col{font-weight:700;color:#1E3A5F;width:14%}
+
+  .tag{display:inline-block;font-size:7px;font-weight:700;padding:1px 5px;border-radius:3px;margin-right:2px}
+  .tag-auto{background:#E8F5E9;color:#2E7D32}
+  .tag-quant{background:#E3F2FD;color:#1565C0}
+  .tag-ai{background:#F3E5F5;color:#7B1FA2}
+
+  /* 차별화 카드 */
+  .diff-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:8px 0}
+  .diff-card{border:1px solid #E0E0E0;border-radius:5px;padding:7px 9px;font-size:9.5px;line-height:150%;background:#FAFBFC;border-top:3px solid #1E3A5F}
+  .diff-card .dc-title{font-weight:700;color:#1E3A5F;font-size:10px;margin-bottom:2px}
+
+  .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:6px 10px;font-size:9px;line-height:150%;margin:6px 0}
+
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-09/index.html" style="margin-left:8px;">← 면수 9</a>
+    <a href="../page-11/index.html" style="margin-left:8px;">면수 11 →</a>
+  </div>
+
+  <div class="sec-header">
+    <span class="sec-num">5</span>
+    <span class="sec-title">로보틱스 기초 기획 및 운영</span>
+  </div>
+
+  <table class="info-box">
+    <tr>
+      <td class="lb">평가항목(배점)</td>
+      <td>교육 내용의 차별성(8) + 로보틱스 대회·교육 프로그램 개발 역량(8)</td>
+    </tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">"<b>자율주행(Autonomous) 필수.</b> 조이스틱·원격조종은 선정 안 될 가능성 높음"</td>
+    </tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 3종 모두 <b>자율주행 기반 정량 평가</b> ⇒ 완료 시간+패널티 합산으로 순위 즉시 산출, 심사 편향 제로<br>
+        ② 초등 "해변 지킴이", 중학 "자원재활용", 고교 "교통 약자 보호" 등 <b>실생활 밀착 주제</b>로 "이게 왜 필요한지" 체감하며 문제 해결
+      </td>
+    </tr>
+  </table>
+
+  <h3>5-1. 예선 문제 개발</h3>
+
+  <span class="label-mark">▸ 예선 대회 문제 개요</span>
+
+  <table class="prob-tbl">
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>수준</th>
+        <th>예선 문제 제목</th>
+        <th>과제 개요</th>
+        <th>활용 요소</th>
+        <th>평가 포인트</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="grade">로보틱스<br>기초</td>
+        <td class="title-col">초등<br><br><span style="font-size:8px;color:#555;">지구를 지켜라!<br>해변 지킴이<br>로보독</span></td>
+        <td style="font-size:8.5px;">
+          <span class="tag tag-auto">자율주행</span><span class="tag tag-quant">정량평가</span><br><br>
+          4족 보행 로봇이 해변을 순찰하며 해양 쓰레기(빨간 큐브)를 리사이클링 구역으로 밀어넣고,
+          바다거북(초록 큐브)을 인식하여 인사 후 앉기 동작으로 마무리
+        </td>
+        <td style="font-size:8px;">
+          스크래치 확장 블록, 거리 센서, AI 카메라(색상인식), 기본 모터 제어(방향 전환/앉기), LED·스피커
+        </td>
+        <td style="font-size:8px;">
+          <b>100% 정량</b>: 소요 시간(초) 기준<br>
+          [가점] 거북이 인사 –30초 / 바다 바라보기 –10초<br>
+          [감점] 쓰레기 돌출 +10초 / 위험지역 접촉 +10초 / 미착석 +10초
+        </td>
+      </tr>
+      <tr>
+        <td class="grade">로보틱스<br>기초</td>
+        <td class="title-col">중학<br><br><span style="font-size:8px;color:#555;">AI 클린시티<br>자원재활용<br>챌린지</span></td>
+        <td style="font-size:8.5px;">
+          <span class="tag tag-auto">자율주행</span><span class="tag tag-ai">AI비전</span><span class="tag tag-quant">정량평가</span><br><br>
+          AI 비전 카메라로 도로 주행(직진/좌/우) 모델을 학습시켜 레인 내 자율주행 수행.
+          신호등(빨강/초록) 인식하여 정지·재출발, 속도표시(30/70) 인식 감속·가속,
+          돌발 장애물(사람모형) 10cm 이내 정지
+        </td>
+        <td style="font-size:8px;">
+          AI 비전 카메라(이미지 분류), 딥코봇, 모터 제어(주행/조향), 거리 인식 알고리즘
+        </td>
+        <td style="font-size:8px;">
+          <b>100% 정량</b>: 출발→도착 최종 기록(초)<br>
+          [감점] 레인 이탈 +3초/회, 속도표시 미수행 +10초/항목, 정지구간 위반 +10초/회<br>
+          [경기종료] 사람모형 충돌 또는 레인 완전 이탈
+        </td>
+      </tr>
+      <tr>
+        <td class="grade">로보틱스<br>기초</td>
+        <td class="title-col">고교<br><br><span style="font-size:8px;color:#555;">교통 약자 보호<br>AI 자율주행<br>챌린지</span></td>
+        <td style="font-size:8.5px;">
+          <span class="tag tag-auto">자율주행</span><span class="tag tag-ai">딥러닝</span><span class="tag tag-quant">정량평가</span><br><br>
+          도로 주행 맵(3,000×3,000mm)에서 AI 비전 카메라로 신호등·차단바·사람모형·속도표지판 인식.
+          딥러닝 이미지 분류 모델을 직접 생성하여 자율주행 제어. SDGs 11.2(안전한 교통)을 주제로 교통 약자 보호 미션 수행
+        </td>
+        <td style="font-size:8px;">
+          AI 비전 카메라(객체/표지판 인식), 이미지 분류(Deep Learning), 모터·조향 제어(가감속/방향 전환), 거리 인식
+        </td>
+        <td style="font-size:8px;">
+          <b>100% 정량</b>: 출발→도착 최종 기록(초)<br>
+          [감점] 레인 이탈 +3초, 속도표시 미수행 +10초, 정지구간 위반 +10초<br>
+          [경기종료] 사람모형 충돌 또는 미션 미수행
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note-box">
+    ※ 개발 배경, 규정·평가 세부사항, 경기장 맵 도면(축적 포함), 물품 위치·색상·규격, 수행 방법·패널티 규정, 시간 측정 방법, 채점 기준표 등 상세 내용은 <b>붙임 5</b>에 별도 수록함.<br>
+    ※ 예선 문제는 재단 전문가 피드백 후 <b>'26.4월 중 최종 확정</b> 예정이며, 제안서에는 문제 개요를 제안하되 확정 후 세부 조정 가능함.
+  </div>
+
+  <!-- 출제 배경 & 차별화 -->
+  <span class="label-mark">▸ 문제 출제 배경 및 타 대회 대비 차별화</span>
+
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="dc-title">초등: SDGs 14 (해양 생태계)</div>
+      "귀여운 강아지 로봇이 해변을 지킨다"는 스토리텔링에 몰입.
+      4족 보행 로봇의 보행·회전·앉기를 세밀하게 제어하는 피지컬 AI 체험.
+      시각 판별 가능한 결과만 초 단위로 치환하여 심사 주관 개입 완전 배제.
+    </div>
+    <div class="diff-card">
+      <div class="dc-title">중학: 기후 위기·환경 보호</div>
+      단순 라인트레이싱이 아닌, AI 비전으로 사물을 스스로 판단하는 "인지→판단→제어" 전 과정 경험.
+      허스키렌즈의 이미지 분류(Object Classification) 활용.
+      비정형 환경에서 창의적 문제해결 유도.
+    </div>
+    <div class="diff-card">
+      <div class="dc-title">고교: SDGs 11 (안전한 교통)</div>
+      단순 '빠른 주행'이 아니라 '보호 구역 준수·돌발 대응' 등 윤리적 판단과 안전 제어가 포함된 자율주행 설계.
+      데이터 수집→모델 훈련→실제 주행 적용까지 <b>실제 AI 모델 생성 과정</b>을 경험.
+    </div>
+  </div>
+
+  <p class="body-text">
+    3개 트랙 모두 <b>자율주행 필수, 100% 정량 평가</b> 원칙을 관철함.
+    초등(센서 기초·순차 조건문) → 중학(AI 비전·논리 제어) → 고교(딥러닝 모델 생성·융합 제어)의
+    <b>3단계 수준별 심화 체계</b>로, 어떤 학교급이든 수준에 맞는 트랙이 존재하는 포용적 설계임.
+  </p>
+
+  <div class="page-num">- 10 -</div>
+</div>
+</body>
+</html>

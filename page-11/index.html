@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 11 – 로봇 선정 및 활용 전략</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .hl{background:#FFFDE7}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+
+  /* 7원칙 대응표 */
+  .principle-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .principle-tbl th{background:#1E3A5F;color:#fff;padding:4px 6px;text-align:center;font-weight:700}
+  .principle-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .principle-tbl tr:nth-child(even){background:#F8FAFC}
+  .principle-tbl .idx{text-align:center;font-weight:700;color:#1E3A5F;width:5%}
+  .principle-tbl .chk{text-align:center;font-size:14px;width:6%}
+  .ok{color:#2E7D32}
+
+  /* 스펙 비교표 */
+  .spec-tbl{width:100%;border-collapse:collapse;font-size:8.5px;line-height:135%;margin:6px 0}
+  .spec-tbl th{background:#E07C38;color:#fff;padding:4px 5px;text-align:center;font-weight:700}
+  .spec-tbl td{border:1px solid #D0D8E0;padding:3px 5px;vertical-align:top;text-align:center}
+  .spec-tbl tr:nth-child(even){background:#FFF8F2}
+  .spec-tbl .left{text-align:left}
+
+  .cost-box{background:#E8F5E9;border:1px solid #A5D6A7;border-radius:5px;padding:8px 12px;font-size:10px;line-height:160%;margin:8px 0}
+  .cost-box b{color:#2E7D32}
+
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-10/index.html" style="margin-left:8px;">← 면수 10</a>
+    <a href="../page-12/index.html" style="margin-left:8px;">면수 12 →</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">5</span>
+    <span class="sec-title">로보틱스 기초 기획 및 운영 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr>
+      <td class="lb">평가항목(배점)</td>
+      <td>교육 내용의 차별성(8) + 대회 운영 적합성(5)</td>
+    </tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td class="hl">담당자가 <b>가장 많이 언급한 주제</b> ⇒ 자율주행·2종 이상·저가·저자유도·로봇사 참여·비용 비중 적정 등</td>
+    </tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 초등용·중고등용 2종 모두 자율주행 내장, 자유도 1~2, 단가 <b>○만원대</b> ⇒ 확산성 기준 충족하는 유일한 조합<br>
+        ② 로봇 임차 비용이 전체 사업비의 <b>○○%로 억제</b> — 제조사 공식 임차 단가표 근거. 교육·운영·모집에 충분히 배분되는 균형 구조
+      </td>
+    </tr>
+  </table>
+
+  <h3>5-2. 로봇 선정 및 활용 전략</h3>
+
+  <!-- 설명회 7원칙 대응표 -->
+  <span class="label-mark">▸ 설명회 7원칙 충족 현황</span>
+
+  <table class="principle-tbl">
+    <thead>
+      <tr>
+        <th></th>
+        <th style="width:20%;">설명회 원칙</th>
+        <th style="width:60%;">우리 로봇의 충족 근거</th>
+        <th>충족</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="idx">(가)</td>
+        <td><b>자율주행 필수</b></td>
+        <td>로보독: 스크래치 코딩 후 자율 보행. 딥코봇: 블록/텍스트 코딩 후 자율 운행. 양쪽 모두 조이스틱 모드 없음</td>
+        <td class="chk ok">✔</td>
+      </tr>
+      <tr>
+        <td class="idx">(나)</td>
+        <td><b>2종 이상</b></td>
+        <td>초등용 로보독(4족 보행) + 중고등용 딥코봇(바퀴형 자율주행) — 2종 투입</td>
+        <td class="chk ok">✔</td>
+      </tr>
+      <tr>
+        <td class="idx">(다)</td>
+        <td><b>고가·고자유도 지양</b></td>
+        <td>로보독: 자유도 ○, 단가 ○만원대 / 딥코봇: 자유도 ○, 단가 ○만원대 — 학교 도입 부담 없는 가격대</td>
+        <td class="chk ok">✔</td>
+      </tr>
+      <tr>
+        <td class="idx">(라)</td>
+        <td><b>최소한의 사용자 선택권</b></td>
+        <td>센서 교체, 부착 위치 선택, 그리퍼 옵션 등 학생이 직접 구성 변경 가능</td>
+        <td class="chk ok">✔</td>
+      </tr>
+      <tr>
+        <td class="idx">(마)</td>
+        <td><b>로봇사 컨소시엄 참여</b></td>
+        <td>핸즈온테크놀러지(LEGO 공식 파트너) 협력기관 참여. 예선 현장에 로봇 전문가 ○명 직접 투입</td>
+        <td class="chk ok">✔</td>
+      </tr>
+      <tr>
+        <td class="idx">(바)</td>
+        <td><b>예선 고유기술 자유 / 본선 제한 가능</b></td>
+        <td>예선에서 딥코 스튜디오 클라우드 AI 활용. 본선 제한 시 범용 코딩 환경으로 전환 — 사전 대비 완료</td>
+        <td class="chk ok">✔</td>
+      </tr>
+      <tr>
+        <td class="idx">(사)</td>
+        <td><b>비용 비중 적정</b></td>
+        <td>전체 사업비 대비 로봇 임차 비율 <b>○○%</b>. 제조사 공식 임차 단가표 근거. 나머지 예산 교육·운영에 충분 배분</td>
+        <td class="chk ok">✔</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 로봇 스펙 비교 -->
+  <span class="label-mark">▸ 로봇별 스펙 비교</span>
+
+  <table class="spec-tbl">
+    <thead>
+      <tr>
+        <th>로봇명</th>
+        <th>대상 트랙</th>
+        <th>자율주행</th>
+        <th>자유도</th>
+        <th>주요 센서</th>
+        <th>프로그래밍 환경</th>
+        <th>정가(만원)</th>
+        <th>임차 단가(만원)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;">로보독</td>
+        <td>초등</td>
+        <td class="ok" style="font-weight:700;">○</td>
+        <td>○</td>
+        <td class="left">AI 카메라(K210), 거리 센서, 자이로, LED, 스피커</td>
+        <td>스크래치 확장 블록</td>
+        <td>○○</td>
+        <td>○○</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">딥코봇</td>
+        <td>중학</td>
+        <td class="ok" style="font-weight:700;">○</td>
+        <td>○</td>
+        <td class="left">AI 비전 카메라, 이미지 분류(딥러닝), DC모터, 서보모터</td>
+        <td>딥코 스튜디오(웹)</td>
+        <td>○○</td>
+        <td>○○</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">딥코 보드 베이직</td>
+        <td>고교</td>
+        <td class="ok" style="font-weight:700;">○</td>
+        <td>○</td>
+        <td class="left">온습도, 조도, 초음파, 네오픽셀, 부저, DC/서보모터</td>
+        <td>딥코 스튜디오(웹)</td>
+        <td>○○</td>
+        <td>○○</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 임차 비용 근거 -->
+  <div class="cost-box">
+    <b>▸ 임차 비용 구조 (사업비 대비)</b><br>
+    · 로봇 임차 총액: ○○,○○○,○○○원 (전체 사업비 4억원 대비 <b>○○%</b>)<br>
+    · 산출 근거: 제조사 공식 임차 단가표 × 필요 세트 수 × 임차 기간<br>
+    · "로봇에 너무 많은 돈 쓰면 조정" — 나머지 예산이 교육·운영·모집에 충분히 배분되는 <b>균형 잡힌 예산 구조</b><br>
+    · 임차 원칙 준수: 소모성 교구 개당 10만원 미만, 재단 협의 후 확정
+  </div>
+
+  <div class="page-num">- 11 -</div>
+</div>
+</body>
+</html>

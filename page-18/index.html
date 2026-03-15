@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 18 – 예선 결과 관리 + 본선 대회 지원</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+
+  .process-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .process-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .process-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+
+  .card-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+  .card{background:#F8FAFE;border:1px solid #C5D3E3;border-radius:6px;padding:10px 8px;text-align:center}
+  .card .c-icon{font-size:22px;margin-bottom:3px}
+  .card .c-title{font-size:10px;font-weight:700;color:#1E3A5F;margin-bottom:2px}
+  .card .c-num{font-size:16px;font-weight:900;color:#E07C38}
+  .card .c-sub{font-size:8.5px;color:#666;margin-top:2px}
+
+  .mentor-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .mentor-tbl th{background:#7B3FA0;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .mentor-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+
+  .score-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .score-tbl th{background:#E07C38;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .score-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top;text-align:center}
+
+  .flow-row{display:flex;align-items:center;justify-content:center;gap:4px;margin:10px 0;flex-wrap:wrap}
+  .flow-step{border-radius:6px;padding:7px 10px;font-size:9px;font-weight:700;text-align:center;color:#fff;min-width:95px}
+  .flow-arrow{font-size:14px;color:#E07C38;font-weight:900}
+
+  .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
+  .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
+  .highlight-box .h-body{font-size:10px;line-height:165%}
+
+  .dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .dual-card{border:1px solid #D0D8E0;border-radius:6px;padding:12px;background:#FAFBFD}
+  .dual-card .dc-title{font-size:11px;font-weight:700;color:#fff;background:#1E3A5F;padding:4px 10px;border-radius:4px;margin-bottom:6px;display:inline-block}
+  .dual-card .dc-body{font-size:9.5px;line-height:160%;color:#333}
+
+  .link-box{background:#E3F2FD;border:1px solid #90CAF9;border-radius:5px;padding:6px 10px;font-size:9.5px;line-height:150%;margin:6px 0}
+  .link-box b{color:#1565C0}
+
+  .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
+
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-17/index.html" style="margin-left:8px;">← 면수 17</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">5</span>
+    <span class="sec-title">로보틱스 기초 기획 및 운영 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr><td class="lb">평가항목(배점)</td><td>대회 운영 적합성(5) + 성과 관리 체계(5) + 사후 관리(3)</td></tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 예선 결과를 <b>실시간 집계 → 24시간 내 공식 발표 → 이의 처리 48시간 완료</b>로 신속·투명하게 관리<br>
+        ② 본선 진출팀에 <b>4주 멘토링(중앙대 멘토단) + 심화 교육 키트</b>를 지원하여 본선 준비도 극대화<br>
+        ③ 예선 → 본선의 <b>데이터 연속성</b>(성적·교육 이력·만족도)을 확보하여 성과 분석 기반 마련
+      </td>
+    </tr>
+  </table>
+
+  <h3>5-9. 예선 결과 관리</h3>
+
+  <!-- 결과 처리 프로세스 -->
+  <span class="label-mark">▸ 예선 결과 처리 프로세스</span>
+
+  <div class="flow-row">
+    <div class="flow-step" style="background:#1E3A5F;">경기 종료<br><span style="font-size:8px;font-weight:400;">현장 즉석 집계</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#2196F3;">영상 검증<br><span style="font-size:8px;font-weight:400;">심판 2인 교차 확인</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#E07C38;">잠정 결과 게시<br><span style="font-size:8px;font-weight:400;">경기 당일 현장</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#f39c12;">이의 접수<br><span style="font-size:8px;font-weight:400;">24시간 이내</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#27ae60;">공식 확정<br><span style="font-size:8px;font-weight:400;">48시간 내 최종</span></div>
+  </div>
+
+  <table class="process-tbl">
+    <thead>
+      <tr>
+        <th style="width:10%;">단계</th>
+        <th style="width:14%;">시점</th>
+        <th style="width:14%;">담당</th>
+        <th style="width:34%;">세부 내용</th>
+        <th style="width:28%;">산출물</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center;font-weight:700;">1. 즉석 집계</td>
+        <td style="text-align:center;">경기 직후</td>
+        <td style="text-align:center;">핸즈온 심판단</td>
+        <td>트랙별 성적 입력(태블릿 기반), 최고 기록 자동 산출</td>
+        <td>트랙별 순위표(잠정)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:700;">2. 영상 검증</td>
+        <td style="text-align:center;">경기 종료 후 30분</td>
+        <td style="text-align:center;">심판 2인</td>
+        <td>녹화 영상 기반 1위~10위 기록 교차 확인, 반칙 여부 점검</td>
+        <td>영상 검증 확인서</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:700;">3. 잠정 게시</td>
+        <td style="text-align:center;">경기 당일 13:00</td>
+        <td style="text-align:center;">블루커뮤니케이션 PM</td>
+        <td>현장 스크린 + 공식 웹사이트 동시 게시, 본선 진출 기준선 안내</td>
+        <td>잠정 결과 공고문</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:700;">4. 이의 처리</td>
+        <td style="text-align:center;">게시 후 24시간</td>
+        <td style="text-align:center;">판정위(PM+심판장+외부위원)</td>
+        <td>이의 접수(온라인 폼) → 영상 재확인 → 3인 합의 → 결과 통보</td>
+        <td>이의 처리 결과 통보서</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:700;">5. 공식 확정</td>
+        <td style="text-align:center;">게시 후 48시간</td>
+        <td style="text-align:center;">블루커뮤니케이션</td>
+        <td>최종 순위 확정, 본선 진출자 개별 통보(문자+이메일), 웹 공시</td>
+        <td>공식 결과표, 본선 진출 통지서</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 채점 기준 요약 -->
+  <span class="label-mark">▸ 트랙별 채점 기준 요약</span>
+
+  <table class="score-tbl">
+    <thead>
+      <tr>
+        <th style="width:12%;">트랙</th>
+        <th style="width:22%;">평가 요소</th>
+        <th style="width:10%;">배점</th>
+        <th style="width:56%;">채점 방식</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2" style="font-weight:700;">초등<br>(미션 수행형)</td>
+        <td>미션 완수율</td>
+        <td><b>70</b></td>
+        <td style="text-align:left;font-size:8.5px;">미션별 성공/실패 이진 채점 (7개 미션 × 10점)</td>
+      </tr>
+      <tr>
+        <td>완주 시간</td>
+        <td><b>30</b></td>
+        <td style="text-align:left;font-size:8.5px;">제한 시간 내 완주 시 잔여 시간에 비례 배점</td>
+      </tr>
+      <tr>
+        <td rowspan="2" style="font-weight:700;">중학<br>(자율주행 레이싱)</td>
+        <td>주행 기록</td>
+        <td><b>80</b></td>
+        <td style="text-align:left;font-size:8.5px;">코스 완주 시간 순위별 점수 (3회 시도 중 최고 기록)</td>
+      </tr>
+      <tr>
+        <td>신호 인식 정확도</td>
+        <td><b>20</b></td>
+        <td style="text-align:left;font-size:8.5px;">신호등 3개 인식 정확도 (정확 10·부분 5·미인식 0)</td>
+      </tr>
+      <tr>
+        <td rowspan="3" style="font-weight:700;">고교<br>(AI 크래프팅)</td>
+        <td>AI 모델 활용 수준</td>
+        <td><b>40</b></td>
+        <td style="text-align:left;font-size:8.5px;">모델 종류·정확도·활용 창의성 루브릭 평가 (심사위원 3인)</td>
+      </tr>
+      <tr>
+        <td>작품 동작 안정성</td>
+        <td><b>35</b></td>
+        <td style="text-align:left;font-size:8.5px;">시연 3회 중 정상 동작 횟수·반응 속도</td>
+      </tr>
+      <tr>
+        <td>발표·시연 전달력</td>
+        <td><b>25</b></td>
+        <td style="text-align:left;font-size:8.5px;">3분 발표 루브릭 (논리성·전달력·질의응답)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:14px;">본선 대회 지원 체계</h3>
+
+  <!-- 본선 지원 개요 카드 -->
+  <div class="card-row">
+    <div class="card">
+      <div class="c-icon">🏆</div>
+      <div class="c-title">본선 진출</div>
+      <div class="c-num">68팀+</div>
+      <div class="c-sub">초등 24·중학 24·고교 20</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">📚</div>
+      <div class="c-title">멘토링 기간</div>
+      <div class="c-num">4주</div>
+      <div class="c-sub">온라인 3주 + 대면 1주</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">👨‍🏫</div>
+      <div class="c-title">멘토 배치</div>
+      <div class="c-num">1:3</div>
+      <div class="c-sub">멘토 1인당 3팀 담당</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">📦</div>
+      <div class="c-title">심화 키트</div>
+      <div class="c-num">무상 지급</div>
+      <div class="c-sub">본선용 추가 센서·부품</div>
+    </div>
+  </div>
+
+  <!-- 멘토링 프로그램 -->
+  <span class="label-mark">▸ 본선 사전 멘토링 프로그램 (4주)</span>
+
+  <table class="mentor-tbl">
+    <thead>
+      <tr>
+        <th style="width:8%;">주차</th>
+        <th style="width:10%;">방식</th>
+        <th style="width:42%;">내용</th>
+        <th style="width:18%;">담당</th>
+        <th style="width:22%;">산출물</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:center;font-weight:700;">1주</td>
+        <td style="text-align:center;">온라인</td>
+        <td>본선 규칙 안내, 팀 구성 확정, 전략 수립 워크숍 (초등: 미션 분석 / 중학: 코스 분석 / 고교: 프로젝트 기획)</td>
+        <td style="text-align:center;">중앙대 멘토단</td>
+        <td>팀 전략서(초안)</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:700;">2주</td>
+        <td style="text-align:center;">온라인</td>
+        <td>본선 심화 기능 교육 (초등: 그리퍼 제어 / 중학: PID 튜닝 / 고교: 딥러닝 모델 최적화), 1차 코드 리뷰</td>
+        <td style="text-align:center;">핸즈온 강사진<br>중앙대 멘토단</td>
+        <td>코드 리뷰 피드백</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:700;">3주</td>
+        <td style="text-align:center;">온라인</td>
+        <td>모의 경기 시뮬레이션 (영상 기반), 멘토 1:1 피드백, 전략 수정</td>
+        <td style="text-align:center;">중앙대 멘토단</td>
+        <td>모의 경기 기록, 수정 전략서</td>
+      </tr>
+      <tr>
+        <td style="text-align:center;font-weight:700;">4주</td>
+        <td style="text-align:center;"><b>대면</b></td>
+        <td>본선 장소 사전 방문(가능 시), 실제 아레나 리허설, 최종 점검·격려, 장비 최종 세팅</td>
+        <td style="text-align:center;">전 기관 공동</td>
+        <td>최종 체크리스트, 리허설 영상</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 예선→본선 데이터 연속성 -->
+  <span class="label-mark">▸ 데이터 연속성 관리 체계</span>
+
+  <div class="dual-grid">
+    <div class="dual-card">
+      <span class="dc-title">예선 데이터 수집</span>
+      <div class="dc-body">
+        <b>성적 데이터:</b> 트랙별 점수, 순위, 시도 횟수, 미션별 성공/실패<br>
+        <b>교육 데이터:</b> 교육 이수 여부, 차시별 실습 완성도<br>
+        <b>만족도 데이터:</b> 5점 척도 설문(교육 만족, 대회 만족, 재참여 의향)<br>
+        <b>인식 변화:</b> 사전-사후 AI·로봇 인식 변화 조사 (5문항)
+      </div>
+    </div>
+    <div class="dual-card">
+      <span class="dc-title" style="background:#7B3FA0;">본선 활용</span>
+      <div class="dc-body">
+        <b>팀 매칭:</b> 예선 성적 + 희망 역할 기반 최적 팀 구성<br>
+        <b>멘토링 맞춤화:</b> 예선 취약 영역 기반 멘토링 집중 포인트 설정<br>
+        <b>성과 비교:</b> 예선→본선 성적 향상도 측정 (교육 효과 입증)<br>
+        <b>최종 보고:</b> 전체 참가자 데이터 기반 성과보고서 작성
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="h-title">본선 대회 지원 핵심 원칙</div>
+    <div class="h-body">
+      <b>① 교육 연속성:</b> 예선 교육에서 다루지 않은 본선 전용 기능(PID, 딥러닝 등)을 멘토링 2주차에 집중 교육하여 "교육 → 대회" 흐름을 끊기지 않게 함.<br>
+      <b>② 공정성 담보:</b> 모든 팀에 동일 사양의 심화 키트를 무상 지급하여 장비 격차를 원천 차단.<br>
+      <b>③ 정서적 지원:</b> 멘토가 기술 지도뿐 아니라 팀워크·발표 자신감까지 코칭하여 본선 현장 퍼포먼스 극대화.
+    </div>
+  </div>
+
+  <div class="link-box">
+    <b>▸ 본선 진출 팀 지원 패키지 구성:</b>
+    심화 키트(추가 센서·부품) + 멘토링 4주 + 본선 교통비 지원(지방팀) + 숙박 지원(원거리 팀) + 본선 참가 확인서·수상 인증서 발급.
+    상세 지원 항목 및 예산은 <b>면수 22(예산 계획)</b>에 명시.
+  </div>
+
+  <div class="note-box">
+    ※ 본선 대회 세부 운영 계획(아레나 레이아웃, 심사 루브릭, 시상 체계)은 <b>붙임 9</b>에 수록
+  </div>
+
+  <div class="page-num">- 18 -</div>
+</div>
+</body>
+</html>

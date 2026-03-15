@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>면수 17 – 예선 대회 운영: 환경·물류·미달 대응</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
+  .page{width:210mm;min-height:297mm;background:#fff;padding:15mm 20mm;box-shadow:0 2px 20px rgba(0,0,0,.08);position:relative}
+  .nav{margin-bottom:12px}.nav a{font-size:11px;color:#1E3A5F;text-decoration:none;border:1px solid #C5D3E3;padding:3px 10px;border-radius:4px}.nav a:hover{background:#F0F4F8}
+  .sec-header{display:flex;align-items:center;gap:10px;border-bottom:2px solid #1E3A5F;padding-bottom:6px}
+  .sec-num{background:#1E3A5F;color:#fff;font-size:16px;font-weight:800;padding:4px 14px;border-radius:3px}
+  .sec-title{font-size:16px;font-weight:700;color:#1E3A5F}
+  .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
+  .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
+  .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
+  h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
+  .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
+  .body-text b{color:#1E3A5F}
+  .label-mark{display:inline-block;font-size:10px;font-weight:700;color:#1E3A5F;margin:8px 0 3px 0}
+
+  .risk-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .risk-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .risk-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .risk-tbl .rn{font-weight:700;color:#1E3A5F;background:#EEF2F7;text-align:center;width:5%}
+  .risk-tbl .sev{text-align:center;font-weight:700;font-size:9px;border-radius:10px;padding:2px 8px;color:#fff;display:inline-block}
+  .sev-high{background:#e74c3c}
+  .sev-mid{background:#f39c12}
+  .sev-low{background:#27ae60}
+
+  .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+  .card{background:#F8FAFE;border:1px solid #C5D3E3;border-radius:6px;padding:10px 8px;text-align:center}
+  .card .c-icon{font-size:22px;margin-bottom:3px}
+  .card .c-title{font-size:10px;font-weight:700;color:#1E3A5F;margin-bottom:2px}
+  .card .c-desc{font-size:9px;color:#555;line-height:150%}
+
+  .logistics-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .logistics-tbl th{background:#E07C38;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .logistics-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+
+  .flow-row{display:flex;align-items:center;justify-content:center;gap:4px;margin:10px 0;flex-wrap:wrap}
+  .flow-step{border-radius:6px;padding:7px 10px;font-size:9px;font-weight:700;text-align:center;color:#fff;min-width:90px}
+  .flow-arrow{font-size:14px;color:#E07C38;font-weight:900}
+
+  .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
+  .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
+  .highlight-box .h-body{font-size:10px;line-height:165%}
+
+  .checklist{margin:6px 0;font-size:9.5px;line-height:160%}
+  .checklist .chk{margin:2px 0;padding-left:16px;position:relative}
+  .checklist .chk::before{content:'☑';position:absolute;left:0;color:#27ae60;font-weight:700}
+
+  .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
+
+  .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="nav">
+    <a href="../index.html">← 대시보드</a>
+    <a href="../page-16/index.html" style="margin-left:8px;">← 면수 16</a>
+  </div>
+
+  <div class="sec-header" style="margin-bottom:0;">
+    <span class="sec-num">5</span>
+    <span class="sec-title">로보틱스 기초 기획 및 운영 (계속)</span>
+  </div>
+
+  <table class="info-box">
+    <tr><td class="lb">평가항목(배점)</td><td>대회 운영 적합성(5) + 위험 관리 체계(3)</td></tr>
+    <tr>
+      <td class="lb">제안사<br>핵심포인트</td>
+      <td class="pt">
+        ① 로봇 300대+ 물류를 <b>사전 배송→현장 세팅→경기 후 회수</b> 3단계로 관리하여 당일 장비 차질 제로 목표<br>
+        ② 모집 미달·장소 변경·로봇 고장 등 <b>7대 리스크</b>에 대해 구체적 대응안을 사전 수립<br>
+        ③ 현장 환경 표준화: 아레나 규격·조명·바닥재·전원 등 <b>체크리스트 기반 품질 관리</b>
+      </td>
+    </tr>
+  </table>
+
+  <h3>5-8. 예선 대회 운영: 환경·물류·미달 대응</h3>
+
+  <!-- 현장 환경 표준 -->
+  <span class="label-mark">▸ 현장 환경 표준 규격</span>
+
+  <div class="card-row">
+    <div class="card">
+      <div class="c-icon">📐</div>
+      <div class="c-title">아레나 규격</div>
+      <div class="c-desc">초등: 1.2m×2.4m<br>중학: 2.0m×3.0m<br>고교: 발표 테이블 1.8m×0.9m<br>바닥재: 무광 PVC (반사 방지)</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">💡</div>
+      <div class="c-title">조명·전원</div>
+      <div class="c-desc">조도 500lux 이상 균일<br>아레나별 독립 전원 분배<br>UPS 1대/권역 비치<br>멀티탭 참가자당 1구</div>
+    </div>
+    <div class="card">
+      <div class="c-icon">📶</div>
+      <div class="c-title">네트워크·안전</div>
+      <div class="c-desc">전용 Wi-Fi AP 3대 이상<br>대역폭 100Mbps+<br>응급키트·소화기 비치<br>안전요원 2명/회차</div>
+    </div>
+  </div>
+
+  <!-- 로봇 물류 체계 -->
+  <span class="label-mark">▸ 로봇 물류 관리 체계</span>
+
+  <div class="flow-row">
+    <div class="flow-step" style="background:#1E3A5F;">물류센터<br><span style="font-size:8px;font-weight:400;">로봇 보관·충전·점검</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#2196F3;">D-2 사전배송<br><span style="font-size:8px;font-weight:400;">택배/전세차량</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#E07C38;">D-Day 현장세팅<br><span style="font-size:8px;font-weight:400;">08:00 완료 목표</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#27ae60;">경기 운영<br><span style="font-size:8px;font-weight:400;">예비 10% 대기</span></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background:#7B3FA0;">D+1 회수·점검<br><span style="font-size:8px;font-weight:400;">파손 확인·수리</span></div>
+  </div>
+
+  <table class="logistics-tbl">
+    <thead>
+      <tr>
+        <th style="width:14%;">로봇 종류</th>
+        <th style="width:10%;">총 수량</th>
+        <th style="width:12%;">회차당 투입</th>
+        <th style="width:10%;">예비율</th>
+        <th style="width:18%;">배송 방식</th>
+        <th style="width:36%;">관리 포인트</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700;text-align:center;">로보독(초등)</td>
+        <td style="text-align:center;">120대</td>
+        <td style="text-align:center;">30~40대</td>
+        <td style="text-align:center;">15%</td>
+        <td>전용 하드케이스 택배</td>
+        <td style="font-size:8.5px;">4족 관절 점검, 배터리 100% 충전 확인, 센서 교정</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;text-align:center;">딥코봇(중학)</td>
+        <td style="text-align:center;">120대</td>
+        <td style="text-align:center;">30~40대</td>
+        <td style="text-align:center;">15%</td>
+        <td>전세차량(수도권·영남)<br>택배(기타)</td>
+        <td style="font-size:8.5px;">카메라 모듈 렌즈 청소, 펌웨어 버전 통일, 바퀴 마모 점검</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;text-align:center;">딥코보드 베이직(고교)</td>
+        <td style="text-align:center;">80세트</td>
+        <td style="text-align:center;">20~25세트</td>
+        <td style="text-align:center;">20%</td>
+        <td>소형 박스 택배</td>
+        <td style="font-size:8.5px;">센서·액추에이터 개별 동작 테스트, 케이블 여분 포함</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 7대 리스크 -->
+  <span class="label-mark">▸ 7대 리스크 및 대응 방안</span>
+
+  <table class="risk-tbl">
+    <thead>
+      <tr>
+        <th style="width:4%;">No</th>
+        <th style="width:16%;">리스크</th>
+        <th style="width:8%;">등급</th>
+        <th style="width:36%;">대응 방안</th>
+        <th style="width:36%;">선제 조치</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="rn">1</td>
+        <td style="font-weight:700;">모집 인원 미달</td>
+        <td style="text-align:center;"><span class="sev sev-high">상</span></td>
+        <td>D-14 기준 70% 미만 시 ① 온라인 타겟 광고 추가 집행(예비비 활용) ② 인접 권역 통합 운영 ③ 트랙 내 최소 인원(30명) 미달 시 인접 트랙 합산 운영</td>
+        <td>D-30부터 주간 모집 현황 모니터링, 자동 알림 트리거 설정(50%, 70%, 90% 달성 시점)</td>
+      </tr>
+      <tr>
+        <td class="rn">2</td>
+        <td style="font-weight:700;">장소 대관 취소</td>
+        <td style="text-align:center;"><span class="sev sev-mid">중</span></td>
+        <td>권역당 후보 장소 2곳 사전 확보, 대관 계약 시 위약금 조항 삽입, 48시간 내 대체 장소 전환</td>
+        <td>후보 장소 리스트 사전 답사 완료, 비상 연락망 유지</td>
+      </tr>
+      <tr>
+        <td class="rn">3</td>
+        <td style="font-weight:700;">로봇 대량 고장</td>
+        <td style="text-align:center;"><span class="sev sev-mid">중</span></td>
+        <td>예비 장비 15~20% 상시 대기, 핸즈온 기술진 현장 상주(회차당 2명), 30분 내 교체 완료 프로토콜</td>
+        <td>D-3 전수 동작 테스트, D-1 배터리 풀충전, 고장 이력 DB 관리</td>
+      </tr>
+      <tr>
+        <td class="rn">4</td>
+        <td style="font-weight:700;">네트워크 장애</td>
+        <td style="text-align:center;"><span class="sev sev-mid">중</span></td>
+        <td>LTE 백업 라우터 2대 비치, 고교 트랙 오프라인 모드 대비 교안 사전 배포</td>
+        <td>D-1 현장 Wi-Fi 속도 테스트(100Mbps 미만 시 AP 추가 설치)</td>
+      </tr>
+      <tr>
+        <td class="rn">5</td>
+        <td style="font-weight:700;">강사·심판 불참</td>
+        <td style="text-align:center;"><span class="sev sev-low">하</span></td>
+        <td>권역당 예비 강사 1명 대기, 중앙대 멘토단에서 긴급 파견 가능 체계 구축</td>
+        <td>강사 풀 120% 확보, 매뉴얼 기반 운영으로 대체 인력 즉시 투입 가능</td>
+      </tr>
+      <tr>
+        <td class="rn">6</td>
+        <td style="font-weight:700;">안전 사고</td>
+        <td style="text-align:center;"><span class="sev sev-low">하</span></td>
+        <td>행사 보험 가입(참가자 전원), 응급키트·AED 비치, 안전요원 2명 상주, 인근 병원 연락망</td>
+        <td>참가 동의서에 건강 특이사항 수집, 개회식 시 안전 수칙 안내</td>
+      </tr>
+      <tr>
+        <td class="rn">7</td>
+        <td style="font-weight:700;">채점 이의 제기</td>
+        <td style="text-align:center;"><span class="sev sev-low">하</span></td>
+        <td>전 경기 영상 녹화(트랙당 카메라 2대), 이의 접수→10분 내 영상 확인→판정위 3인 합의</td>
+        <td>채점 기준표 사전 공개, 참가자 브리핑 시 채점 시연 실시</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 현장 운영 체크리스트 -->
+  <span class="label-mark">▸ 현장 운영 품질 체크리스트 (요약)</span>
+
+  <div class="checklist">
+    <div class="chk">아레나 바닥 수평·청결 확인 (PVC 이음새 테이프 처리)</div>
+    <div class="chk">조명 500lux 이상 균일 확인 (조도계 측정)</div>
+    <div class="chk">전원 분배기 과부하 테스트 (동시 사용 시뮬레이션)</div>
+    <div class="chk">Wi-Fi 접속 테스트 (동시 50대 접속 안정성)</div>
+    <div class="chk">로봇 전수 동작 확인 (센서·모터·카메라·배터리)</div>
+    <div class="chk">안전 장비 비치 확인 (응급키트·소화기·AED)</div>
+    <div class="chk">참가자 동선 안내판·화장실·음수대 위치 확인</div>
+    <div class="chk">영상 녹화 장비 테스트 (트랙당 2대, 저장 용량 확인)</div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="h-title">미달 대응 의사결정 플로우</div>
+    <div class="h-body">
+      D-30 모집률 50% 미만 → PM 긴급 보고 → 타겟 광고 추가 집행 결정<br>
+      D-14 모집률 70% 미만 → 인접 권역 통합 검토 → 장소 변경 또는 온라인 병행 결정<br>
+      D-7 모집률 85% 미만 → 트랙 내 최소 인원 점검 → 최종 운영 규모 확정<br>
+      D-7 모집률 100%+ → 대기자 명단 관리, 추가 회차 편성 검토
+    </div>
+  </div>
+
+  <div class="note-box">
+    ※ 체크리스트 전체 버전(50개 항목)과 리스크 대응 매뉴얼 상세는 <b>붙임 8</b>에 수록
+  </div>
+
+  <div class="page-num">- 17 -</div>
+</div>
+</body>
+</html>

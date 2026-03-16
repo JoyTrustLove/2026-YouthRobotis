@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>면수 20 – 멘토링 세부 운영 + 홍보부스</title>
+<title>면수 20 – 6-2 참가자 모집 전략 + 6-3 AI Future Festa 홍보 부스</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Pretendard','Malgun Gothic',sans-serif;background:#E8EAED;display:flex;justify-content:center;padding:30px 10px}
@@ -15,6 +15,7 @@
   .info-box{width:100%;border-collapse:collapse;font-size:9.5px;line-height:145%;margin:8px 0 10px 0}
   .info-box td{border:1px solid #C5D3E3;padding:4px 8px;vertical-align:top}
   .info-box .lb{background:#F0F4F8;font-weight:700;text-align:center;color:#1E3A5F;width:95px}
+  .info-box .hl{background:#FFFDE7}
   .info-box .pt{background:#FFF8E1;border-left:3px solid #F9A825}
   h3{font-size:12px;color:#1E3A5F;border-left:3px solid #1E3A5F;padding-left:8px;margin:12px 0 5px 0}
   .body-text{font-size:11px;line-height:170%;text-indent:8px;margin:2px 0;color:#262626}
@@ -23,11 +24,23 @@
   .data-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
   .data-tbl th{background:#1E3A5F;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
   .data-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
-  .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+  .data-tbl tr:nth-child(even){background:#F8FAFC}
+  .data-tbl .sub-total td{background:#F0F4F8;font-weight:700;color:#1E3A5F}
+  .promo-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
+  .promo-tbl th{background:#E07C38;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
+  .promo-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .promo-tbl tr:nth-child(even){background:#FFF8F2}
+  .card-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+  .card-3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
   .card{background:#F8FAFE;border:1px solid #C5D3E3;border-radius:6px;padding:10px 8px;text-align:center}
   .card .c-icon{font-size:22px;margin-bottom:3px}
   .card .c-title{font-size:10px;font-weight:700;color:#1E3A5F;margin-bottom:2px}
+  .card .c-num{font-size:16px;font-weight:900;color:#E07C38}
+  .card .c-sub{font-size:8.5px;color:#666;margin-top:2px}
   .card .c-desc{font-size:9px;color:#555;line-height:150%}
+  .flow-row{display:flex;align-items:center;justify-content:center;gap:4px;margin:10px 0;flex-wrap:wrap}
+  .flow-step{border-radius:6px;padding:7px 10px;font-size:9px;font-weight:700;text-align:center;color:#fff;min-width:100px}
+  .flow-arrow{font-size:14px;color:#E07C38;font-weight:900}
   .dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
   .dual-card{border:1px solid #D0D8E0;border-radius:6px;padding:12px;background:#FAFBFD}
   .dual-card .dc-title{font-size:11px;font-weight:700;color:#fff;background:#1E3A5F;padding:4px 10px;border-radius:4px;margin-bottom:6px;display:inline-block}
@@ -35,10 +48,13 @@
   .highlight-box{background:linear-gradient(135deg,#1E3A5F,#2a5a8f);color:#fff;border-radius:6px;padding:12px 14px;margin:10px 0}
   .highlight-box .h-title{font-size:11px;font-weight:800;margin-bottom:4px}
   .highlight-box .h-body{font-size:10px;line-height:165%}
-  .promo-tbl{width:100%;border-collapse:collapse;font-size:9px;line-height:140%;margin:6px 0}
-  .promo-tbl th{background:#E07C38;color:#fff;padding:5px 6px;text-align:center;font-weight:700}
-  .promo-tbl td{border:1px solid #D0D8E0;padding:4px 6px;vertical-align:top}
+  .warn-box{background:#FFF3E0;border:1px solid #FFE082;border-left:3px solid #E65100;border-radius:5px;padding:8px 12px;font-size:10px;line-height:160%;margin:8px 0}
+  .warn-box b{color:#E65100}
   .note-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:5px;padding:5px 10px;font-size:9px;line-height:145%;margin:6px 0}
+
+  /* 구분선 */
+  .section-divider{border:none;border-top:2px solid #E07C38;margin:14px 0}
+
   .page-num{position:absolute;bottom:10mm;left:0;right:0;text-align:center;font-size:10px;color:#999}
 </style>
 </head>
@@ -57,20 +73,30 @@
   </div>
 
   <table class="info-box">
-    <tr><td class="lb">평가항목(배점)</td><td>멘토링 운영 계획(8) + 홍보·확산 전략(5)</td></tr>
+    <tr>
+      <td class="lb">평가항목<br>(배점)</td>
+      <td colspan="3">사업 환류 및 성과 확산(7)</td>
+    </tr>
+    <tr>
+      <td class="lb">사업설명회<br>강조사항</td>
+      <td colspan="3" class="hl">AI Future Festa 홍보 부스(6m×6m, 3일간). "<b>화려한 목공 부스 불필요. 대회 경기장 가져와서 보여주는 게 최고 홍보</b>"</td>
+    </tr>
     <tr>
       <td class="lb">제안사<br>핵심포인트</td>
-      <td class="pt">
-        ① 온라인 3주 + 대면 1주의 <b>하이브리드 멘토링</b> 세부 운영 계획 제시<br>
-        ② 예선 현장에 <b>AI·로봇 체험 홍보부스</b>를 운영하여 학부모·일반 관람객 대상 AI 인식 확산<br>
-        ③ 온·오프라인 <b>홍보 채널 8종</b> 전략으로 2,900명 모집 실현
+      <td colspan="3" class="pt">
+        ① 온라인 3주 + 대면 1주의 <b>하이브리드 멘토링</b> 세부 운영 계획 제시 (면수 19 멘토단 구성과 연동)<br>
+        ② AI Future Festa 부스에 <b>실제 대회 경기장+로봇을 가져와</b> 관람객이 직접 체험하는 구성 ⇒ 시공 비용 최소, 체험 임팩트 최대의 홍보 전략
       </td>
     </tr>
   </table>
 
-  <h3>6-2. 멘토링 세부 운영 계획</h3>
+  <!-- ================================================= -->
+  <!-- 6-2: 멘토링 세부 운영 + 참가자 모집 전략 -->
+  <!-- ================================================= -->
 
-  <span class="label-mark">▸ 주차별 멘토링 운영 상세</span>
+  <h3>6-2. 멘토링 세부 운영 + 참가자 모집 전략</h3>
+
+  <span class="label-mark">▸ 주차별 멘토링 운영 상세 (4주)</span>
 
   <table class="data-tbl">
     <thead>
@@ -79,7 +105,7 @@
         <th style="width:9%;">방식</th>
         <th style="width:10%;">시간</th>
         <th style="width:36%;">활동 내용</th>
-        <th style="width:20%;">멘토 역할</th>
+        <th style="width:20%;">멘토 역할 (전략·기술 자문)</th>
         <th style="width:18%;">산출물</th>
       </tr>
     </thead>
@@ -87,32 +113,32 @@
       <tr>
         <td style="text-align:center;font-weight:700;">1주</td>
         <td style="text-align:center;">온라인</td>
-        <td style="text-align:center;">2시간×2회</td>
-        <td>팀 빌딩, 본선 규칙 해설, 전략 수립 워크숍, 역할 분담</td>
-        <td style="font-size:8.5px;">아이스브레이킹 진행, 팀 전략서 초안 리뷰</td>
+        <td style="text-align:center;">2h×2회</td>
+        <td style="font-size:8.5px;">팀 빌딩, 본선 규칙 해설, <b>팀별 전략 수립 자문</b>, 역할 분담</td>
+        <td style="font-size:8.5px;">아이스브레이킹, 전략서 초안 리뷰</td>
         <td style="font-size:8.5px;">팀 전략서(초안), 역할 분담표</td>
       </tr>
       <tr>
         <td style="text-align:center;font-weight:700;">2주</td>
         <td style="text-align:center;">온라인</td>
-        <td style="text-align:center;">2시간×2회</td>
-        <td>본선 심화 기능 교육(트랙별), 1차 코드 리뷰, 디버깅 실습</td>
-        <td style="font-size:8.5px;">기술 지도, 코드 리뷰 피드백, 트러블슈팅 가이드</td>
+        <td style="text-align:center;">2h×2회</td>
+        <td style="font-size:8.5px;"><b>프로그래밍 최적화 자문</b>, 1차 코드 리뷰, 디버깅 실습</td>
+        <td style="font-size:8.5px;">코드 리뷰 피드백, 트러블슈팅 가이드</td>
         <td style="font-size:8.5px;">코드 리뷰 피드백, 디버깅 로그</td>
       </tr>
       <tr>
         <td style="text-align:center;font-weight:700;">3주</td>
         <td style="text-align:center;">온라인</td>
-        <td style="text-align:center;">2시간×2회</td>
-        <td>모의 경기 시뮬레이션(영상 기반), 전략 수정, 발표 리허설</td>
-        <td style="font-size:8.5px;">모의 심사, 피드백, 발표 코칭</td>
+        <td style="text-align:center;">2h×2회</td>
+        <td style="font-size:8.5px;">모의 경기 시뮬레이션(영상 기반), <b>전략 보완 자문</b>, 발표 리허설</td>
+        <td style="font-size:8.5px;">모의 심사, 전략 피드백, 발표 코칭</td>
         <td style="font-size:8.5px;">모의 경기 기록, 수정 전략서</td>
       </tr>
       <tr>
         <td style="text-align:center;font-weight:700;">4주</td>
         <td style="text-align:center;font-weight:700;color:#E07C38;">대면</td>
-        <td style="text-align:center;">종일(6시간)</td>
-        <td>본선 장소 리허설, 실제 아레나 연습, 장비 최종 세팅, 격려</td>
+        <td style="text-align:center;">종일(6h)</td>
+        <td style="font-size:8.5px;">본선 장소 리허설, 실제 아레나 연습, <b>최종 점검·전략 확정</b>, 멘탈 관리</td>
         <td style="font-size:8.5px;">현장 기술 지원, 최종 점검, 정서적 지지</td>
         <td style="font-size:8.5px;">최종 체크리스트, 리허설 영상</td>
       </tr>
@@ -121,142 +147,144 @@
 
   <span class="label-mark">▸ 멘토링 커뮤니케이션 도구</span>
 
-  <div class="card-row">
-    <div class="card">
-      <div class="c-icon">💬</div>
-      <div class="c-title">실시간 채팅</div>
-      <div class="c-desc">팀별 전용 채팅방 (카카오톡 오픈채팅)<br>멘토 응답 24시간 이내 원칙</div>
-    </div>
-    <div class="card">
-      <div class="c-icon">📹</div>
-      <div class="c-title">화상 세션</div>
-      <div class="c-desc">Zoom 활용, 주 2회 정기 세션<br>녹화 후 복습 자료 제공</div>
-    </div>
-    <div class="card">
-      <div class="c-icon">📂</div>
-      <div class="c-title">자료 공유</div>
-      <div class="c-desc">Google Drive 팀별 폴더<br>코드·자료·피드백 아카이빙</div>
-    </div>
+  <div class="card-3">
+    <div class="card"><div class="c-icon">💬</div><div class="c-title">실시간 채팅</div><div class="c-desc">팀별 전용 카카오톡 오픈채팅<br>멘토 응답 24시간 이내 원칙</div></div>
+    <div class="card"><div class="c-icon">📹</div><div class="c-title">화상 세션</div><div class="c-desc">Zoom 활용, 주 2회 정기 세션<br>녹화 후 복습 자료 제공</div></div>
+    <div class="card"><div class="c-icon">📂</div><div class="c-title">자료 공유</div><div class="c-desc">Google Drive 팀별 폴더<br>코드·자료·피드백 아카이빙</div></div>
   </div>
 
-  <h3 style="margin-top:14px;">홍보부스 및 참가자 모집 전략</h3>
-
-  <span class="label-mark">▸ 예선 현장 AI·로봇 체험 홍보부스</span>
-
-  <div class="dual-grid">
-    <div class="dual-card">
-      <span class="dc-title">부스 구성</span>
-      <div class="dc-body">
-        <b>체험존 A:</b> 로보독 4족 보행 체험 (조이스틱 조종)<br>
-        <b>체험존 B:</b> 딥코봇 자율주행 미니 레이싱<br>
-        <b>체험존 C:</b> AI 비전 모델 실시간 시연<br>
-        <b>상담존:</b> 참가 안내·진로 상담 (학부모 대상)<br>
-        <b>포토존:</b> 대회 로고 배경 SNS 공유 유도
-      </div>
-    </div>
-    <div class="dual-card">
-      <span class="dc-title" style="background:#E07C38;">운영 계획</span>
-      <div class="dc-body">
-        <b>규모:</b> 예선 11회 × 부스 1개소 (약 20㎡)<br>
-        <b>운영 인력:</b> 타임에듀 스태프 2명 + 멘토 1명<br>
-        <b>운영 시간:</b> 예선 당일 08:30~13:00<br>
-        <b>대상:</b> 학부모·일반 관람객·비참가 학생<br>
-        <b>목표:</b> 부스 체험 300명+ (전체 예선 누적)
-      </div>
-    </div>
-  </div>
-
-  <span class="label-mark">▸ 홍보 채널 전략 (8종)</span>
+  <span class="label-mark">▸ 홍보 채널 전략 (8종) — 참가자 2,900명 모집</span>
 
   <table class="promo-tbl">
     <thead>
-      <tr>
-        <th style="width:5%;">No</th>
-        <th style="width:16%;">채널</th>
-        <th style="width:12%;">담당</th>
-        <th style="width:35%;">세부 전략</th>
-        <th style="width:14%;">시기</th>
-        <th style="width:18%;">목표 도달</th>
-      </tr>
+      <tr><th style="width:4%;">No</th><th style="width:14%;">채널</th><th style="width:10%;">담당</th><th style="width:32%;">세부 전략</th><th style="width:12%;">시기</th><th style="width:16%;">목표</th></tr>
     </thead>
     <tbody>
-      <tr>
-        <td style="text-align:center;">1</td>
-        <td style="font-weight:700;">학교 공문</td>
-        <td style="text-align:center;">타임에듀</td>
-        <td style="font-size:8.5px;">시·도 교육청 협조 공문 → 전국 초·중·고 발송</td>
-        <td style="text-align:center;">5월 1~2주</td>
-        <td style="font-size:8.5px;">전국 11,000교+</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">2</td>
-        <td style="font-weight:700;">SNS 광고</td>
-        <td style="text-align:center;">블루커뮤니케이션</td>
-        <td style="font-size:8.5px;">인스타그램·유튜브 타겟 광고 (학부모 30~50대)</td>
-        <td style="text-align:center;">5월~6월</td>
-        <td style="font-size:8.5px;">노출 50만+, 클릭 5,000+</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">3</td>
-        <td style="font-weight:700;">학원 네트워크</td>
-        <td style="text-align:center;">타임에듀</td>
-        <td style="font-size:8.5px;">코딩·로봇 학원 500곳+ 포스터·리플렛 배포</td>
-        <td style="text-align:center;">5월~6월</td>
-        <td style="font-size:8.5px;">학원당 5명 유도 = 2,500명</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">4</td>
-        <td style="font-weight:700;">교사 커뮤니티</td>
-        <td style="text-align:center;">핸즈온</td>
-        <td style="font-size:8.5px;">인디스쿨·에듀넷 게시판, SW교육 교사 연수회 안내</td>
-        <td style="text-align:center;">5월</td>
-        <td style="font-size:8.5px;">교사 500명 인지</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">5</td>
-        <td style="font-weight:700;">WRO·FLL DB</td>
-        <td style="text-align:center;">핸즈온</td>
-        <td style="font-size:8.5px;">기존 대회 참가자 DB 대상 이메일·문자 발송</td>
-        <td style="text-align:center;">5월 2주</td>
-        <td style="font-size:8.5px;">DB 3,000명 발송</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">6</td>
-        <td style="font-weight:700;">보도자료</td>
-        <td style="text-align:center;">블루커뮤니케이션</td>
-        <td style="font-size:8.5px;">주요 언론사·교육 전문 매체 보도자료 배포</td>
-        <td style="text-align:center;">5월 1주</td>
-        <td style="font-size:8.5px;">기사 게재 10건+</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">7</td>
-        <td style="font-weight:700;">유튜브 콘텐츠</td>
-        <td style="text-align:center;">블루커뮤니케이션</td>
-        <td style="font-size:8.5px;">대회 소개·로봇 시연 숏폼 5편 제작 (30초~1분)</td>
-        <td style="text-align:center;">5월~7월</td>
-        <td style="font-size:8.5px;">조회 수 3만+</td>
-      </tr>
-      <tr>
-        <td style="text-align:center;">8</td>
-        <td style="font-weight:700;">현장 홍보부스</td>
-        <td style="text-align:center;">타임에듀</td>
-        <td style="font-size:8.5px;">예선 현장 체험부스 운영, 학부모 구전 확산</td>
-        <td style="text-align:center;">7~8월</td>
-        <td style="font-size:8.5px;">체험 300명+, 구전 효과</td>
-      </tr>
+      <tr><td style="text-align:center;">1</td><td style="font-weight:700;">학교 공문</td><td style="text-align:center;">타임에듀</td><td style="font-size:8.5px;">시·도 교육청 협조 공문 → 전국 초·중·고 발송</td><td style="text-align:center;">5월 1~2주</td><td style="font-size:8.5px;">11,000교+</td></tr>
+      <tr><td style="text-align:center;">2</td><td style="font-weight:700;">SNS 광고</td><td style="text-align:center;">블루</td><td style="font-size:8.5px;">인스타그램·유튜브 타겟 광고 (학부모 30~50대)</td><td style="text-align:center;">5~6월</td><td style="font-size:8.5px;">노출 50만+, 클릭 5,000+</td></tr>
+      <tr><td style="text-align:center;">3</td><td style="font-weight:700;">학원 네트워크</td><td style="text-align:center;">타임에듀</td><td style="font-size:8.5px;">코딩·로봇 학원 500곳+ 포스터·리플렛 배포</td><td style="text-align:center;">5~6월</td><td style="font-size:8.5px;">학원당 5명 = 2,500명</td></tr>
+      <tr><td style="text-align:center;">4</td><td style="font-weight:700;">교사 커뮤니티</td><td style="text-align:center;">핸즈온</td><td style="font-size:8.5px;">인디스쿨·에듀넷 게시판, SW교육 교사 연수회 안내</td><td style="text-align:center;">5월</td><td style="font-size:8.5px;">교사 500명 인지</td></tr>
+      <tr><td style="text-align:center;">5</td><td style="font-weight:700;">WRO·FLL DB</td><td style="text-align:center;">핸즈온</td><td style="font-size:8.5px;">기존 대회 참가자 DB 대상 이메일·문자 발송</td><td style="text-align:center;">5월 2주</td><td style="font-size:8.5px;">DB 3,000명 발송</td></tr>
+      <tr><td style="text-align:center;">6</td><td style="font-weight:700;">보도자료</td><td style="text-align:center;">블루</td><td style="font-size:8.5px;">주요 언론사·교육 전문 매체 보도자료 3회 배포</td><td style="text-align:center;">5월 1주</td><td style="font-size:8.5px;">기사 게재 10건+</td></tr>
+      <tr><td style="text-align:center;">7</td><td style="font-weight:700;">유튜브 콘텐츠</td><td style="text-align:center;">블루</td><td style="font-size:8.5px;">대회 소개·로봇 시연 숏폼 5편 제작 (30초~1분)</td><td style="text-align:center;">5~7월</td><td style="font-size:8.5px;">조회 수 3만+</td></tr>
+      <tr><td style="text-align:center;">8</td><td style="font-weight:700;">AI Future Festa 부스</td><td style="text-align:center;">공동</td><td style="font-size:8.5px;">아래 6-3 참조: 실제 경기장 체험 → 차년도 사전 인지도 확보</td><td style="text-align:center;">12월</td><td style="font-size:8.5px;">900명 체험, 3,000+ SNS 노출</td></tr>
     </tbody>
   </table>
 
-  <div class="highlight-box">
-    <div class="h-title">모집 실현 가능성 근거</div>
-    <div class="h-body">
-      <b>① 과거 실적:</b> 타임에듀 2024 코드페어 3,200명 모집 실적 보유 → 2,900명 목표는 보수적 설정.<br>
-      <b>② 다채널 중복 도달:</b> 8종 채널을 통해 동일 타겟에 3회 이상 중복 노출하여 전환율 극대화.<br>
-      <b>③ 학부모 결정권:</b> 초·중학생은 학부모가 참가를 결정하므로, SNS·학원·상담존을 통해 학부모 대상 집중 홍보.
+  <!-- ================================================= -->
+  <!-- 6-3: AI Future Festa 홍보 부스 -->
+  <!-- ================================================= -->
+
+  <hr class="section-divider">
+
+  <h3>6-3. AI Future Festa 로보틱스 대회 홍보 부스 운영 계획</h3>
+
+  <!-- 핵심 원칙 박스 -->
+  <div class="warn-box">
+    <b>⚡ 설명회 방침 — "대회 경기장 가져와서 보여주는 게 최고 홍보":</b>
+    목공·인테리어에 예산 낭비 없이, <b>실제 예선 대회에서 사용하는 경기장(아레나)과 로봇을 그대로 가져와 설치</b>함.
+    관람객은 "이것이 실제 대회 현장"임을 즉시 체감하며, 별도 시공 비용 없이 최대의 홍보 효과를 달성함.
+  </div>
+
+  <table class="data-tbl">
+    <thead>
+      <tr><th style="width:20%;">항목</th><th style="width:80%;">내용</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight:700;">행사명</td><td>AI Future Festa (과학기술정보통신부 주관)</td></tr>
+      <tr><td style="font-weight:700;">부스 목적</td><td>2026 청소년 로보틱스 챌린지 성과 홍보 + <b>실제 경기장 체험</b> + 차년도 사전 인지도 확보</td></tr>
+      <tr><td style="font-weight:700;">운영 기간</td><td><b>3일간</b> (Festa 전체 일정 참여, 12월 중 서울 DDP)</td></tr>
+      <tr><td style="font-weight:700;">부스 규모</td><td><b>6m × 6m (36㎡)</b></td></tr>
+      <tr><td style="font-weight:700;">부스 컨셉</td><td><b>실제 대회 경기장 + 로봇을 그대로 가져와 설치</b> — 별도 목공·인테리어 시공 없음</td></tr>
+      <tr><td style="font-weight:700;">운영 인력</td><td>5명/일 (진행 2 + 기술 지원 2 + 안내 1) — 2개 수행기관 합동 운영</td></tr>
+      <tr><td style="font-weight:700;">목표 방문자</td><td>300명+/일 × 3일 = 총 <b>900명+ 부스 체험</b></td></tr>
+    </tbody>
+  </table>
+
+  <!-- 부스 배치 -->
+  <span class="label-mark">▸ 부스 배치 구성 (6m × 6m)</span>
+
+  <div class="dual-grid">
+    <div class="dual-card">
+      <span class="dc-title">경기장 A: 초등·중학 문제해결 아레나</span>
+      <div class="dc-body">
+        실제 대회 미션 필드(1,143×1,181mm 표준 보드) 설치<br>
+        로보독 2대 + 딥코봇 2대 배치<br>
+        관람객이 직접 조작해보는 미션 체험<br>
+        <b>→ 실제 대회에서 쓰는 아레나를 그대로 가져옴</b>
+      </div>
+    </div>
+    <div class="dual-card">
+      <span class="dc-title" style="background:#E07C38;">경기장 B: 고교 작품공모전 전시 + AI 비전 데모</span>
+      <div class="dc-body">
+        올해 수상작 재현 전시<br>
+        딥코 보드 AI 비전 실시간 시연 (객체 인식)<br>
+        안내 데스크 + 리플릿 배포 + 포토존<br>
+        대형 모니터: 대회 하이라이트 영상 루프 재생
+      </div>
     </div>
   </div>
 
-  <div class="note-box">※ 홍보 소요 예산(광고비·인쇄비 등)은 <b>면수 28(운영비)</b>에 반영</div>
+  <!-- 투입 장비 -->
+  <span class="label-mark">▸ 부스 투입 장비 (실제 대회 장비 그대로 사용)</span>
+
+  <table class="data-tbl">
+    <thead>
+      <tr><th style="width:28%;">장비</th><th style="width:10%;">수량</th><th style="width:30%;">용도</th><th style="width:32%;">비고</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight:700;">초등·중학 문제해결 아레나</td><td style="text-align:center;">1세트</td><td style="font-size:8.5px;">실제 미션 필드 체험</td><td style="font-size:8.5px;">예선 대회 동일 규격 (1,143×1,181mm)</td></tr>
+      <tr><td style="font-weight:700;">로보독</td><td style="text-align:center;">2대</td><td style="font-size:8.5px;">관람객 직접 조작 체험</td><td style="font-size:8.5px;">기본 동작 체험 프로그램 탑재</td></tr>
+      <tr><td style="font-weight:700;">딥코봇</td><td style="text-align:center;">2대</td><td style="font-size:8.5px;">라인트레이싱 미니 레이싱</td><td style="font-size:8.5px;">아레나 내 미니 트랙</td></tr>
+      <tr><td style="font-weight:700;">딥코 보드 베이직</td><td style="text-align:center;">1세트</td><td style="font-size:8.5px;">AI 비전 실시간 시연</td><td style="font-size:8.5px;">객체 인식 데모</td></tr>
+      <tr><td style="font-weight:700;">대형 모니터 (55")</td><td style="text-align:center;">1대</td><td style="font-size:8.5px;">대회 하이라이트 영상 루프</td><td style="font-size:8.5px;">자체 보유 장비</td></tr>
+      <tr><td style="font-weight:700;">X-배너</td><td style="text-align:center;">2개</td><td style="font-size:8.5px;">부스 입구 양측</td><td style="font-size:8.5px;">대회 비주얼</td></tr>
+    </tbody>
+  </table>
+
+  <p class="body-text" style="font-size:9.5px;">
+    ※ 모든 장비는 사업용 보유 장비를 활용 → 추가 구매·임차 최소화. 아레나와 로봇은 예선·본선 종료 후 그대로 DDP에 운반.
+  </p>
+
+  <!-- 비용 효율 비교 -->
+  <span class="label-mark">▸ 비용 효율 비교: 기존 방식 vs 제안 방식</span>
+
+  <table class="data-tbl">
+    <thead>
+      <tr><th style="width:20%;">항목</th><th style="width:40%;">기존 방식 (목공 부스)</th><th style="width:40%;">제안 방식 (경기장 직반입)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="font-weight:700;">부스 시공</td><td>목공 제작·인테리어 500만원+</td><td style="font-weight:700;color:#2E7D32;"><b>0원</b> (시공 불필요)</td></tr>
+      <tr><td style="font-weight:700;">철거 비용</td><td>철거·폐기 100만원+</td><td style="font-weight:700;color:#2E7D32;"><b>0원</b> (장비 회수만)</td></tr>
+      <tr><td style="font-weight:700;">운반·설치</td><td>별도 디스플레이 운반 200만원</td><td style="font-weight:700;color:#2E7D32;">아레나+로봇 운반 <b>100만원 내외</b></td></tr>
+      <tr><td style="font-weight:700;">체험 임팩트</td><td>시각적 화려함 중심</td><td style="font-weight:700;color:#2E7D32;"><b>실제 대회 현장</b> 즉시 체감</td></tr>
+      <tr><td style="font-weight:700;">재사용성</td><td>1회성 (폐기)</td><td style="font-weight:700;color:#2E7D32;"><b>100% 재사용</b> (대회 장비)</td></tr>
+      <tr class="sub-total"><td>예상 절감</td><td colspan="2" style="text-align:center;">기존 대비 <b>약 700만원 절감</b> + 체험 품질 향상</td></tr>
+    </tbody>
+  </table>
+
+  <!-- 기대 효과 카드 -->
+  <div class="card-row">
+    <div class="card"><div class="c-icon">👥</div><div class="c-title">부스 체험자</div><div class="c-num">900+</div><div class="c-sub">300명/일 × 3일</div></div>
+    <div class="card"><div class="c-icon">📱</div><div class="c-title">SNS 노출</div><div class="c-num">3,000+</div><div class="c-sub">3일 합산</div></div>
+    <div class="card"><div class="c-icon">💰</div><div class="c-title">예산 절감</div><div class="c-num">~700만</div><div class="c-sub">목공 부스 대비</div></div>
+    <div class="card"><div class="c-icon">🏟️</div><div class="c-title">체험존</div><div class="c-num">2</div><div class="c-sub">경기장 A·B</div></div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="h-title">모집·홍보 핵심 메시지</div>
+    <div class="h-body">
+      <b>① 모집 실현 근거:</b> 타임에듀 2024 코드페어 3,200명 모집 실적 보유 → 2,900명 목표는 보수적 설정. 8종 채널 × 60일 타임라인 × 일일 모니터링.<br>
+      <b>② Festa 부스 전략:</b> "경기장을 그대로 가져온다" — 시공비 0원 × 36㎡ × 3일 → 900명 체험 · ~700만원 절감.<br>
+      <b>③ 체험→흥미→확산:</b> 관람객은 목공 장식이 아닌 진짜 아레나와 로봇을 보고 만지며 대회의 가치를 즉시 체감.
+    </div>
+  </div>
+
+  <div class="note-box">
+    ※ 홍보 소요 예산(광고비·인쇄비 등)은 <b>면수 28(운영비)</b>에 반영.<br>
+    ※ AI Future Festa 부스 운영 인력 출장비는 <b>면수 29(여비)</b>에 반영.<br>
+    ※ 부스 운영 식비는 <b>면수 27(특근매식비)</b>에 반영 (6명×3일=18식).
+  </div>
 
   <div class="page-num">- 20 -</div>
 </div>
